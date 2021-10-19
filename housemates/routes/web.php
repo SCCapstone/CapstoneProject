@@ -18,14 +18,16 @@ Route::get('/', function () {
 });
 
 //routes
-use App\Http\Controllers\HousematesController;
-Route::get('/contact', [HousematesController::class, 'contact']);
+use App\Http\Controllers\HouseController;
+Route::get('/pages/contact', [HouseController::class, 'contact']);
 
-Route::get('/settings', [HousematesController::class, 'settings']);
+Route::get('/pages/settings', [HouseController::class, 'settings']);
 
-Route::get('/sign-in', [HousematesController::class, 'sign-in']);
-Route::get('/sign-up', [HousematesController::class, 'sign-up']);
+Route::get('/pages/sign-in', [HouseController::class, 'signin']);
+Route::get('/pages/sign-up', [HouseController::class, 'signup']);
 
-Route::get('/shopping', [HousematesController::class, 'shopping']);
-Route::get('/calendar', [HousematesController::class, 'calendar']);
-Route::get('/chat', [HousematesController::class, 'chat']);
+Route::get('/pages/shopping', [HouseController::class, 'shopping']);
+Route::get('/pages/calendar', [HouseController::class, 'calendar']);
+Route::get('/pages/chat', [HouseController::class, 'chat']);
+
+Route::get('/pages/index', [HouseController::class, 'index']);
