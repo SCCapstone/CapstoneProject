@@ -12,23 +12,7 @@
     </thead>
     <tbody>
         <tr>
-            <td>
-                <div contenteditable></div>
-            </td>
-            <td>
-                <div contenteditable></div>
-            </td>
-            <td>
-                <div contenteditable></div>
-            </td>
-            <td>
-                <div contenteditable></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div contenteditable></div>
-            </td>
+            <td><input type="checkbox" name="row1"/>&nbsp;</td>
             <td>
                 <div contenteditable></div>
             </td>
@@ -40,23 +24,7 @@
             </td>
         </tr>
         <tr>
-            <td>
-                <div contenteditable></div>
-            </td>
-            <td>
-                <div contenteditable></div>
-            </td>
-            <td>
-                <div contenteditable></div>
-            </td>
-            <td>
-                <div contenteditable></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div contenteditable></div>
-            </td>
+            <td><input type="checkbox" name="row2"/>&nbsp;</td>
             <td>
                 <div contenteditable></div>
             </td>
@@ -68,9 +36,31 @@
             </td>
         </tr>
         <tr>
+            <td><input type="checkbox" name="row3"/>&nbsp;</td>
             <td>
                 <div contenteditable></div>
             </td>
+            <td>
+                <div contenteditable></div>
+            </td>
+            <td>
+                <div contenteditable></div>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="row4"/>&nbsp;</td>
+            <td>
+                <div contenteditable></div>
+            </td>
+            <td>
+                <div contenteditable></div>
+            </td>
+            <td>
+                <div contenteditable></div>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="row5"/>&nbsp;</td>
             <td>
                 <div contenteditable></div>
             </td>
