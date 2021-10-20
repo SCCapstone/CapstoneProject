@@ -4,7 +4,7 @@
         <meta charset="utf-8">
 
         <title>HouseMates</title>
-
+        <h>HouseMates</h>
         <style>
 			body {
 				text-align: left;
@@ -20,7 +20,7 @@
                 height: 96px;
                 background: #FFFFFF;
                 position:absolute;
-                top: 50px;
+                top: 70px;
             }
             a {
                 text-decoration: none;
@@ -34,7 +34,7 @@
                 width: 100vw;
                 background-color: #FFFFF;
                 position: absolute;
-                top: 85px;
+                top: 105px;
             }
             ul {
                 margin: 0;
@@ -46,9 +46,15 @@
                 margin: 0 6vw;
                 font-size: 3vh;
             }
+            h1 {
+                color: #698384;
+                text-align: center;
+
+            }
         </style>    
     </head>
     <body class="">
+        <h1>HouseMates</h1>
         <div id="nav-rectangle"></div>
 
         <nav>
