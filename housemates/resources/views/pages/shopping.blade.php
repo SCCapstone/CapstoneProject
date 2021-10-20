@@ -7,7 +7,7 @@
             <th>Done?</th>
             <th>Item</th>
             <th>Urgency</th>
-            <th>Asigned</th>
+            <th>Assigned</th>
         </tr>
     </thead>
     <tbody>
