@@ -5,7 +5,7 @@
 
         <title>HouseMates</title>
         <h>HouseMates</h>
-        
+
     </head>
     <body class="">
         <h1>HouseMates</h1>
