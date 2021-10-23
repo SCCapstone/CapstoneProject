@@ -16,8 +16,14 @@ In order to build this project you first have to install:
 
 ## Setup
 
-User will use command:
-"php artisan serve" in command line within project vscode directory to run local server for viewing webpages
+User must install Laravel and Composer.<br>
+The user must clone repository onto their local machine.<br>
+The user must  also have xampp and MySQL installed in order to run an apache and MySQL database server locally. 
+
+If the user would like to create a new laravel project the commands are as follows:<br>
+User must install Laravel and Composer.<br>
+Then the user must navigate into their Laravel folder in the command line.<br>
+Next the user must type "laravel new projectName"
 
 ## Running
 
@@ -32,16 +38,13 @@ Internet. These should be detailed enough so anyone can re-deploy if needed
 
 # Testing
 
-In 492 you will write automated tests. When you do you will need to add a 
-section that explains how to run them.
+The unit tests are in `/tests/Unit`.
 
-The unit tests are in `/test/unit`.
-
-The behavioral tests are in `/test/casper/`.
+The behavioral tests are in `/tests/Behavioral/`.
 
 ## Testing Technology
 
-In some cases you need to install test runners, etc. Explain how.
+TBD
 
 ## Running Tests
 
@@ -49,8 +52,8 @@ TBD
 
 # Authors
 
-Camryn Reid: ctreid@email.sc.edu
-Coline Bowes: cbowes@email.sc.edu
-Lauren Lee: lel2@email.sc.edulel2@email.sc.edu
-Nicolas Becker: nbecker@email.sc.edu
-Roscoe Burke-Moody: roscoeb@email.sc.edu
+Camryn Reid: ctreid@email.sc.edu<br>
+Coline Bowes: cbowes@email.sc.edu<br>
+Lauren Lee: lel2@email.sc.edulel2@email.sc.edu<br>
+Nicolas Becker: nbecker@email.sc.edu<br>
+Roscoe Burke-Moody: roscoeb@email.sc.edu<br>
