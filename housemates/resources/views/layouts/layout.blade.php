@@ -13,7 +13,7 @@
 				background-position: center;
 				color: white;
 				font-family: Roboto;
-                margin: 0;
+                margin: 10;
 			}
             #nav-rectangle {
                 width: 100%;
