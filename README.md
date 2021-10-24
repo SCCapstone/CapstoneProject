@@ -56,4 +56,4 @@ Camryn Reid: ctreid@email.sc.edu<br>
 Colin Bowes: cbowes@email.sc.edu<br>
 Lauren Lee: lel2@email.sc.edu<br>
 Nicolas Becker: nbecker@email.sc.edu<br>
-Roscoe Burke-Moody: roscoeb@email.sc.edu<br>
+Roscoe Burk-Moody: roscoeb@email.sc.edu<br>
