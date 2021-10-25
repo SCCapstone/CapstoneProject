@@ -48,7 +48,7 @@ The behavioral tests are in `/tests/Behavioral/`.
 
 ## Testing Technology
 
-TBD
+To create and run tests on VS Code, we'll be installing Hardhat and Mocha integration extension. Hardhat will be installed through command prompt using " npm install --save-dev hardhat ". Mocha Test Explorer will be installed as an extension of VS Code using " npm isntall --save-dev mocha ". Both will create JSON files used for testing.
 
 ## Running Tests
 
