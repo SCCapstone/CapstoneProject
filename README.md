@@ -3,6 +3,10 @@
 This project will use php and Laravel framework to createa web app. The app is designed to allow users to share contact information, grocery lists, calendars, and chat.
 More detailed design information is available at: https://github.com/SCCapstone/CapstoneProject/wiki/Design
 
+## Style
+
+This project will use the [PSR-12](https://www.php-fig.org/psr/psr-12/) style guide from the PHP Framework Interoperability Group.
+
 ## External Requirements
 
 In order to build this project you first have to install:
