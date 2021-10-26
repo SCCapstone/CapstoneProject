@@ -52,7 +52,7 @@ To create and run tests on VS Code, we'll be installing Hardhat and Mocha integr
 
 ## Running Tests
 
-TBD
+We will be running tests on our code using the Hardhat and Mocha integration extensions. We will do this by first creating a directory exclusively for Hardhat. We will then run the test files from the new directory using the "npx hardhat" command and the system will output the result of the test. 
 
 # Authors
 
