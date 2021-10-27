@@ -39,6 +39,7 @@ Developer will use command:
 Webapps need a deployment section that explains how to get it deployed on the 
 Internet. These should be detailed enough so anyone can re-deploy if needed
 . Note that you **do not put passwords in git**. 
+Currently only Camryn has access to deployment but we are working to make it open for all members. 
 
 # Testing
 
@@ -48,11 +49,11 @@ The behavioral tests are in `/tests/Behavioral/`.
 
 ## Testing Technology
 
-To create and run tests on VS Code, we'll be installing Hardhat and Mocha integration extension. Hardhat will be installed through command prompt using " npm install --save-dev hardhat ". Mocha Test Explorer will be installed as an extension of VS Code using " npm isntall --save-dev mocha ". Both will create JSON files used for testing.
+We do not plan on installing software to automate testing. We will create test users in test.php that will create users and run functions to check certain aspects of the web application.  
 
 ## Running Tests
 
-We will be running tests on our code using the Hardhat and Mocha integration extensions. We will do this by first creating a directory exclusively for Hardhat. We will then run the test files from the new directory using the "npx hardhat" command and the system will output the result of the test. 
+We will run our tests through test.php. 
 
 # Authors
 
