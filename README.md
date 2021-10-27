@@ -53,7 +53,7 @@ We do not plan on installing software to automate testing. We will create test u
 
 ## Running Tests
 
-We will run our tests through testCase.php. Compiling and running testCase.php will automatically run our application by using the file runApplication.
+We will run our tests through testCase.php. Compiling and running testCase.php will automatically run our application by using the file CreateApplication.php.
 
 # Authors
 
