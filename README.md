@@ -36,7 +36,7 @@ Developer will use command:
 
 # Deployment
 
-Currently only Camryn has access to the Forge server page for deployment but we are actively working to make it open for all members.
+For deployment the user will have to contact Camryn or another member for the necessary username and password. This will give them access to the Forge account where deployment will be possible.
 
 # Testing
 
