@@ -36,10 +36,7 @@ Developer will use command:
 
 # Deployment
 
-Webapps need a deployment section that explains how to get it deployed on the 
-Internet. These should be detailed enough so anyone can re-deploy if needed
-. Note that you **do not put passwords in git**. 
-Currently only Camryn has access to deployment but we are working to make it open for all members. 
+Currently only Camryn has access to the Forge server page for deployment but we are actively working to make it open for all members.
 
 # Testing
 
