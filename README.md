@@ -49,11 +49,11 @@ The behavioral tests are in `/tests/Behavioral/`.
 
 ## Testing Technology
 
-We do not plan on installing software to automate testing. We will create test users in test.php that will create users and run functions to check certain aspects of the web application.  
+We do not plan on installing software to automate testing. We will create test users in testCase.php that will create users and run functions to check certain aspects of the web application.  
 
 ## Running Tests
 
-We will run our tests through test.php. 
+We will run our tests through testCase.php. Compiling and running testCase.php will automatically run our application by using the file runApplication.
 
 # Authors
 
