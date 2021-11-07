@@ -3,7 +3,6 @@
 	<head>
 		<title></title>
 		<style>
-			<!-- COMMENT FOR MC TEST-->
 			html * {
 				font-family: Roboto, sans-serif;
 			}
