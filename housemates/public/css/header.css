@@ -37,3 +37,38 @@ h1 {
     color: #698384;
     text-align: center;
 }
+
+/* Shopping content */
+table {
+    width: 95vw;
+    color: black;
+    position: relative;
+    top: 100px;
+    margin: 40px 40px 40px 40px;
+    font-family: Roboto;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th {
+    font-weight: bolder;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+.checkbox-column {
+    width: 20px;
+}
+.item-column {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.urgency-column {
+    font-style: italic;
+    text-transform: capitalize;
+}
+.assignee-column {
+    text-transform: uppercase;
+}
