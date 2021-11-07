@@ -3,6 +3,7 @@
 	<head>
 		<title></title>
 		<style>
+        <!-- For demonstrating merge conflict -->
 			html * {
 				font-family: lato, sans-serif;
 			}
