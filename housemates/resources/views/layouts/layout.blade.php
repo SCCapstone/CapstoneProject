@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="/css/header.css" type="text/css" rel="stylesheet">
 
         <title>HouseMates</title>
         <h>HouseMates</h>
@@ -51,7 +52,7 @@
                 text-align: center;
 
             }
-        </style>    
+        </style>
     </head>
     <body class="">
         <h1>HouseMates</h1>
