@@ -2,7 +2,7 @@
 
 @section('content')
 
-<table>
+<table id="shopping-table">
     <thead>
         <tr>
             <th>Done?</th>
