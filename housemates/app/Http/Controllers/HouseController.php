@@ -32,4 +32,7 @@ class HouseController extends Controller
     public function shopping(){
         return view('pages.shopping');
     }
+    public function homepage(){
+        return view('pages.home-page');
+    }
 }
