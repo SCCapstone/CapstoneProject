@@ -2,6 +2,8 @@
 
 @section('content')
 
+<div id="shopping-background-rectangle"></div>
+
 <table id="shopping-table">
     <thead>
         <tr>
