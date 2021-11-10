@@ -4,8 +4,6 @@
         <meta charset="utf-8">
 
         <title>HouseMates</title>
-<<<<<<< Updated upstream
-=======
         <h>HouseMates</h>
 
         <style>
@@ -98,7 +96,6 @@
                 padding: 1%;
             }
         </style>    
->>>>>>> Stashed changes
     </head>
     <body class="">
         @yield('content')
