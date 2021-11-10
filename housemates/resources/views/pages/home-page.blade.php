@@ -2,33 +2,7 @@
 @section('content')
 
 <h1>Home Page</h1>
-<style>
-
-      #box1 {
-        width: 500px;
-        height: 200px;
-        background: #FFFFFF;
-        position:absolute;
-        top: 200px;
-        left: 500px;
-        border-radius: 25px
-      }
-      #alert-rectangle {
-        width: 100%;
-        height: 200px;
-        background: #FFFFFF;
-        position: absolute;
-        top: 450px;
-      }
-      #alert2-rectangle {
-        width: 100%;
-        height: 150px;
-        background: #FFFFFF;
-        position: absolute;
-        top: 655px;
-      }
-
-</style>
+<link href="/css/home.css" type="text/css" rel="stylesheet">
 
 <body>
 
