@@ -1,7 +1,11 @@
 # Housemates
 
-This project will use php and Laravel framework to createa web app. The app is designed to allow users to share contact information, grocery lists, calendars, and chat.
+This project will use php and Laravel framework to create a web app. The app is designed to allow users to share contact information, grocery lists, calendars, and chat.
 More detailed design information is available at: https://github.com/SCCapstone/CapstoneProject/wiki/Design
+
+## Style
+
+This project will use the [PSR-12](https://www.php-fig.org/psr/psr-12/) style guide from the PHP Framework Interoperability Group.
 
 ## External Requirements
 
@@ -32,9 +36,7 @@ Developer will use command:
 
 # Deployment
 
-Webapps need a deployment section that explains how to get it deployed on the 
-Internet. These should be detailed enough so anyone can re-deploy if needed
-. Note that you **do not put passwords in git**. 
+For deployment the user will have to contact Camryn or another member for the necessary username and password. This will give them access to the Forge account where deployment will be possible.
 
 # Testing
 
@@ -44,16 +46,16 @@ The behavioral tests are in `/tests/Behavioral/`.
 
 ## Testing Technology
 
-TBD
+We do not plan on installing software to automate testing. We will create test users in testCase.php that will create users and run functions to check certain aspects of the web application.  
 
 ## Running Tests
 
-TBD
+We will run our tests through testCase.php. Compiling and running testCase.php will automatically run our application by using the file CreateApplication.php.
 
 # Authors
 
 Camryn Reid: ctreid@email.sc.edu<br>
-Coline Bowes: cbowes@email.sc.edu<br>
-Lauren Lee: lel2@email.sc.edulel2@email.sc.edu<br>
+Colin Bowes: cbowes@email.sc.edu<br>
+Lauren Lee: lel2@email.sc.edu<br>
 Nicolas Becker: nbecker@email.sc.edu<br>
-Roscoe Burke-Moody: roscoeb@email.sc.edu<br>
+Roscoe Burk-Moody: roscoeb@email.sc.edu<br>
