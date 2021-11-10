@@ -23,7 +23,8 @@
         <p>Emergencry Phone:</p>
         <p>Instagram</p>
         <p>Snapchat</p>
-        <p>Venmo</p>    </div>
+        <p>Venmo</p>
+    </div>
     <div class="rm">
         <h3>RM #3</h3>
         <p>Phone:</p>
