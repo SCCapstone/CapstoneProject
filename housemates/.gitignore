@@ -11,5 +11,3 @@ yarn-error.log
 /.idea
 /.vscode
 .DS_STORE
-.env
-/vendor
