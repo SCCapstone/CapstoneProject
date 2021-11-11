@@ -5,7 +5,6 @@
         <link href="/css/header.css" type="text/css" rel="stylesheet">
 
         <title>HouseMates</title>
-<<<<<<< HEAD
         <!-- <h>HouseMates</h> -->  
     <style>
         body {
@@ -53,10 +52,7 @@
                 text-align: center;
             }
         </style>
-=======
-        <h>HouseMates</h>
 
->>>>>>> main
     </head>
     <body class="">
         <h1>HouseMates</h1>
