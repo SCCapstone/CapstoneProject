@@ -8,6 +8,7 @@
     <p>Phone: (***) ***-****</p>
     <p>Address: 123 Fake Ave, Columbia, SC</p>
 </div>
+
 <div class="roommates">
     <div class="rm">
         <h3>RM #1</h3>
