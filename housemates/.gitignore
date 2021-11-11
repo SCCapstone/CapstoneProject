@@ -10,8 +10,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-<<<<<<< HEAD
 /.DS_STORE
-=======
-.DS_STORE
->>>>>>> main
+
