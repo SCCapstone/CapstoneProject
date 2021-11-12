@@ -10,4 +10,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-.DS_STORE
+.DS_Store
+

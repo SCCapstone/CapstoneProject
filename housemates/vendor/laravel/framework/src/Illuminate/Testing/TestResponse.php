@@ -422,7 +422,7 @@ EOF;
                 PHPUnit::assertSame(
                     $filename,
                     isset(explode('=', $contentDisposition[1])[1])
-                        ? trim(explode('=', $contentDisposition[1])[1])
+                        ? trim(explode('=', $contentDisposition[1])[1], " \"'")
                         : '',
                     $message
                 );
@@ -1356,6 +1356,43 @@ EOF;
     protected function session()
     {
         return app('session.store');
+    }
+
+    /**
+     * Dump the content from the response and end the script.
+     *
+     * @return never
+     */
+    public function dd()
+    {
+        $this->dump();
+
+        exit(1);
+    }
+
+    /**
+     * Dump the headers from the response and end the script.
+     *
+     * @return never
+     */
+    public function ddHeaders()
+    {
+        $this->dumpHeaders();
+
+        exit(1);
+    }
+
+    /**
+     * Dump the session from the response and end the script.
+     *
+     * @param  string|array  $keys
+     * @return never
+     */
+    public function ddSession($keys = [])
+    {
+        $this->dumpSession($keys);
+
+        exit(1);
     }
 
     /**
