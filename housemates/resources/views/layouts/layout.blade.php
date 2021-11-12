@@ -3,52 +3,38 @@
     <head>
         <meta charset="utf-8">
         <link href="/css/header.css" type="text/css" rel="stylesheet">
-
-        <title>HouseMates</title>
-        <!-- <h>HouseMates</h> -->  
-
+        <link href="/css/shopping.css" type="text/css" rel="stylesheet">
+        <link href="/css/home.css" type="text/css" rel="stylesheet">
+        <link href="/css/app.css" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>Housemates</title>
     </head>
-    <body class="">
-        <h1>HouseMates</h1>
-        <div id="nav-rectangle"></div>
-    
-    <nav>
-    <ul>
-        <li>
-        <!-- link one -->
-        <!-- <a href="#Home"> Home </a> -->
-        <a href="/pages/home-page">Home</a>
-        <!-- TODO: HOMEPAGE NOT LINKING -->
-        </li>
-        <li>
-        <!-- link two -->
-        <!-- <a href="#Calendar"> Calendar </a> -->
-        <a href="/pages/calendar">Calendar</a>
-        </li>
-        <li>
-        <!-- link three -->
-        <!-- <a href="#Grocery"> Grocery </a> -->
-        <a href="/pages/shopping">Grocery</a>
-        </li>
-        <li>
-        <!-- link four -->
-        <!-- <a href="#Chat"> Chat </a> -->
-        <a href="/pages/chat">Chat</a>
-        </li>
-        <li>
-        <!-- link five -->
-        <!-- <a href="#Contacts"> Contacts </a> -->
-        <a href="/pages/contact">Contacts</a>
-        </li>
-        <li>
-        <!-- link six -->
-        <!-- <a href="#Settings"> Settings </a> -->
-        <a href="/pages/settings">Settings</a>
-        </li>
-    </ul>
-    </nav>
-    <!-- put in navigation to other pages -->
-    
+    <body>
+        <h1><a href="/">Housemates</a></h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/pages/calendar">Calendar</a>
+                </li>
+                <li>
+                    <a href="/pages/shopping">Shopping</a>
+                </li>
+                <li>
+                    <a href="/pages/chat">Chat</a>
+                </li>
+                <li>
+                    <a href="/pages/contact">Contact</a>
+                </li>
+                <li>
+                    <a href="/pages/settings">Settings</a>
+                </li>
+            </ul>
+        </nav>
         @yield('content')
     </body>
 </html>
