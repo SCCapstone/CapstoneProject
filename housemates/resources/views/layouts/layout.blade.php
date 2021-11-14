@@ -2,6 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8">
+
+        <link href="/css/contact.css" type="text/css" rel="stylesheet">
+        <title>HouseMates</title>
+        <h>HouseMates</h>
+        
         <link href="/css/header.css" type="text/css" rel="stylesheet">
         <link href="/css/shopping.css" type="text/css" rel="stylesheet">
         <link href="/css/home.css" type="text/css" rel="stylesheet">
