@@ -6,47 +6,40 @@
         <link href="/css/contact.css" type="text/css" rel="stylesheet">
         <title>HouseMates</title>
         <h>HouseMates</h>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin
+        
+        <link href="/css/header.css" type="text/css" rel="stylesheet">
+        <link href="/css/shopping.css" type="text/css" rel="stylesheet">
+        <link href="/css/home.css" type="text/css" rel="stylesheet">
+        <link href="/css/app.css" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>Housemates</title>
     </head>
-    <body class="">
-        <h1>HouseMates</h1>
-        <div id="nav-rectangle"></div>
-
+    <body>
+        <h1><a href="/">Housemates</a></h1>
         <nav>
-        <ul>
-            <li>
-            <!-- link one -->
-            <a href="#Home"> Home </a>
-            </li>
-            <li>
-            <!-- link two -->
-            <a href="#Calendar"> Calendar </a>
-            </li>
-            <li>
-            <!-- link three -->
-            <a href="#Grocery"> Grocery </a>
-            </li>
-            <li>
-            <!-- link four -->
-            <a href="#Chat"> Chat </a>
-            </li>
-            <li>
-            <!-- link five -->
-            <a href="#Contacts"> Contacts </a>
-            </li>
-            <li>
-            <!-- link six -->
-            <a href="#Settings"> Settings </a>
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/pages/calendar">Calendar</a>
+                </li>
+                <li>
+                    <a href="/pages/shopping">Shopping</a>
+                </li>
+                <li>
+                    <a href="/pages/chat">Chat</a>
+                </li>
+                <li>
+                    <a href="/pages/contact">Contact</a>
+                </li>
+                <li>
+                    <a href="/pages/settings">Settings</a>
+                </li>
+            </ul>
         </nav>
-    <!-- put in navigation to other pages -->
-
-
-
         @yield('content')
     </body>
 </html>
