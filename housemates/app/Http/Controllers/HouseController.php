@@ -9,30 +9,27 @@ use App\Models\House;
 class HouseController extends Controller
 {
     public function signin(){
-        return view('pages.sign-in');
+        return view('sign-in');
     }
     public function signup(){
-        return view('pages.sign-up');
-    }
-    public function index(){
-        return view('pages.index');
+        return view('sign-up');
     }
     public function calendar(){
-        return view('pages.calendar');
+        return view('calendar');
     }
     public function settings(){
-        return view('pages.settings');
+        return view('settings');
     }
     public function chat(){
-        return view('pages.chat');
+        return view('chat');
     }
     public function contact(){
-        return view('pages.contact');
+        return view('contact');
     }
     public function shopping(){
-        return view('pages.shopping');
+        return view('shopping');
     }
-    public function homepage(){
-        return view('pages.home-page');
+    public function home(){
+        return view('home');
     }
 }

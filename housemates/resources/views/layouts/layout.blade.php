@@ -5,7 +5,6 @@
         <link href="/css/header.css" type="text/css" rel="stylesheet">
         <link href="/css/shopping.css" type="text/css" rel="stylesheet">
         <link href="/css/home.css" type="text/css" rel="stylesheet">
-        <link href="/css/app.css" type="text/css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -19,19 +18,19 @@
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/pages/calendar">Calendar</a>
+                    <a href="/calendar">Calendar</a>
                 </li>
                 <li>
-                    <a href="/pages/shopping">Shopping</a>
+                    <a href="/shopping">Shopping</a>
                 </li>
                 <li>
-                    <a href="/pages/chat">Chat</a>
+                    <a href="/chat">Chat</a>
                 </li>
                 <li>
-                    <a href="/pages/contact">Contact</a>
+                    <a href="/contact">Contact</a>
                 </li>
                 <li>
-                    <a href="/pages/settings">Settings</a>
+                    <a href="/settings">Settings</a>
                 </li>
             </ul>
         </nav>
