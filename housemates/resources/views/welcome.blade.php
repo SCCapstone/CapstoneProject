@@ -6,15 +6,7 @@
 
 <body>
 
-    <form>
-         	Username:<br> <input type="text" name="username" placeholder="Enter here">
-         	<br>
-		    <br>
-         	Password:<br> <input type="text" name="password" placeholder="Enter here">
-         	<br>
-    </form>
-
-    <a href="sign-up.blade.php">Don't have an account? Sign up here!</a>
+    <a href="/pages/sign-up">Don't have an account? Sign up here!</a>
 <!-- <a href="/pages/calendar">Calendar</a>
 <a href="/pages/chat">Chat</a>
 <a href="/pages/index">Index</a>

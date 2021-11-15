@@ -11,6 +11,14 @@
 	<div id="welcomebox"></div>
 	<div id="divider"></div>
 
+    <form>
+         	Username:<br> <input type="text" name="username" placeholder="Enter here">
+         	<br>
+		    <br>
+         	Password:<br> <input type="text" name="password" placeholder="Enter here">
+         	<br>
+    </form>
+
     @yield('content')
 
 	<!-- <div id="userandpass" style = "top: 360px; left: 525px; position: absolute;">Username:</div>
@@ -44,7 +52,7 @@
 
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<meta name="google-signin-client_id" content="capstoneproject-332219.apps.googleusercontent.com.apps.googleusercontent.com.apps.googleusercontent.com">
-	<div class="g-signin2" data-onsuccess="onSignIn" style = "top: 650px; left: 625px; position: absolute; height: 50px; width: 200px;"></div>
+	<div class="g-signin2" data-onsuccess="onSignIn" style = "top: 650px; left: 615px; position: absolute; height: 50px; width: 200px;"></div>
 	<script>
 		function onSuccess(googleUser) {
       			console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
