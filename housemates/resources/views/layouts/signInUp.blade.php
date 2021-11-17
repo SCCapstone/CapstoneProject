@@ -51,7 +51,7 @@
 	<script src="https://apis.google.com/js/platform.js" async defer></script> -->
 
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
-	<meta name="google-signin-client_id" content="capstoneproject-332219.apps.googleusercontent.com.apps.googleusercontent.com.apps.googleusercontent.com">
+	<meta name="google-signin-client_id" content=".apps.googleusercontent.com">
 	<div class="g-signin2" data-onsuccess="onSignIn" style = "top: 400px; left: 550px; position: absolute; height: 75px; width: 350px; box-shadow: 6px 2px 8px #698384;"></div>
 	<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
 	<script>
