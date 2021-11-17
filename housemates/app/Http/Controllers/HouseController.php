@@ -8,8 +8,8 @@ use App\Models\House;
 
 class HouseController extends Controller
 {
-    public function signin(){
-        return view('sign-in');
+    public function welcome(){
+        return view('welcome');
     }
     public function signup(){
         return view('sign-up');
@@ -31,5 +31,20 @@ class HouseController extends Controller
     }
     public function home(){
         return view('home');
+    }
+    public function settingsInvite() {
+        return view('settings.invite');
+    }
+    public function settingsEmergency() {
+        return view('settings.emergency');
+    }
+    public function settingsHousing() {
+        return view('settings.housing');
+    }
+    public function settingsProfile() {
+        return view('settings.profile');
+    }
+    public function settingsSocial() {
+        return view('settings.social');
     }
 }

@@ -1,0 +1,15 @@
+.settings-nav {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 200px;
+    border-radius: 9%;
+    position: relative;
+    left: 80px;
+    top: 150px;
+}
+.settings-nav h4 {
+    color: #000000;
+    font-size: 100%;
+    position: relative;
+    text-align: center;
+}
