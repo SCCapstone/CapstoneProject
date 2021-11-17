@@ -2,7 +2,6 @@
 @section('content')
 
 <h1>Home Page</h1>
-<link href="/css/home.css" type="text/css" rel="stylesheet">
 
 <body>
 
