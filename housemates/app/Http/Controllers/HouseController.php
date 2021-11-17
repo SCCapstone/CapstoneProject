@@ -35,4 +35,19 @@ class HouseController extends Controller
     public function homepage(){
         return view('pages.home-page');
     }
+    public function emergencySettings(){
+        return view('pages.settingsPages.emergencySettings');
+    }
+    public function informationSettings(){
+        return view('pages.settingsPages.informationSettings');
+    }
+    public function personalSettings(){
+        return view('pages.settingsPages.personalSettings');
+    }
+    public function roommatesSettings(){
+        return view('pages.settingsPages.roommatesSettings');
+    }
+    public function socialsSettings(){
+        return view('pages.settingsPages.socialsSettings');
+    }
 }
