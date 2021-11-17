@@ -36,7 +36,7 @@
                     <a href="/pages/contact">Contact</a>
                 </li>
                 <li>
-                    <a href="/pages/settings">Settings</a>
+                    <a href="/pages/settingsPages/personalSettings">Settings</a>
                 </li>
             </ul>
         </nav>
