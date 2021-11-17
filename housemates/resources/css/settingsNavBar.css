@@ -1,0 +1,106 @@
+
+html * {
+    font-family: Roboto, sans-serif;
+}
+body {
+    background-color: #e6ecef;
+    font-family: Roboto;
+}
+h2 {
+    color: #000000;
+}
+h6 {
+    color: #000000;
+}
+p {
+    background-color: #ffffff;
+    border: #ffffff;
+    padding: 10px;
+}
+.topnav {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.topnav h1 {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 80px;
+}
+#leftNav {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 150px;
+    border-radius: 10%;
+    position: absolute;
+    left: 80px;
+    top: 50px;
+}
+.leftNav h3 {
+    color: #000000;
+    font-size: 150%;
+    position: relative;
+    left: 15px;
+}
+.leftNav h4 {
+    color: #000000;
+    text-align: center;
+}
+.leftNav a {
+    text-decoration: none;
+    color: #000000;
+    font-family: Roboto;
+}
+.leftNav a:hover {
+    color: #698384;
+}
+.settingsTriangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid #ffffff;
+    position: relative;
+    left: 1335px;
+}
+.inputField {
+    background-color: #ffffff;
+    width: 400px;
+    position: relative;
+    top: -15px;
+}
+.inputField p {
+    color: #d3d3d3;
+}
+h4 {
+    color: #000000;
+}
+.editAndPublish {
+    background-color: #000000;
+    border-radius: 10%;
+    position: absolute;
+    width: 100px;
+}
+.editAndPublish h2 {
+    color: #ffffff;
+    text-align: center;
+}
+.circleBase {
+    border-radius: 50%;
+}
+.circle {
+    width: 200px;
+    height: 200px;
+    background: #ffffff;
+    position: absolute;
+    top: 325px;
+    left: 300px;
+}
+.subcircle {
+    width: 50px;
+    height: 50px;
+    background: #949494;
+    position: absolute;
+    top: 475px;
+    left: 450px;
+}
