@@ -7,14 +7,6 @@
 <body>
 
     <a href="/pages/sign-up">Don't have an account? Sign up here!</a>
-<!-- <a href="/pages/calendar">Calendar</a>
-<a href="/pages/chat">Chat</a>
-<a href="/pages/index">Index</a>
-<a href="/pages/settings">Settings</a>
-<a href="/pages/shopping">Shopping</a>
-<a href="/pages/sign-in">Sign-in</a>
-<a href="/pages/sign-up">Sign-up</a>
-<a href="/pages/contact">Contact</a> -->
 
 </body>
 

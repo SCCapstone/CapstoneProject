@@ -7,17 +7,17 @@
 	</head>
 
 	<body class="">
-		<h1>Welcome Roommates!</h1>
+		<h1>Welcome HouseMates!</h1>
 	<div id="welcomebox"></div>
 	<div id="divider"></div>
 
-    <form>
+    <!-- <form>
          	Username:<br> <input type="text" name="username" placeholder="Enter here">
          	<br>
 		    <br>
          	Password:<br> <input type="text" name="password" placeholder="Enter here">
          	<br>
-    </form>
+    </form> -->
 
     @yield('content')
 
@@ -52,7 +52,8 @@
 
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<meta name="google-signin-client_id" content="capstoneproject-332219.apps.googleusercontent.com.apps.googleusercontent.com.apps.googleusercontent.com">
-	<div class="g-signin2" data-onsuccess="onSignIn" style = "top: 650px; left: 615px; position: absolute; height: 50px; width: 200px;"></div>
+	<div class="g-signin2" data-onsuccess="onSignIn" style = "top: 400px; left: 550px; position: absolute; height: 75px; width: 350px; box-shadow: 6px 2px 8px #698384;"></div>
+	<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
 	<script>
 		function onSuccess(googleUser) {
       			console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
