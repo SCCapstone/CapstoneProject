@@ -40,4 +40,8 @@
 }
 .rm p{
     padding: 1%;
+    display: inline;
+}
+.rm br{
+    margin: 4%;
 }
