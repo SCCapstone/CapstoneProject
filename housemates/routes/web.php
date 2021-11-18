@@ -38,3 +38,7 @@ Route::get('/pages/settingsPages/informationSettings', [HouseController::class, 
 Route::get('/pages/settingsPages/personalSettings', [HouseController::class, 'personalSettings']);
 Route::get('/pages/settingsPages/roommatesSettings', [HouseController::class, 'roommatesSettings']);
 Route::get('/pages/settingsPages/socialsSettings', [HouseController::class, 'socialsSettings']);
+
+Route::get('housedb', function() {
+    return view('housedb');
+});

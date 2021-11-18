@@ -5,7 +5,7 @@
 	<div style="position:absolute; top:250px; left:350px;">
 		<form>
 			<label for="emname">Emergency Contact Name</label><br>
-			<input size="50" type="text" id="emname" name="emname" value="Enter Text"><br>
+			<input contenteditable size="50" type="text" id="emname" name="emname" value="Enter Text"><br>
 			<label for="emnum">Emergency Contact Number</label><br>
 			<input size="50" type="text" id="emnum" name="emnum" value="Enter Text"><br>
 			<label for="emrel">Emergency Contact Relation</label><br>
