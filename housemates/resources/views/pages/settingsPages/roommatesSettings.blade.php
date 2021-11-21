@@ -2,17 +2,17 @@
 @section('subSettingsPages')
 	
 	<div style="position:absolute; top:250px; left:350px;">
-		<form>
+		<form action='' method="POST">
 			<label for="r1">Roommate 1</label><br>
-			<input size="50" type="text" id="r1" name="r1" value="Enter Text"><br>
+			<input size="50" type="text" id="r1" name="r1" placeholder="Enter Text"><br>
 			<label for="r2">Roommate 2</label><br>
-			<input size="50" type="text" id="r2" name="r2" value="Enter Text"><br>
+			<input size="50" type="text" id="r2" name="r2" placeholder="Enter Text"><br>
 			<label for="r3">Roommate 3</label><br>
-			<input size="50" type="text" id="r3" name="r3" value="Enter Text"><br>
+			<input size="50" type="text" id="r3" name="r3" placeholder="Enter Text"><br>
 			<label for="r4">Roommate 4</label><br>
-			<input size="50" type="text" id="r4" name="r4" value="Enter Text"><br>
+			<input size="50" type="text" id="r4" name="r4" placeholder="Enter Text"><br>
 			<label for="invite">Invite Roommate</label><br>
-			<input size="50" type="text" id="invite" name="invite" value="Enter Text"><br>
+			<input size="50" type="text" id="invite" name="invite" placeholder="Enter Text"><br>
 			<input type="submit" value="Publish">
 		</form>
 	</div>

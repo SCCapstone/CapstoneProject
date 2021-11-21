@@ -9,17 +9,17 @@
 
 	
 	<div style="position:absolute; top:250px; left:570px;">
-		<form>
+		<form action='' method="POST">
 			<label for="fname">First Name</label><br>
-			<input size="50" type="text" id="fname" name="fname" value="Enter Text"><br>
+			<input size="50" type="text" id="fname" name="fname" placeholder="Enter Text"><br>
 			<label for="lname">Last Name</label><br>
-			<input size="50" type="text" id="lname" name="lname" value="Enter Text"><br>
+			<input size="50" type="text" id="lname" name="lname" placeholder="Enter Text"><br>
 			<label for="phone" style="position:relative; top:125px; left:-250px;">Phone Number</label><br>
-			<input size="50" type="text" id="phone" name="phone" value="Enter Text" style="position:relative; top:125px; left:-250px"><br>
+			<input size="50" type="text" id="phone" name="phone" placeholder="Enter Text" style="position:relative; top:125px; left:-250px"><br>
 			<label for="email" style="position:relative; top:125px; left:-250px;">Email Address</label><br>
-			<input size="50" type="text" id="email" name="email" value="Enter Text" style="position:relative; top:125px; left:-250px"><br>
+			<input size="50" type="text" id="email" name="email" placeholder="Enter Text" style="position:relative; top:125px; left:-250px"><br>
 			<label for="address" style="position:relative; top:125px; left:-250px;">Address</label><br>
-			<input size="50" type="text" id="address" name="address" value="Enter Text" style="position:relative; top:125px; left:-250px"><br>
+			<input size="50" type="text" id="address" name="address" placeholder="Enter Text" style="position:relative; top:125px; left:-250px"><br>
 			<input type="submit" value="Publish">
 		</form>
 	</div>

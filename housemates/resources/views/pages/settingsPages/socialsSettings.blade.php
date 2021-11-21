@@ -2,15 +2,15 @@
 @section('subSettingsPages')
 	
 	<div style="position:absolute; top:250px; left:350px;">
-		<form>
+		<form action='' method="POST">
 			<label for="insta">Instagram</label><br>
-			<input size="50" type="text" id="insta" name="insta" value="Enter Text"><br>
+			<input size="50" type="text" id="insta" name="insta" placeholder="Enter Text"><br>
 			<label for="snap">Snapchat</label><br>
-			<input size="50" type="text" id="snap" name="snap" value="Enter Text"><br>
+			<input size="50" type="text" id="snap" name="snap" placeholder="Enter Text"><br>
 			<label for="venmo">Venmo</label><br>
-			<input size="50" type="text" id="venmo" name="venmo" value="Enter Text"><br>
+			<input size="50" type="text" id="venmo" name="venmo" placeholder="Enter Text"><br>
 			<label for="tt">TikTok</label><br>
-			<input size="50" type="text" id="tt" name="tt" value="Enter Text"><br>
+			<input size="50" type="text" id="tt" name="tt" placeholder="Enter Text"><br>
 			<input type="submit" value="Publish">
 		</form>
 	</div>
