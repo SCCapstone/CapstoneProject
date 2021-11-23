@@ -14,14 +14,11 @@ class CreateRemindersTable extends Migration
     public function up()
     {
         Schema::create('reminders', function (Blueprint $table) {
-            $table->id('user_id');
+            $table->id();
             $table->timestamps();
-            #$table->integer('user_id');
-            #$table->dateTime('created_at');
-            #$table->dateTime('updated_at');
-            $table->string('assignments');
-            $table->string('meetings');
-            $table->string('bills');
+            $table->string("assignments");
+            $table->string("meetings");
+            $table->string("bills");
         });
     }
 

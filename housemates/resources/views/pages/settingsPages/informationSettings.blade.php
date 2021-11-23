@@ -3,6 +3,7 @@
 	
 <div style="position:absolute; top:250px; left:350px;">
 	<form action='' method="POST">
+		@csrf
 		<label for="housing">Type of Housing</label><br>
 		<input size="50" type="text" id="housing" name="housing" placeholder="Enter Text"><br>
 		<label for="rent">Rental Company</label><br>

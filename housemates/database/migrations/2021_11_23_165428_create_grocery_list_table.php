@@ -14,16 +14,13 @@ class CreateGroceryListTable extends Migration
     public function up()
     {
         Schema::create('grocery_list', function (Blueprint $table) {
-            $table->id('user_id');
+            $table->id();
             $table->timestamps();
-            #$table->integer('user_id');
-            #$table->dateTime('created_at');
-            #$table->dateTime('updated_at');
-            $table->string('user');
-            $table->string('food');
-            $table->string('drinks');
-            $table->string('supplies');
-            $table->string('other');
+            $table->string("user");
+            $table->string("food");
+            $table->string("drinks");
+            $table->string("supplies");
+            $table->string("other");
         });
     }
 

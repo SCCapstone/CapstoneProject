@@ -3,6 +3,7 @@
 	
 	<div style="position:absolute; top:250px; left:350px;">
 		<form action='' method="POST">
+			@csrf
 			<label for="insta">Instagram</label><br>
 			<input size="50" type="text" id="insta" name="insta" placeholder="Enter Text"><br>
 			<label for="snap">Snapchat</label><br>

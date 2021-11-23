@@ -3,6 +3,7 @@
 	
 	<div style="position:absolute; top:250px; left:350px;">
 		<form action='' method="POST">
+			@csrf
 			<label for="r1">Roommate 1</label><br>
 			<input size="50" type="text" id="r1" name="r1" placeholder="Enter Text"><br>
 			<label for="r2">Roommate 2</label><br>

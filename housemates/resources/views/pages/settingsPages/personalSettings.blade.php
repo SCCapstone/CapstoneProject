@@ -10,6 +10,7 @@
 	
 	<div style="position:absolute; top:250px; left:570px;">
 		<form action='' method="POST">
+			@csrf
 			<label for="fname">First Name</label><br>
 			<input size="50" type="text" id="fname" name="fname" placeholder="Enter Text"><br>
 			<label for="lname">Last Name</label><br>

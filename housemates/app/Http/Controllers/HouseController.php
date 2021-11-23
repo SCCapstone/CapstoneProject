@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\House;
+use App\Models\Contactinfo;
+use App\Models\Grocerylist;
+use App\Models\Reminders;
+use App\Models\User;
 
 
 class HouseController extends Controller
@@ -50,4 +54,9 @@ class HouseController extends Controller
     public function socialsSettings(){
         return view('pages.settingsPages.socialsSettings');
     }
+
+    /**public function store() {
+        error_log(request('name'));
+        return redirect('/');
+    }**/
 }

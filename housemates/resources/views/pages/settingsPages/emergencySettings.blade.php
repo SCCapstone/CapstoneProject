@@ -4,6 +4,7 @@
 
 	<div style="position:absolute; top:250px; left:350px;">
 		<form action='' method="POST">
+			@csrf
 			<label for="emname">Emergency Contact Name</label><br>
 			<input contenteditable size="50" type="text" id="emname" name="emname" placeholder="Enter Text"><br>
 			<label for="emnum">Emergency Contact Number</label><br>
