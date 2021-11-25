@@ -22,7 +22,7 @@ class CreateLandlordTable extends Migration
             $table->string("phone");
             $table->string("email");
             $table->string("officeAddress");
-            $table->dateTime("rentDueBy");
+            $table->string("rentDueBy");
         });
     }
 

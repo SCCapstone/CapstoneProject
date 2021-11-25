@@ -2,7 +2,7 @@
 @section('subSettingsPages')
 	
 	<div style="position:absolute; top:250px; left:350px;">
-		<form action='' method="POST">
+		<form action='/pages/settingsPages/socialsSettings' method="POST">
 			@csrf
 			<label for="insta">Instagram</label><br>
 			<input size="50" type="text" id="insta" name="insta" placeholder="Enter Text"><br>

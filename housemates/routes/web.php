@@ -43,3 +43,9 @@ Route::get('/pages/settingsPages/socialsSettings', [HouseController::class, 'soc
 Route::get('housedb', function() {
     return view('housedb');
 });
+
+Route::post('/pages/settingsPages/emergencySettings', [HouseController::class, 'storeEmergencySettings']);
+Route::post('/pages/settingsPages/informationSettings', [HouseController::class, 'storeInformationSettings']);
+Route::post('/pages/settingsPages/personalSettings', [HouseController::class, 'storePersonalSettings']);
+Route::post('/pages/settingsPages/roommatesSettings', [HouseController::class, 'storeRoommatesSettings']);
+Route::post('/pages/settingsPages/socialsSettings', [HouseController::class, 'storeSocialsSettings']);

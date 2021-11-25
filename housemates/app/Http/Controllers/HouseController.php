@@ -3,15 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\House;
-use App\Models\Contactinfo;
-use App\Models\Grocerylist;
-use App\Models\Reminders;
-use App\Models\User;
+
+use Illuminate\Support\Facades\DB;
 
 
 class HouseController extends Controller
 {
+
     public function signin(){
         return view('pages.sign-in');
     }
@@ -55,8 +53,94 @@ class HouseController extends Controller
         return view('pages.settingsPages.socialsSettings');
     }
 
-    /**public function store() {
-        error_log(request('name'));
-        return redirect('/');
-    }**/
+    public function storeEmergencySettings() {
+        $updateDetails = [
+            'emergencyName' => request('emname'),
+            'emergencyPhone' => request('emnum'),
+            'emergencyRelation' => request('emrel')
+        ];
+        DB::table('contactinfo')
+            ->where('id', 1)
+            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
+        error_log(request('emname'));
+        error_log(request('emnum'));
+        error_log(request('emrel'));
+        return redirect('/pages/settingsPages/emergencySettings');
+    }
+
+    public function storeInformationSettings() {
+        $updateDetails = [
+            'housingType' => request('housing'),
+            'rentalCompany' => request('rent'),
+            'officeHours' => request('hours'),
+            'phone' => request('phone'),
+            'email' => request('email'),
+            'officeAddress' => request('address'),
+            'rentDueBy' => request('due')
+        ];
+        DB::table('landlord')
+            ->where('id', 1)
+            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
+        error_log(request('housing'));
+        error_log(request('rent'));
+        error_log(request('hours'));
+        error_log(request('phone'));
+        error_log(request('email'));
+        error_log(request('address'));
+        error_log(request('due'));
+        return redirect('/pages/settingsPages/informationSettings');
+    }
+
+    public function storePersonalSettings() {
+        $updateDetails = [
+            'firstName' => request('fname'),
+            'lastName' => request('lname'),
+            'phone' => request('phone'),
+            'email' => request('email'),
+            'address' => request('address')
+        ];
+        DB::table('contactinfo')
+            ->where('id', 1)
+            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
+        error_log(request('fname'));
+        error_log(request('lname'));
+        error_log(request('phone'));
+        error_log(request('email'));
+        error_log(request('address'));
+        return redirect('/pages/settingsPages/personalSettings');
+    }
+
+    public function storeRoommatesSettings() {
+        $updateDetails = [
+            'roommate1' => request('r1'),
+            'roommate2' => request('r2'),
+            'roommate3' => request('r3'),
+            'roommate4' => request('r4'),
+        ];
+        DB::table('contactinfo')
+            ->where('id', 1)
+            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
+        error_log(request('r1'));
+        error_log(request('r2'));
+        error_log(request('r3'));
+        error_log(request('r4'));
+        return redirect('/pages/settingsPages/roommatesSettings');
+    }
+
+    public function storeSocialsSettings() {
+        $updateDetails = [
+            'instagram' => request('insta'),
+            'snapchat' => request('snap'),
+            'venmo' => request('venmo'),
+            'tiktok' => request('tt')
+        ];
+        DB::table('contactinfo')
+            ->where('id', 1)
+            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
+        error_log(request('insta'));
+        error_log(request('snap'));
+        error_log(request('venmo'));
+        error_log(request('tt'));
+        return redirect('/pages/settingsPages/socialsSettings');
+    }
 }

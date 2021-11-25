@@ -1,16 +1,21 @@
 @extends('layouts.settings')
 @section('subSettingsPages')
 
-	<div class="circleBase circle"></div>
+	<!--<div class="circleBase circle"></div>
 	<div class="circleBase subcircle"></div>
 	<div style="position:absolute; left:462px; top:364px">
 		<h1 style="font-size:300%"><strong>+</strong></h1>
-	</div>
+	</div>-->
 
 	
 	<div style="position:absolute; top:250px; left:570px;">
-		<form action='' method="POST">
+		<form action='/pages/settingsPages/personalSettings' method="POST">
 			@csrf
+			<div class="circleBase circle"></div>
+			<div class="circleBase subcircle"></div>
+			<div class="circleBase clickable">
+				<h1 style="font-size:300%"><strong>+</strong></h1>
+			</div>
 			<label for="fname">First Name</label><br>
 			<input size="50" type="text" id="fname" name="fname" placeholder="Enter Text"><br>
 			<label for="lname">Last Name</label><br>
