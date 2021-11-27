@@ -65,7 +65,7 @@ class HouseController extends Controller
         error_log(request('emname'));
         error_log(request('emnum'));
         error_log(request('emrel'));
-        return redirect('/pages/settingsPages/emergencySettings');
+        return redirect( route('settings.emergency') );
     }
 
     public function storeInformationSettings() {
@@ -88,7 +88,7 @@ class HouseController extends Controller
         error_log(request('email'));
         error_log(request('address'));
         error_log(request('due'));
-        return redirect('/pages/settingsPages/informationSettings');
+        return redirect( route('settings.information') );
     }
 
     public function storePersonalSettings() {
@@ -107,7 +107,7 @@ class HouseController extends Controller
         error_log(request('phone'));
         error_log(request('email'));
         error_log(request('address'));
-        return redirect('/pages/settingsPages/personalSettings');
+        return redirect( route('settings.personal') );
     }
 
     public function storeRoommatesSettings() {
@@ -124,7 +124,7 @@ class HouseController extends Controller
         error_log(request('r2'));
         error_log(request('r3'));
         error_log(request('r4'));
-        return redirect('/pages/settingsPages/roommatesSettings');
+        return redirect( route('settings.roommates') );
     }
 
     public function storeSocialsSettings() {
@@ -141,6 +141,6 @@ class HouseController extends Controller
         error_log(request('snap'));
         error_log(request('venmo'));
         error_log(request('tt'));
-        return redirect('/pages/settingsPages/socialsSettings');
+        return redirect( route('settings.socials') );
     }
 }
