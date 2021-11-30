@@ -116,6 +116,7 @@ class HouseController extends Controller
             'roommate2' => request('r2'),
             'roommate3' => request('r3'),
             'roommate4' => request('r4'),
+            'inviteRoommate' => request('invite'),
         ];
         DB::table('contactinfo')
             ->where('id', 1)
@@ -124,6 +125,7 @@ class HouseController extends Controller
         error_log(request('r2'));
         error_log(request('r3'));
         error_log(request('r4'));
+        error_log(request('invite'));
         return redirect( route('settings.roommates') );
     }
 

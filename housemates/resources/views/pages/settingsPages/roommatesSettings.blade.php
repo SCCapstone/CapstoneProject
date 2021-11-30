@@ -12,8 +12,8 @@
 			<input size="50" type="text" id="r3" name="r3" value="{{ DB::table('contactinfo')->where('id',1)->value('roommate3') }}"><br>
 			<label for="r4">Roommate 4</label><br>
 			<input size="50" type="text" id="r4" name="r4" value="{{ DB::table('contactinfo')->where('id',1)->value('roommate4') }}"><br>
-			<!--<label for="invite">Invite Roommate</label><br>
-			<input size="50" type="text" id="invite" name="invite" value="{{ DB::table('contactinfo')->where('id',1)->value('inviteRoommate') }}"><br>-->
+			<label for="invite">Invite Roommate</label><br>
+			<input size="50" type="text" id="invite" name="invite" value="{{ DB::table('contactinfo')->where('id',1)->value('inviteRoommate') }}"><br>
 			<input type="submit" value="Publish">
 		</form>
 	</div>

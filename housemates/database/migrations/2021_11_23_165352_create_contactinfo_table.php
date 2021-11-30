@@ -16,23 +16,24 @@ class CreateContactinfoTable extends Migration
         Schema::create('contactinfo', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string("firstName");
-            $table->string("lastName");
-            $table->string("phone");
-            $table->string("email");
-            $table->string("gmail");
-            $table->string("address");
-            $table->string("emergencyName");
-            $table->string("emergencyPhone");
-            $table->string("emergencyRelation");
-            $table->string("instagram");
-            $table->string("snapchat");
-            $table->string("venmo");
-            $table->string("tiktok");
-            $table->string("roommate1");
-            $table->string("roommate2");
-            $table->string("roommate3");
-            $table->string("roommate4");
+            $table->string("firstName")->nullable();
+            $table->string("lastName")->nullable();
+            $table->string("phone")->nullable();
+            $table->string("email")->nullable();
+            $table->string("gmail")->nullable();
+            $table->string("address")->nullable();
+            $table->string("emergencyName")->nullable();
+            $table->string("emergencyPhone")->nullable();
+            $table->string("emergencyRelation")->nullable();
+            $table->string("instagram")->nullable();
+            $table->string("snapchat")->nullable();
+            $table->string("venmo")->nullable();
+            $table->string("tiktok")->nullable();
+            $table->string("roommate1")->nullable();
+            $table->string("roommate2")->nullable();
+            $table->string("roommate3")->nullable();
+            $table->string("roommate4")->nullable();
+            $table->string('inviteRoommate')->nullable();
         });
     }
 

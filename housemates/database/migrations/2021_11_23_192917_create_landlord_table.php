@@ -16,13 +16,13 @@ class CreateLandlordTable extends Migration
         Schema::create('landlord', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string("housingType");
-            $table->string("rentalCompany");
-            $table->string("officeHours");
-            $table->string("phone");
-            $table->string("email");
-            $table->string("officeAddress");
-            $table->string("rentDueBy");
+            $table->string("housingType")->nullable();
+            $table->string("rentalCompany")->nullable();
+            $table->string("officeHours")->nullable();
+            $table->string("phone")->nullable();
+            $table->string("email")->nullable();
+            $table->string("officeAddress")->nullable();
+            $table->string("rentDueBy")->nullable();
         });
     }
 

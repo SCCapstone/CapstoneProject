@@ -16,11 +16,11 @@ class CreateGroceryListTable extends Migration
         Schema::create('grocery_list', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string("user");
-            $table->string("food");
-            $table->string("drinks");
-            $table->string("supplies");
-            $table->string("other");
+            $table->string("user")->nullable();
+            $table->string("food")->nullable();
+            $table->string("drinks")->nullable();
+            $table->string("supplies")->nullable();
+            $table->string("other")->nullable();
         });
     }
 
