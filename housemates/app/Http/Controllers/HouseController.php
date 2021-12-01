@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
-
+use App\Models\Contact;
 
 class HouseController extends Controller
 {
@@ -29,7 +29,9 @@ class HouseController extends Controller
         return view('pages.chat');
     }
     public function contact(){
-        return view('pages.contact');
+        $contacts = Contact::all();
+        $rm1Phone = '(803) 123-7890';
+        return view('pages.contact', ['contacts' => $contacts]);
     }
     public function shopping(){
         return view('pages.shopping');

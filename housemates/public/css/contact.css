@@ -20,7 +20,7 @@
 }
 .roommates{
     background: white;
-    height: 500px;
+    height: 520px;
     margin-top: 2%;
     display: flex;
 }
@@ -30,7 +30,7 @@
     margin-right: 1%;
     margin-top: 2%;
     padding: 1%;
-    height: 300px;
+    height: 445px;
     flex: 1;
     border-radius: 15px;
     color: black;

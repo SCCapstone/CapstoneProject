@@ -10,37 +10,19 @@
 </div>
 
 <div class="roommates">
-    <div class="rm">
-        <h3>RM #1</h3>
-        <p>Phone:</p><p id="rm1P"></p><br>
-        <p>Emergencry Phone:</p><p id="rm1EP"></p><br>
-        <p>Instagram</p><p id="rm1I"></p><br>
-        <p>Snapchat</p><p id="rm1S"></p><br>
-        <p>Venmo</p><p id="rm1V"></p><br>
-    </div>
-    <div class="rm">
-        <h3>RM #2</h3>
-        <p>Phone:</p><p id="rm2P"></p><br>
-        <p>Emergencry Phone:</p><p id="rm2EP"></p><br>
-        <p>Instagram</p><p id="rm2I"></p><br>
-        <p>Snapchat</p><p id="rm2S"></p><br>
-        <p>Venmo</p><p id="rm2V"></p><br>
-    </div>
-    <div class="rm">
-        <h3>RM #3</h3>
-        <p>Phone:</p><p id="rm3P"></p><br>
-        <p>Emergencry Phone:</p><p id="rm3EP"></p><br>
-        <p>Instagram</p><p id="rm3I"></p><br>
-        <p>Snapchat</p><p id="rm3S"></p><br>
-        <p>Venmo</p><p id="rm3V"></p><br>
-    </div>
-    <div class="rm">
-        <h3>RM #4</h3>
-        <p>Phone:</p><p id="rm4P"></p><br>
-        <p>Emergencry Phone:</p><p id="rm4EP"></p><br>
-        <p>Instagram</p><p id="rm4I"></p><br>
-        <p>Snapchat</p><p id="rm4S"></p><br>
-        <p>Venmo</p><p id="rm4V"></p><br>
-    </div>
+    @foreach($contacts as $contact)
+        <div class="rm">
+            <h3>{{ $contact->firstName }}</h3>
+            <p><b>Phone:</b></p><p>{{ $contact->phone }}</p><br>
+            <p><b>Email:</b></p><p>{{ $contact->email }}</p><br>
+            <p><b>Emergency Contact:</b></p><p>{{ $contact->emergencyName }}</p><br>
+            <p><b>Relation:</b></p><p>{{ $contact->emergencyRelation }}</p><br>
+            <p><b>Emergencry Phone:</b></p><p>{{ $contact->emergencyPhone }}</p><br>
+            <p><b>Instagram</b></p><p>{{ $contact->instagram }}</p><br>
+            <p><b>Snapchat</b></p><p>{{ $contact->snapchat }}</p><br>
+            <p><b>Venmo</b></p><p>{{ $contact->venmo }}</p><br>
+            <p><b>TikTok</b></p><p>{{ $contact->tiktok }}</p><br>
+        </div>
+    @endforeach
 </div>
 @endsection
