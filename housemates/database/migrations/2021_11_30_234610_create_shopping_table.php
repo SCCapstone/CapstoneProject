@@ -16,7 +16,7 @@ class CreateShoppingTable extends Migration
         Schema::create('shopping', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('done'); // Todo: make this a boolean
+            $table->boolean('done');
             $table->string('item');
             $table->string('urgency');
             $table->string('assignee');
