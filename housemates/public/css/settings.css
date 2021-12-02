@@ -31,3 +31,7 @@
 .invite-form #label {
     color: black;
 }
+
+.invite-form #email {
+    width: 300px;
+}

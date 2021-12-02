@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\House;
+use App\Models\ShoppingListItem;
 
 
 class HouseController extends Controller
@@ -27,7 +28,8 @@ class HouseController extends Controller
         return view('contact');
     }
     public function shopping(){
-        return view('shopping');
+        $shoppingitem = ShoppingListItem::all();
+        return view('shopping', ['shoppingitem' => $shoppingitem,]);
     }
     public function home(){
         return view('home');
