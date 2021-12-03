@@ -1,0 +1,39 @@
+body {
+    text-align: left;
+    background-color: #E6ECEF;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: Roboto;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-family: Roboto;
+}
+a:hover {
+    color: #698384;
+}
+nav {
+    width: 100vw;
+    height: 60px;
+    padding-top: 20px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 80px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+li {
+    list-style-type: none;
+    margin: 0 5vw;
+    font-size: 3vh;
+}
+h1 {
+    color: #698384;
+    text-align: center;
+}
