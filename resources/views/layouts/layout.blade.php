@@ -17,26 +17,26 @@
         <title>Housemates</title>
     </head>
     <body>
-        <h1><a href="/home">Housemates</a></h1>
+        <h1><a href="/">Housemates</a></h1>
         <nav>
             <ul>
                 <li>
-                    <a href="/home">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/calendar">Calendar</a>
+                    <a href="/pages/calendar">Calendar</a>
                 </li>
                 <li>
-                    <a href="/shopping">Shopping</a>
+                    <a href="/pages/shopping">Shopping</a>
                 </li>
                 <li>
-                    <a href="/chat">Chat</a>
+                    <a href="/pages/chat">Chat</a>
                 </li>
                 <li>
-                    <a href="/contact">Contact</a>
+                    <a href="/pages/contact">Contact</a>
                 </li>
                 <li>
-                    <a href="/settings/profile">Settings</a>
+                    <a href="/pages/settingsPages/personalSettings">Settings</a>
                 </li>
             </ul>
         </nav>
