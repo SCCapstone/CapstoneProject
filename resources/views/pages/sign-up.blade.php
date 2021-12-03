@@ -1,6 +1,10 @@
-@extends('layouts.layout')
+@extends('layouts.signInUp')
 @section('content')
 
-<h1>Sign-up</h1>
+<title>Sign Up</title>
+<div id="sign">Sign Up</div>
+<body>
+    <a href="/">Have an account? Sign in here!</a>
+</body>
 
 @endsection
