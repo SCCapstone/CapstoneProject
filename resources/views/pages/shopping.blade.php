@@ -197,7 +197,7 @@
         </tr>
     </tbody>
 </table>
-<input type="submit" value="Publish">
+<input type="submit" value="Submit" id="submit">
 </form>
 
 @endsection
