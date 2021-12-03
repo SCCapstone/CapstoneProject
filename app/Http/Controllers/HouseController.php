@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Models\House;
 use App\Models\Contact;
 use App\Models\Landlord;
+use Illuminate\Support\Facades\DB;
+
 
 class HouseController extends Controller
 {
-
     public function signin(){
         return view('pages.sign-in');
     }
@@ -22,9 +22,6 @@ class HouseController extends Controller
     }
     public function calendar(){
         return view('pages.calendar');
-    }
-    public function settings(){
-        return view('pages.settings');
     }
     public function chat(){
         return view('pages.chat');
