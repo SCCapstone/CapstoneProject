@@ -89,8 +89,8 @@ h1 {
     	position:absolute;
 } */
 a {
-	top: 550px;
-	left: 620px;
+	top: 600px;
+	left: 600px;
 	position: absolute;
 	color: #698384
 }
@@ -117,4 +117,12 @@ input {
 placeholder {
 	font-family: Roboto;
 	font-size: 24px;
+}
+
+button {
+	top: 555px;
+	position: absolute;
+	left: 675px;
+	width: 100px;
+	height: 40px;
 }
