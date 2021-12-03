@@ -27,7 +27,9 @@ class HouseController extends Controller
         return view('pages.chat');
     }
     public function contact(){
-        return view('pages.contact');
+        $contacts = Contact::all();
+        $landlords = Landlord::all();
+        return view('pages.contact', ['contacts' => $contacts], ['landlords' => $landlords]);
     }
     public function shopping(){
         return view('pages.shopping');
