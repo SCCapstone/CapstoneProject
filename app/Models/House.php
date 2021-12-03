@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Contact extends Model
+class House extends Model
 {
-    use HasFactory;
+    //use HasFactory;
+    //protected $table = 'some_name';
 
-    protected $table = 'contactinfo';
 }
