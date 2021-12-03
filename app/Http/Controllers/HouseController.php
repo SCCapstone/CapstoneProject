@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\House;
 use App\Models\Contact;
 use App\Models\Landlord;
 
@@ -38,18 +39,18 @@ class HouseController extends Controller
     }
     public function storeShoppingTable(){
         $updateDetails = [
-            'done' => request('done'),
-            'item' => request('item'),
-            'urgency' => request('urgency'),
-            'assignee' => request('assignee')
+            'done' => request('checkbox1'),
+            'item' => request('item1'),
+            'urgency' => request('urgency1'),
+            'assignee' => request('assignee1')
         ];
         DB::table('shopping')
             ->where('id', 1)
             ->update($updateDetails);
-        error_log(request('done'));
-        error_log(request('item'));
-        error_log(request('urgency'));
-        error_log(request('assignee'));
+        error_log(request('checkbox1'));
+        error_log(request('item1'));
+        error_log(request('urgency1'));
+        error_log(request('assignee1'));
         return redirect( route('shopping') );
     }
     public function homepage(){
