@@ -19,7 +19,7 @@
          	<!-- Username:<br>  --> <input type="text" name="username" placeholder="Enter here">
          	<br>
 		    <br>
-         	<!-- Password:<br>  --> <input type="text" name="password" placeholder="Enter here">
+         	<!-- Password:<br>  --> <input type="password" name="password" placeholder="Enter here">
          	<br>
     </form>
 
