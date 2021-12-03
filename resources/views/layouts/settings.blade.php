@@ -3,7 +3,7 @@
 
 <link href="/css/settingsNav.css" type="text/css" rel="stylesheet">
 
-<div class="leftnav">
+<div class="leftnav" style="top: 250px">
     <h1 style="color:#000000; text-align: center">Settings</h1>
     <hr/>
     <h3>Profile</h3>
