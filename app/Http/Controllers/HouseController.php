@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\House;
+use App\Models\Contact;
+use App\Models\Landlord;
 use Illuminate\Support\Facades\DB;
 
 
