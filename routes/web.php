@@ -32,3 +32,15 @@ Route::get('/pages/calendar', [HouseController::class, 'calendar']);
 Route::get('/pages/chat', [HouseController::class, 'chat']);
 
 Route::get('/pages/index', [HouseController::class, 'index']);
+
+Route::get('/pages/settingsPages/emergencySettings', [HouseController::class, 'emergencySettings'])->name('settings.emergency');
+Route::get('/pages/settingsPages/informationSettings', [HouseController::class, 'informationSettings'])->name('settings.information');
+Route::get('/pages/settingsPages/personalSettings', [HouseController::class, 'personalSettings'])->name('settings.personal');
+Route::get('/pages/settingsPages/roommatesSettings', [HouseController::class, 'roommatesSettings'])->name('settings.roommates');
+Route::get('/pages/settingsPages/socialsSettings', [HouseController::class, 'socialsSettings'])->name('settings.socials');
+
+Route::post('/pages/settingsPages/emergencySettings', [HouseController::class, 'storeEmergencySettings']);
+Route::post('/pages/settingsPages/informationSettings', [HouseController::class, 'storeInformationSettings']);
+Route::post('/pages/settingsPages/personalSettings', [HouseController::class, 'storePersonalSettings']);
+Route::post('/pages/settingsPages/roommatesSettings', [HouseController::class, 'storeRoommatesSettings']);
+Route::post('/pages/settingsPages/socialsSettings', [HouseController::class, 'storeSocialsSettings']);
