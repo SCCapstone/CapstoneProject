@@ -19,7 +19,6 @@ Route::get('/', function () {
 
 //routes
 use App\Http\Controllers\HouseController;
-
 Route::get('/pages/contact', [HouseController::class, 'contact']);
 
 Route::get('/pages/settings', [HouseController::class, 'settings']);
@@ -27,8 +26,8 @@ Route::get('/pages/settings', [HouseController::class, 'settings']);
 Route::get('/pages/sign-in', [HouseController::class, 'signin']);
 Route::get('/pages/sign-up', [HouseController::class, 'signup']);
 Route::get('/pages/home-page', [HouseController::class, 'homepage']);
-Route::get('/pages/shopping', [HouseController::class, 'shopping'])->name('shopping');
-Route::post('/pages/shopping', [HouseController::class, 'storeShoppingTable']);
+
+Route::get('/pages/shopping', [HouseController::class, 'shopping']);
 Route::get('/pages/calendar', [HouseController::class, 'calendar']);
 Route::get('/pages/chat', [HouseController::class, 'chat']);
 

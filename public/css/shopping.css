@@ -14,45 +14,22 @@
     font-weight: bolder;
 }
 #shopping-table th, #shopping-table td {
-    padding: 6px;
+    padding: 5px;
     text-align: left;
 }
 .checkbox-column {
     width: 20px;
 }
 .item-column {
-    width: 20px;
-}
-.item-form {
     font-weight: bold;
     text-transform: capitalize;
-    width: 800px;
 }
 .urgency-column {
-    width: 20px;
-}
-.urgency-form {
-    width: 300px;
     font-style: italic;
     text-transform: capitalize;
 }
 .assignee-column {
-    width: 20px;
-}
-.assignee-form {
-    width: 300px;
     text-transform: uppercase;
-}
-.item-form, .urgency-form, .assignee-form {
-    border: none;
-    font-size: 100%;
-    font-family: inherit;
-}
-#submit {
-    margin-top: 60px;
-    margin-left: 65px;
-    font-family: Roboto;
-    font-size: 100%;
 }
 
 #shopping-background-rectangle {
@@ -63,10 +40,4 @@
     top: 150px;
     z-index: -100;
     margin: 40px 40px 40px 40px;
-    border-radius: 1%;
-}
-
-@font-face {
-    font-family: "Roboto";
-    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 }

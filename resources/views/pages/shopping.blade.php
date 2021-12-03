@@ -4,7 +4,6 @@
 
 <div id="shopping-background-rectangle"></div>
 
-<form action="/pages/shopping" method="POST">
 <table id="shopping-table">
     <thead>
         <tr>
@@ -16,188 +15,126 @@
     </thead>
     <tbody>
         <tr>
-            <td class="checkbox-column">
-                    @csrf
-                    <input type="checkbox" name="checkbox1" class="checkbox-form" value="{{ DB::table('shopping')->where('id',1)->value('done') }}">
-            </td>
+            <td class="checkbox-column"><input type="checkbox" name="row1"/>&nbsp;</td>
             <td class="item-column">
-                    @csrf
-                    <input type="text" name="item1" class="item-form" value="{{ DB::table('shopping')->where('id',1)->value('item') }}">
+                <div contenteditable></div>
             </td>
             <td class="urgency-column">
-                    @csrf
-                    <input type="text" name="urgency1" class="urgency-form" value="{{ DB::table('shopping')->where('id',1)->value('urgency') }}">
+                <div contenteditable></div>
             </td>
             <td class="assignee-column">
-                    @csrf
-                    <input type="text" name="assignee1" class="assignee-form" value="{{ DB::table('shopping')->where('id',1)->value('assignee') }}">
+                <div contenteditable></div>
             </td>
         </tr>
         <tr>
-            <td class="checkbox-column">
-                    @csrf
-                    <input type="checkbox" name="checkbox2" class="checkbox-form" value="{{ DB::table('shopping')->where('id',2)->value('done') }}">
-            </td>
+            <td class="checkbox-column"><input type="checkbox" name="row2"/>&nbsp;</td>
             <td class="item-column">
-                    @csrf
-                    <input type="text" name="item2" class="item-form" value="{{ DB::table('shopping')->where('id',2)->value('item') }}">
+                <div contenteditable></div>
             </td>
             <td class="urgency-column">
-                    @csrf
-                    <input type="text" name="urgency2" class="urgency-form" value="{{ DB::table('shopping')->where('id',2)->value('urgency') }}">
+                <div contenteditable></div>
             </td>
             <td class="assignee-column">
-                    @csrf
-                    <input type="text" name="assignee2" class="assignee-form" value="{{ DB::table('shopping')->where('id',2)->value('assignee') }}">
+                <div contenteditable></div>
             </td>
         </tr>
         <tr>
-            <td class="checkbox-column">
-                    @csrf
-                    <input type="checkbox" name="checkbox3" class="checkbox-form" value="{{ DB::table('shopping')->where('id',3)->value('done') }}">
-            </td>            
+            <td class="checkbox-column"><input type="checkbox" name="row3"/>&nbsp;</td>
             <td class="item-column">
-                    @csrf
-                    <input type="text" name="item3" class="item-form" value="{{ DB::table('shopping')->where('id',3)->value('item') }}">
+                <div contenteditable></div>
             </td>
             <td class="urgency-column">
-                    @csrf
-                    <input type="text" name="urgency3" class="urgency-form" value="{{ DB::table('shopping')->where('id',3)->value('urgency') }}">
+                <div contenteditable></div>
             </td>
             <td class="assignee-column">
-                    @csrf
-                    <input type="text" name="assignee3" class="assignee-form" value="{{ DB::table('shopping')->where('id',3)->value('assignee') }}">
+                <div contenteditable></div>
             </td>
         </tr>
         <tr>
-            <td class="checkbox-column">
-                    @csrf
-                    <input type="checkbox" name="checkbox4" class="checkbox-form" value="{{ DB::table('shopping')->where('id',4)->value('done') }}">
-            </td>
+            <td class="checkbox-column"><input type="checkbox" name="row4"/>&nbsp;</td>
             <td class="item-column">
-                    @csrf
-                    <input type="text" name="item4" class="item-form" value="{{ DB::table('shopping')->where('id',4)->value('item') }}">
+                <div contenteditable></div>
             </td>
             <td class="urgency-column">
-                    @csrf
-                    <input type="text" name="urgency4" class="urgency-form" value="{{ DB::table('shopping')->where('id',4)->value('urgency') }}">
+                <div contenteditable></div>
             </td>
             <td class="assignee-column">
-                    @csrf
-                    <input type="text" name="assignee4" class="assignee-form" value="{{ DB::table('shopping')->where('id',4)->value('assignee') }}">
+                <div contenteditable></div>
             </td>
         </tr>
         <tr>
-            <td class="checkbox-column">
-                    @csrf
-                    <input type="checkbox" name="checkbox5" class="checkbox-form" value="{{ DB::table('shopping')->where('id',5)->value('done') }}">
-            </td>
+            <td class="checkbox-column"><input type="checkbox" name="row5"/>&nbsp;</td>
             <td class="item-column">
-                    @csrf
-                    <input type="text" name="item5" class="item-form" value="{{ DB::table('shopping')->where('id',5)->value('item') }}">
+                <div contenteditable></div>
             </td>
             <td class="urgency-column">
-                    @csrf
-                    <input type="text" name="urgency5" class="urgency-form" value="{{ DB::table('shopping')->where('id',5)->value('urgency') }}">
+                <div contenteditable></div>
             </td>
             <td class="assignee-column">
-                    @csrf
-                    <input type="text" name="assignee5" class="assignee-form" value="{{ DB::table('shopping')->where('id',5)->value('assignee') }}">
+                <div contenteditable></div>
             </td>
         </tr>
         <tr>
-            <td class="checkbox-column">
-                    @csrf
-                    <input type="checkbox" name="checkbox6" class="checkbox-form" value="{{ DB::table('shopping')->where('id',6)->value('done') }}">
-            </td>
+            <td class="checkbox-column"><input type="checkbox" name="row6"/>&nbsp;</td>
             <td class="item-column">
-                    @csrf
-                    <input type="text" name="item6" class="item-form" value="{{ DB::table('shopping')->where('id',6)->value('item') }}">
+                <div contenteditable></div>
             </td>
             <td class="urgency-column">
-                    @csrf
-                    <input type="text" name="urgency6" class="urgency-form" value="{{ DB::table('shopping')->where('id',6)->value('urgency') }}">
+                <div contenteditable></div>
             </td>
             <td class="assignee-column">
-                    @csrf
-                    <input type="text" name="assignee6" class="assignee-form" value="{{ DB::table('shopping')->where('id',6)->value('assignee') }}">
+                <div contenteditable></div>
             </td>
         </tr>
         <tr>
-            <td class="checkbox-column">
-                    @csrf
-                    <input type="checkbox" name="checkbox7" class="checkbox-form" value="{{ DB::table('shopping')->where('id',7)->value('done') }}">
-            </td>
+            <td class="checkbox-column"><input type="checkbox" name="row7"/>&nbsp;</td>
             <td class="item-column">
-                    @csrf
-                    <input type="text" name="item7" class="item-form" value="{{ DB::table('shopping')->where('id',7)->value('item') }}">
+                <div contenteditable></div>
             </td>
             <td class="urgency-column">
-                    @csrf
-                    <input type="text" name="urgency7" class="urgency-form" value="{{ DB::table('shopping')->where('id',7)->value('urgency') }}">
+                <div contenteditable></div>
             </td>
             <td class="assignee-column">
-                    @csrf
-                    <input type="text" name="assignee7" class="assignee-form" value="{{ DB::table('shopping')->where('id',7)->value('assignee') }}">
+                <div contenteditable></div>
             </td>
         </tr>
         <tr>
-            <td class="checkbox-column">
-                    @csrf
-                    <input type="checkbox" name="checkbox8" class="checkbox-form" value="{{ DB::table('shopping')->where('id',8)->value('done') }}">
-            </td>
+            <td class="checkbox-column"><input type="checkbox" name="row8"/>&nbsp;</td>
             <td class="item-column">
-                    @csrf
-                    <input type="text" name="item8" class="item-form" value="{{ DB::table('shopping')->where('id',8)->value('item') }}">
+                <div contenteditable></div>
             </td>
             <td class="urgency-column">
-                    @csrf
-                    <input type="text" name="urgency8" class="urgency-form" value="{{ DB::table('shopping')->where('id',8)->value('urgency') }}">
+                <div contenteditable></div>
             </td>
             <td class="assignee-column">
-                    @csrf
-                    <input type="text" name="assignee8" class="assignee-form" value="{{ DB::table('shopping')->where('id',8)->value('assignee') }}">
+                <div contenteditable></div>
             </td>
         </tr>
         <tr>
-            <td class="checkbox-column">
-                    @csrf
-                    <input type="checkbox" name="checkbox9" class="checkbox-form" value="{{ DB::table('shopping')->where('id',9)->value('done') }}">
-            </td>
+            <td class="checkbox-column"><input type="checkbox" name="row9"/>&nbsp;</td>
             <td class="item-column">
-                    @csrf
-                    <input type="text" name="item9" class="item-form" value="{{ DB::table('shopping')->where('id',9)->value('item') }}">
+                <div contenteditable></div>
             </td>
             <td class="urgency-column">
-                    @csrf
-                    <input type="text" name="urgency9" class="urgency-form" value="{{ DB::table('shopping')->where('id',9)->value('urgency') }}">
+                <div contenteditable></div>
             </td>
             <td class="assignee-column">
-                    @csrf
-                    <input type="text" name="assignee9" class="assignee-form" value="{{ DB::table('shopping')->where('id',9)->value('assignee') }}">
+                <div contenteditable></div>
             </td>
         </tr>
         <tr>
-            <td class="checkbox-column">
-                    @csrf
-                    <input type="checkbox" name="checkbox10" class="checkbox-form" value="{{ DB::table('shopping')->where('id',10)->value('done') }}">
-            </td>
+            <td class="checkbox-column"><input type="checkbox" name="row10"/>&nbsp;</td>
             <td class="item-column">
-                    @csrf
-                    <input type="text" name="item10" class="item-form" value="{{ DB::table('shopping')->where('id',10)->value('item') }}">
+                <div contenteditable></div>
             </td>
             <td class="urgency-column">
-                    @csrf
-                    <input type="text" name="urgency10" class="urgency-form" value="{{ DB::table('shopping')->where('id',10)->value('urgency') }}">
+                <div contenteditable></div>
             </td>
             <td class="assignee-column">
-                    @csrf
-                    <input type="text" name="assignee10" class="assignee-form" value="{{ DB::table('shopping')->where('id',10)->value('assignee') }}">
+                <div contenteditable></div>
             </td>
         </tr>
     </tbody>
 </table>
-<input type="submit" value="Submit" id="submit">
-</form>
 
 @endsection
