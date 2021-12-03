@@ -4,7 +4,7 @@
     background: #FFFFFF;
     position:absolute;
     top: 200px;
-    left: 440px;
+    left: 500px;
     border-radius: 25px
 }
     #alert-rectangle {
@@ -20,32 +20,4 @@
     background: #FFFFFF;
     position: absolute;
     top: 655px;
-}
-#text {
-    position:absolute; 
-    left:475px; 
-    top:255px; 
-    color:black; 
-    font-size:72px; 
-    text-decoration: underline; 
-    font-weight: bold; 
-    font-family: Roboto;
-}
-#alerts {
-    position:absolute; 
-    left:40px; 
-    top:525px; 
-    color:black; 
-    font-size:48px; 
-    font-weight: bold; 
-    font-family: Roboto;
-}
-#reminders {
-    position:absolute; 
-    left:40px; 
-    top:725px; 
-    color:black; 
-    font-size:24px; 
-    font-weight: bold; 
-    font-family: Roboto;
 }

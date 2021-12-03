@@ -1,26 +1,26 @@
 @extends('layouts.layout')
 @section('content')
 
-<!-- <h1>Home Page</h1> -->
+<h1>Home Page</h1>
 
 <body>
 
 	<div id="box1"></div>
     	<div id="alert-rectangle"></div>
     	<div id="alert2-rectangle"></div>
-    	<div id ="text">
-			House Name
+    	<div style = "position:absolute; left:560px; top:255px; color:black; font-size:72px; text-decoration: underline; font-weight: bold; font-family: Roboto">
+	House Name
       	<!-- Change name based on user input -->
     	</div>
 
-	<div id = "alerts">
+	<div style = "position:absolute; left:40px; top:525px; color:black; font-size:48px; font-weight: bold; font-family: Roboto">
       	Alerts:
-    </div>
+    	</div>
     	<!-- display alerts based on user input -->
 
-	<div id = "reminders">
+	<div style = "position:absolute; left:40px; top:725px; color:black; font-size:24px; font-weight: bold; font-family: Roboto">
       	House Reminders:
-    </div>
+    	</div>
     	<!-- add vertical line -->
 </body>
 

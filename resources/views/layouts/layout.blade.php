@@ -7,6 +7,7 @@
         <h1>HouseMates</h1>
         
         <link href="/css/contact.css" type="text/css" rel="stylesheet">
+        <link href="/css/settings.css" type="text/css" rel="stylesheet">
         <link href="/css/header.css" type="text/css" rel="stylesheet">
         <link href="/css/shopping.css" type="text/css" rel="stylesheet">
         <link href="/css/home.css" type="text/css" rel="stylesheet">
@@ -33,7 +34,7 @@
                     <a href="/pages/contact">Contact</a>
                 </li>
                 <li>
-                    <a href="/pages/settings">Settings</a>
+                    <a href="/pages/settingsPages/personalSettings">Settings</a>
                 </li>
             </ul>
         </nav>
