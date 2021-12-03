@@ -8,7 +8,7 @@
 	<div id="box1"></div>
     	<div id="alert-rectangle"></div>
     	<div id="alert2-rectangle"></div>
-    	<div style = "position:absolute; left:560px; top:255px; color:black; font-size:72px; text-decoration: underline; font-weight: bold; font-family: Roboto">
+    	<div style = "position:absolute; left:540px; top:255px; color:black; font-size:72px; text-decoration: underline; font-weight: bold; font-family: Roboto">
 	House Name
       	<!-- Change name based on user input -->
     	</div>
