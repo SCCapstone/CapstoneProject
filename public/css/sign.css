@@ -1,0 +1,128 @@
+body {
+    /* text-align: left; */
+    background-color: #E6ECEF;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: Roboto;
+    margin: 0;
+}
+/* ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}*/
+/* li {
+    list-style-type: none;
+    margin: 0 6vw;
+    font-size: 3vh;
+} */
+/* .g-signin2 {
+	top: 400px; 
+	left: 550px; 
+	position: absolute; 
+	height: 75px; 
+	width: 350px; 
+	box-shadow: 6px 2px 8px #698384;
+} */
+h1 {
+    color: #698384;
+    position: absolute;
+    left: 400px;
+	font-size: 72px;
+	text-shadow: 2px 1px 4px #000000;
+
+}
+#sign {
+	position: absolute;
+	left: 625px;
+	top: 200px;
+	color: #698384;
+	font-size: 64px;
+	font-weight: bold;
+	font-family: Roboto;
+}
+/* #welcomebox {
+    width: 450px;
+    height: 650px;
+    background: #FFFFFF;
+    position:absolute;
+    top: 175px;
+    left: 500px;
+    border-radius: 25px;
+} */
+#welcomebox {
+	width: 450px;
+    height: 450px;
+    background: #FFFFFF;
+    position:absolute;
+    top: 175px;
+    left: 500px;
+    border-radius: 25px;
+}
+#bottom {
+	position: absolute;
+	left: 52px;
+	top: 700px;
+	color: #698384;
+	font-size: 24px;
+	font-family: Roboto;
+	text-align: center;
+}
+#divider {
+	top: 300px;
+	background-color: #E6ECEF;
+	height: 10px;
+	border: none;
+	position: relative;
+}
+#userandpass {
+	color: #698384;
+	font-size: 24px;
+	font-family: Roboto;
+    position: absolute;
+}
+/* #entry {
+	width: 400px;
+    	height: 60px;
+    	background-color: rgba(196, 196, 196, 0.5);
+    	position:absolute;
+} */
+a {
+	top: 600px;
+	left: 620px;
+	position: absolute;
+	color: #698384
+}
+form {
+	top: 350px;
+	left: 525px;
+    color: #698384;
+    position: absolute;
+	margin:10px 0;
+	font-size: 24px;
+	font-family: Roboto;
+}
+input {
+	margin: 10px;
+	width: 350px;
+	height: 50px;
+	background-color: rgba(196, 196, 196, 0.5);
+	left: 525px;
+	border-radius: 10px;
+	font-family: Roboto;
+	font-size: 24px;
+	padding: 5px;
+}
+placeholder {
+	font-family: Roboto;
+	font-size: 24px;
+}
+
+button {
+	top: 555px;
+	position: absolute;
+	left: 675px;
+	width: 100px;
+	height: 40px;
+}
