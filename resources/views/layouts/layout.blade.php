@@ -6,7 +6,6 @@
         <link href="/css/contact.css" type="text/css" rel="stylesheet">
         <link href="/css/header.css" type="text/css" rel="stylesheet">
         <link href="/css/home.css" type="text/css" rel="stylesheet">
-        <link href="/css/settingsNav.css" type="text/css" rel="stylesheet">
         <link href="/css/shopping.css" type="text/css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
