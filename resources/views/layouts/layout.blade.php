@@ -12,6 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
     </head>
     <body>
+        <h1><a href="/pages/home-page">Housemates</a></h1>
         <nav>
             <ul>
                 <li>
