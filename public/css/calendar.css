@@ -22,7 +22,7 @@ h1{
 }
 /* Resetting the document */
 /* Resetting the document */
-* {
+/** {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -30,7 +30,7 @@ h1{
 }
 
 /* Style the header */
-header {
+/*header {
   padding: 30px 40px;
   color: #E6ECEF;
   text-align: center;
@@ -67,7 +67,7 @@ input {
 }
 
 /* Style the list items */
-ul li {
+/*ul li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -79,26 +79,26 @@ ul li {
 
 
   /* make the list items unselectable */
-  -webkit-user-select: none;
+/*  -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
 /* Darker background-color on hover */
-ul li:hover {
+/*ul li:hover {
   background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
-ul li.checked {
+/*ul li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
-ul li.checked::before {
+/*ul li.checked::before {
   content: "";
   position: absolute;
   border-color: #fff;
@@ -112,7 +112,7 @@ ul li.checked::before {
 }
 
 /* Style the trash button */
-.far {
+/*.far {
   position: absolute;
   right: 0;
   top: 0;
@@ -141,4 +141,4 @@ body{
   text-align: center;
   display: inline;
   padding: 0px 50px 0px 50px;
-}
+}*/
