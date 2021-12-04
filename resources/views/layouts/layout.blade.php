@@ -8,6 +8,8 @@
         <link href="/css/home.css" type="text/css" rel="stylesheet">
         <link href="/css/shopping.css" type="text/css" rel="stylesheet">
         <link href="/css/calendar.css" type="text/css" rel="stylesheet">
+
+        <script src="{{ asset('resources/js/reminders.js')}}"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">

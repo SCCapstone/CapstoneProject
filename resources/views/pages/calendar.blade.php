@@ -29,8 +29,10 @@
 
       </ul>
       <!-- The link below is for the js file without using class  -->
-      <!-- <script src="calScript.js"></script> -->
-    <script src="reminders.js"></script>
+      <!-- <script src="reminders.js"></script> -->
+      <script src="{{asset('resources/js/reminders.js')}}"></script>
+
+
       </div>
   </body>
 
