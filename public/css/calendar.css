@@ -1,33 +1,41 @@
 #calendar {
-  width: 400px;
-  height: 100px;
+  width: 800px;
+  height: 75px;
   background: white;
   position: absolute;
   top: 200px;
+  left: 350px;
 }
 #reminders{
-  width: 100px;
-  height: 100px;
+  width: 0px;
+  height: 0px;
   background: white;
   position: absolute;
+  left: 0px;
 
+}
+h1{
+  color: #698384;
+  font-size: 200;
+  font-family: Roboto, sans-serif;
 
 }
 /* Resetting the document */
-/** {
+/* Resetting the document */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: #26403E;
 }
 
-h1 {
-  margin-bottom: 15px;
-  font-family: 'Roboto', sans-serif;
-  color: black;
-  /*color: #26403E;*/
-  /*text-align: center;
+/* Style the header */
+header {
+  padding: 30px 40px;
+  color: #E6ECEF;
+  text-align: center;
 }
+
 
 input {
   width: 60%;
@@ -59,7 +67,7 @@ input {
 }
 
 /* Style the list items */
-/*ul li {
+ul li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -71,26 +79,26 @@ input {
 
 
   /* make the list items unselectable */
-/*  -webkit-user-select: none;
+  -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
 /* Darker background-color on hover */
-/*ul li:hover {
+ul li:hover {
   background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
-/*ul li.checked {
+ul li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
-/*ul li.checked::before {
+ul li.checked::before {
   content: "";
   position: absolute;
   border-color: #fff;
@@ -104,7 +112,7 @@ input {
 }
 
 /* Style the trash button */
-/*.far {
+.far {
   position: absolute;
   right: 0;
   top: 0;
@@ -119,13 +127,8 @@ input {
 body{
   background-color: #E6ECEF;
 }
-h2 {
-  font-size: 24;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  color: #26403E;
-}
-/*#page-nav a {
+
+#page-nav a {
   color: #698384;
 }
 #page-nav ul {
@@ -138,4 +141,4 @@ h2 {
   text-align: center;
   display: inline;
   padding: 0px 50px 0px 50px;
-}*/
+}
