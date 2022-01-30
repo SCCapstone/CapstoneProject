@@ -40,7 +40,7 @@ For deployment the user will have to contact Camryn or another member for the ne
 
 # Testing
 
-The unit tests are in `/tests/Unit`.
+The unit tests are in `/tests/Unit`. They are automatically integrated into Laravel with unitphp. No third-party software is necessary to unit tests. Unit tests are run using either the command 'php artisan test' or './vendor/bin/unitphp' but both achieve the same result.
 
 The behavioral tests are in `/tests/Behavioral/`. They are built using the Selenium IDE. A guide for installing and using the Selenium command line runner can be found [here](https://www.seleniumhq.org/selenium-ide/docs/en/introduction/command-line-runner/), or, alternatively, you can [use the Selenium IDE browser extension](https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started).
 
