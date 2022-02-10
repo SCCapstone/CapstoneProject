@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GoogleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +46,10 @@ Route::post('/pages/settingsPages/informationSettings', [HouseController::class,
 Route::post('/pages/settingsPages/personalSettings', [HouseController::class, 'storePersonalSettings']);
 Route::post('/pages/settingsPages/roommatesSettings', [HouseController::class, 'storeRoommatesSettings']);
 Route::post('/pages/settingsPages/socialsSettings', [HouseController::class, 'storeSocialsSettings']);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);

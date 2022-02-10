@@ -7,7 +7,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 		<link href="/css/sign.css" type="text/css" rel="stylesheet">
-		<!-- <meta name="google-signin-client_id" content="224820970107-7dsle63ops8sblvn9aheitj99o0bmq9d.apps.googleusercontent.com.apps.googleusercontent.com"> -->
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<meta name="google-signin-client_id" content="224820970107-3ighd8fvmam6kh7qv8rf1jouj3uju4cm.apps.googleusercontent.com">
 	</head>
 
 	<body class="">
@@ -34,51 +35,41 @@
 	<!-- <input type="button" value="Go!" class="signbutton" id="btnHome" onClick="document.location.href='pages/home-page'" style = "top: 600px;" /> -->
 	<button name="button" onClick = "document.location.href='pages/home-page'">Go!</button>
 
-    <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div>
-	<script>
-		function onSuccess(googleUser) {
-      			console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-		}
-    		function onFailure(error) {
-      			console.log(error);
-    		}
-    		function renderButton() {
-      			gapi.signin2.render('my-signin2', {
-        			'scope': 'profile email',
-        			'width': 240,
-        			'height': 50,
-        			'longtitle': true,
-        			'theme': 'dark',
-        			'onsuccess': onSuccess,
-        			'onfailure': onFailure
-      			});
-    		}
-	</script>
-	<script src="https://apis.google.com/js/platform.js" async defer></script> -->
+		<div class="flex items-center justify-end mt-4">
+        	<a href="{{ url('auth/google') }}">
+            	<img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png" style="position: absolute; top: 45px; left: 45px;">
+        	</a>
+    	</div>
 
-	<!-- <script src="https://apis.google.com/js/platform.js" async defer></script>
-	<meta name="google-signin-client_id" content=".apps.googleusercontent.com">
-	<div class="g-signin2" data-onsuccess="onSignIn" style = "top: 400px; left: 550px; position: absolute; height: 75px; width: 350px; box-shadow: 6px 2px 8px #698384;"></div>
+	<!-- 
 	<div class="g-signin2" data-onsuccess="onSignIn"></div>
+	<a href="{{ url('auth/google') }}">
 	<script>
-		function onSuccess(googleUser) {
-      			console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+		function onSignIn(googleUser) {
+			console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+  			var profile = googleUser.getBasicProfile();
+  			console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  			console.log('Name: ' + profile.getName());
+  			console.log('Image URL: ' + profile.getImageUrl());
+  			console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 		}
-    		function onFailure(error) {
-      			console.log(error);
-    		}
-    		function renderButton() {
-      			gapi.signin2.render('my-signin2', {
-        			'scope': 'profile email',
-        			'width': 240,
-        			'height': 50,
-        			'longtitle': true,
-        			'theme': 'dark',
-        			'onsuccess': onSuccess,
-        			'onfailure': onFailure
-      			});
-    		}
-	</script> -->
+		function onFailure(error) {
+      		console.log(error);
+    	}
+    	function renderButton() {
+      		gapi.signin2.render('my-signin2', {
+        		'scope': 'profile email',
+    			'width': 240,
+    			'height': 50,
+	   			'longtitle': true,
+    			'theme': 'dark',
+    			'onsuccess': onSuccess,
+    			'onfailure': onFailure
+  			});
+		}
+	</script>
+	</a>
+	-->
 
 	<div id ="bottom">The home all-in-one-app! Share calendars, organize chores, decide on grocery lists, assign tasks, or discuss topics! We strive to help your household become a more transparent one.</bottom>
 	</body>
