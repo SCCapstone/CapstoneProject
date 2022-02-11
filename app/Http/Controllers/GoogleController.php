@@ -28,34 +28,9 @@ class GoogleController extends Controller
     public function handleGoogleCallback()
     {
         try {
-            $user = Socialite::driver('google')->user();
-        } catch (\Exception $e) {
-            return redirect('/login');
-        }
-        // only allow people with @company.com to login
-        if(explode("@", $user->email)[1] !== 'company.com'){
-            return redirect()->to('/');
-        }
-        // check if they're an existing user
-        $existingUser = User::where('email', $user->email)->first();
-        if($existingUser){
-            // log them in
-            auth()->login($existingUser, true);
-        } else {
-            // create a new user
-            $newUser                  = new User;
-            $newUser->name            = $user->name;
-            $newUser->email           = $user->email;
-            $newUser->google_id       = $user->id;
-            $newUser->avatar          = $user->avatar;
-            $newUser->avatar_original = $user->avatar_original;
-            $newUser->save();
-            auth()->login($newUser, true);
-        }
-        return redirect()->to('/home');
-        /* try {
       
             $user = Socialite::driver('google')->user();
+            
        
             $finduser = User::where('google_id', $user->id)->first();
        
@@ -63,7 +38,7 @@ class GoogleController extends Controller
        
                 Auth::login($finduser);
       
-                return redirect()->intended('dashboard');
+                return redirect()->intended('/pages/home-page');
        
             }else{
                 $newUser = User::create([
@@ -72,14 +47,25 @@ class GoogleController extends Controller
                     'google_id'=> $user->id,
                     'password' => encrypt('123456dummy')
                 ]);
+                DB::table('users')
+                    ->update($newUser);
+
+                /* $updateDetails = [
+                    'emergencyName' => request('emname'),
+                    'emergencyPhone' => request('emnum'),
+                    'emergencyRelation' => request('emrel')
+                ];
+                DB::table('contactinfo')
+                    ->where('id', 1)
+                    ->update($updateDetails); */
       
                 Auth::login($newUser);
       
-                return redirect()->intended('dashboard');
+                return redirect()->intended('/pages/home-page');
             }
       
         } catch (Exception $e) {
             dd($e->getMessage());
-        } */
+        }
     }
 }

@@ -35,13 +35,14 @@
 	<!-- <input type="button" value="Go!" class="signbutton" id="btnHome" onClick="document.location.href='pages/home-page'" style = "top: 600px;" /> -->
 	<button name="button" onClick = "document.location.href='pages/home-page'">Go!</button>
 
-		<div class="flex items-center justify-end mt-4">
+
+	<div class="flex items-center justify-end mt-4">
         	<a href="{{ url('auth/google') }}">
             	<img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png" style="position: absolute; top: 45px; left: 45px;">
         	</a>
     	</div>
 
-	<!-- 
+	<!-- 	
 	<div class="g-signin2" data-onsuccess="onSignIn"></div>
 	<a href="{{ url('auth/google') }}">
 	<script>
@@ -70,6 +71,7 @@
 	</script>
 	</a>
 	-->
+
 
 	<div id ="bottom">The home all-in-one-app! Share calendars, organize chores, decide on grocery lists, assign tasks, or discuss topics! We strive to help your household become a more transparent one.</bottom>
 	</body>
