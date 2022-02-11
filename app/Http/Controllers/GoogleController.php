@@ -47,7 +47,13 @@ class GoogleController extends Controller
                     'google_id'=> $user->id,
                     'password' => encrypt('123456dummy')
                 ]);
+
+                DB::table('users')->insert([
+                    'google_id' => $user->id,
+                ]);
+
                 DB::table('users')
+                    ->where('google_id', $user->id)
                     ->update($newUser);
 
                 /* $updateDetails = [
