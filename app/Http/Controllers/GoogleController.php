@@ -49,11 +49,11 @@ class GoogleController extends Controller
                 ]);
 
                 DB::table('users')->insert([
-                    'google_id' => $user->id,
+                    'google_id' => $newUser->id,
                 ]);
 
                 DB::table('users')
-                    ->where('google_id', $user->id)
+                    ->where('google_id', $newUser->id)
                     ->update($newUser);
 
                 /* $updateDetails = [
