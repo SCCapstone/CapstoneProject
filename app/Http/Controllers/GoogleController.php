@@ -7,6 +7,7 @@ use Laravel\Socialite\Facades\Socialite;
 use Exception;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+
   
 class GoogleController extends Controller
 {
@@ -48,23 +49,6 @@ class GoogleController extends Controller
                     'password' => encrypt('123456dummy')
                 ]);
 
-                DB::table('users')->insert([
-                    'google_id' => $newUser->id,
-                ]);
-
-                DB::table('users')
-                    ->where('google_id', $newUser->id)
-                    ->update($newUser);
-
-                /* $updateDetails = [
-                    'emergencyName' => request('emname'),
-                    'emergencyPhone' => request('emnum'),
-                    'emergencyRelation' => request('emrel')
-                ];
-                DB::table('contactinfo')
-                    ->where('id', 1)
-                    ->update($updateDetails); */
-      
                 Auth::login($newUser);
       
                 return redirect()->intended('/pages/home-page');
