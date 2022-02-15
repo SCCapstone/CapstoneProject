@@ -7,7 +7,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 		<link href="/css/sign.css" type="text/css" rel="stylesheet">
-		<!-- <meta name="google-signin-client_id" content="224820970107-7dsle63ops8sblvn9aheitj99o0bmq9d.apps.googleusercontent.com.apps.googleusercontent.com"> -->
+		<meta name="google-signin-client_id" content="224820970107-7dsle63ops8sblvn9aheitj99o0bmq9d.apps.googleusercontent.com">
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
 	</head>
 
 	<body class="">
