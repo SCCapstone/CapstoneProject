@@ -12,6 +12,13 @@ a {
     color: black;
     font-family: Roboto;
 }
+p {
+    text-decoration: none;
+    color: black;
+    font-family: Roboto;
+    text-align: right;
+    padding: 2px 15px 0;
+}
 a:hover {
     color: #698384;
 }
@@ -43,4 +50,5 @@ li {
 h1 {
     color: #698384;
     text-align: center;
+    margin: 0 auto;
 }

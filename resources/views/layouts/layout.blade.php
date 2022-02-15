@@ -16,7 +16,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1><a href="/pages/home-page">Housemates</a></h1>
+        <h1><a href="/pages/home-page">Housemates</a></h1> 
+        <!-- this needs to be fixed -->
         <nav>
             <ul>
                 <li>
@@ -40,5 +41,6 @@
             </ul>
         </nav>
         @yield('content')
+        
     </body>
 </html>
