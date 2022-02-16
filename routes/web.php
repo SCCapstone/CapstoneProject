@@ -46,3 +46,8 @@ Route::post('/pages/settingsPages/informationSettings', [HouseController::class,
 Route::post('/pages/settingsPages/personalSettings', [HouseController::class, 'storePersonalSettings']);
 Route::post('/pages/settingsPages/roommatesSettings', [HouseController::class, 'storeRoommatesSettings']);
 Route::post('/pages/settingsPages/socialsSettings', [HouseController::class, 'storeSocialsSettings']);
+
+Route::prefix('google')->name('google.')->group( function(){
+    Route::get('login', [GoogleController::class, 'loginWithGoogle'])->name('login');
+    Route::any('callback', [GoogleController::class, 'callbackFromGoogle'])->name('callback');
+});

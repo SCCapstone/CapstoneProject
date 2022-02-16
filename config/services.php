@@ -33,7 +33,8 @@ return [
     'google' => [
         'client_id' => '224820970107-3ighd8fvmam6kh7qv8rf1jouj3uju4cm.apps.googleusercontent.com',
         'client_secret' => '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',
-        'redirect' => 'http://f9f5-12-1-129-7.ngrok.io/callback/google',
+        //'redirect' => 'http://f9f5-12-1-129-7.ngrok.io/callback/google',
+        'redirect' => 'http://d739-2603-6080-4d0a-8600-705c-4837-524d-b7d2.ngrok.io/pages/home-page',
       ], 
 
 ];
