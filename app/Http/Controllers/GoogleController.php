@@ -33,7 +33,7 @@ class GoogleController extends Controller
             $user = Socialite::driver('google')->user();
             
        
-            $finduser = User::where('google_id', $user->id)->first();
+            $finduser = users::where('google_id', $user->id)->first();
        
             if($finduser){
        
@@ -42,7 +42,7 @@ class GoogleController extends Controller
                 return redirect()->intended('/pages/home-page');
        
             }else{
-                $newUser = User::create([
+                $newUser = users::create([
                     'name' => $user->name,
                     'email' => $user->email,
                     'google_id'=> $user->id,
