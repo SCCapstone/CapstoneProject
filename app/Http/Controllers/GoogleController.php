@@ -1,10 +1,6 @@
 <?php
   
-namespace App\Http\Controllers\Auth\Google;
-
-
-use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 use Exception;
