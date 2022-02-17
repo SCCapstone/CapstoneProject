@@ -30,4 +30,11 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'google' => [
+        'client_id' => '224820970107-3ighd8fvmam6kh7qv8rf1jouj3uju4cm.apps.googleusercontent.com',
+        'client_secret' => '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',
+        //'redirect' => 'http://localhost:8000/auth/google/callback',
+        'redirect' => 'http://housemates.fun/auth/google/callback',
+    ],
+
 ];
