@@ -15,13 +15,20 @@ a {
 a:hover {
     color: #698384;
 }
+/* #nav-rectangle {
+    width: 100%;
+    height: 96px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 50px;
+}*/
 nav {
     width: 100vw;
     height: 60px;
-    padding-top: 20px;
+    padding-top: 30px;
     background-color: #FFFFFF;
     position: absolute;
-    top: 80px;
+    top: 85px;
 }
 ul {
     margin: 0;
