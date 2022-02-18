@@ -2,9 +2,9 @@
 
 @section('content')
 
-<div id="shopping-background-rectangle"></div>
+<div id="shopping-background-rectangle">
 
-<form action="/pages/shopping" method="POST">
+<form action="/shopping" method="POST">
 <table id="shopping-table">
     <thead>
         <tr>
@@ -199,5 +199,7 @@
 </table>
 <input type="submit" value="Submit" id="submit">
 </form>
+
+</div>
 
 @endsection

@@ -6,12 +6,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-		<link href="/css/sign.css" type="text/css" rel="stylesheet">
+		<link href="/css/auth.css" type="text/css" rel="stylesheet">
 		<!-- <meta name="google-signin-client_id" content="224820970107-7dsle63ops8sblvn9aheitj99o0bmq9d.apps.googleusercontent.com.apps.googleusercontent.com"> -->
 	</head>
 
 	<body class="">
-		<h1>Welcome HouseMates!</h1>
+		<h1>Welcome Housemates!</h1>
 	<div id="welcomebox"></div>
 	<div id="divider"></div>
 
@@ -32,7 +32,7 @@
 
 	<!-- button goes here -->
 	<!-- <input type="button" value="Go!" class="signbutton" id="btnHome" onClick="document.location.href='pages/home-page'" style = "top: 600px;" /> -->
-	<button name="button" onClick = "document.location.href='pages/home-page'">Go!</button>
+	<button name="button" onClick = "document.location.href='../home'">Go!</button>
 
     <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div>
 	<script>
