@@ -16,24 +16,25 @@
 	<div id="welcomebox"></div>
 	<div id="divider"></div>
 
-    <form>
-         	<!-- Username:<br>  --> <input type="text" name="username" placeholder="Enter here">
-         	<br>
-		    <br>
-         	<!-- Password:<br>  --> <input type="password" name="password" placeholder="Enter here">
-         	<br>
-    </form>
-
     @yield('content')
 
-	<div id="userandpass" style = "top: 330px; left: 525px; position: absolute;">Username:</div>
+	<!--<div id="userandpass" style = "top: 330px; left: 525px; position: absolute;">Username:</div> -->
 	<!-- <div id="entry" style = "top: 425px; left: 525px;"></div> -->
-	<div id="userandpass" style = "top: 450px; left: 525px; position: absolute;">Password:</div>
+	<!-- <div id="userandpass" style = "top: 450px; left: 525px; position: absolute;">Password:</div> -->
 	<!-- <div id="entry" style = "top: 550px; left: 525px;"></div> -->
 
 	<!-- button goes here -->
 	<!-- <input type="button" value="Go!" class="signbutton" id="btnHome" onClick="document.location.href='pages/home-page'" style = "top: 600px;" /> -->
-	<button name="button" onClick = "document.location.href='pages/home-page'">Go!</button>
+
+	<!-- <button name="button" onClick="document.location.href='pages/home-page'">Go!</button> -->
+	
+	<form action='/pages/sign-in' method="POST">
+		<label for="username">First Name</label><br>
+		<input type="text" id="username" name="username" placeholder="Username"><br>
+		<label for="password">Last Name</label><br>
+		<input type="password" id="password" name="password" placeholder="Password"><br>
+		<input type="submit" value="Go">
+	</form>
 
 
 	<div class="flex items-center justify-end mt-4">

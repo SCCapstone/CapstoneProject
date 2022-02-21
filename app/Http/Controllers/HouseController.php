@@ -14,6 +14,25 @@ class HouseController extends Controller
     public function signin(){
         return view('pages.sign-in');
     }
+    public function trySignIn(){
+        $userInfo = [
+            'username' => request('username'),
+            'password' => request('password')
+        ];
+        $finduserU = User::where('username', $userInfo->username)->first();
+        $finduserP = User::where('password', $userInfo->password)->first();
+        if($finduserU && $finduserP){
+            Auth::login($finduserU);
+            return redirect()->intended('/pages/home-page');
+        }else{
+            $newUser = User::create([
+                'name' => $userInfo->username,
+                'password' => encrypt($userInfo->password)
+            ]);
+            Auth::login($newUser);
+            return redirect()->intended('/pages/home-page');
+        }
+    }
     public function signup(){
         return view('pages.sign-up');
     }
