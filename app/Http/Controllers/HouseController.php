@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\House;
 use App\Models\Contact;
 use App\Models\Landlord;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
 class HouseController extends Controller
@@ -16,18 +18,18 @@ class HouseController extends Controller
     }
     public function trySignIn(){
         $userInfo = [
-            'username' => request('username'),
+            'email' => request('email'),
             'password' => request('password')
         ];
-        $finduserU = User::where('username', $userInfo->username)->first();
-        $finduserP = User::where('password', $userInfo->password)->first();
-        if($finduserU && $finduserP){
+        $finduserU = User::where('email', $userInfo['email'])->first();
+        if($finduserU){
             Auth::login($finduserU);
             return redirect()->intended('/pages/home-page');
         }else{
             $newUser = User::create([
-                'name' => $userInfo->username,
-                'password' => encrypt($userInfo->password)
+                'name' => $userInfo['email'],
+                'email' => $userInfo['email'],
+                'password' => encrypt($userInfo['password'])
             ]);
             Auth::login($newUser);
             return redirect()->intended('/pages/home-page');

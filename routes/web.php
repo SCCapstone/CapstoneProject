@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\HouseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,7 @@ use App\Http\Controllers\GoogleController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-//routes
-use App\Http\Controllers\HouseController;
+Route::post('/', [HouseController::class, 'trySignIn']);
 
 Route::get('/pages/contact', [HouseController::class, 'contact']);
 

@@ -28,10 +28,11 @@
 
 	<!-- <button name="button" onClick="document.location.href='pages/home-page'">Go!</button> -->
 	
-	<form action='/pages/sign-in' method="POST">
-		<label for="username">First Name</label><br>
-		<input type="text" id="username" name="username" placeholder="Username"><br>
-		<label for="password">Last Name</label><br>
+	<form action='/' method="POST">
+		@csrf
+		<label for="email">Email</label><br>
+		<input type="text" id="email" name="email" placeholder="Email"><br>
+		<label for="password">Password</label><br>
 		<input type="password" id="password" name="password" placeholder="Password"><br>
 		<input type="submit" value="Go">
 	</form>
