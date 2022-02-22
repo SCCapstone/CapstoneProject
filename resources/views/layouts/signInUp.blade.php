@@ -28,7 +28,7 @@
 
 	<!-- <button name="button" onClick="document.location.href='pages/home-page'">Go!</button> -->
 	
-	<form action='/' method="POST">
+	<form action='user' method="POST">
 		@csrf
 		<label for="email">Email</label><br>
 		<input type="text" id="email" name="email" placeholder="Email"><br>

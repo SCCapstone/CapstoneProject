@@ -16,7 +16,7 @@ class HouseController extends Controller
     public function signin(){
         return view('pages.sign-in');
     }
-    public function trySignIn(){
+    public function trySignIn(Request $req){
         $userInfo = [
             'email' => request('email'),
             'password' => request('password')
@@ -24,6 +24,7 @@ class HouseController extends Controller
         $finduserU = User::where('email', $userInfo['email'])->first();
         if($finduserU){
             Auth::login($finduserU);
+            $req->session()->put('email', $userInfo['email']);
             return redirect()->intended('/pages/home-page');
         }else{
             $newUser = User::create([
@@ -32,6 +33,7 @@ class HouseController extends Controller
                 'password' => encrypt($userInfo['password'])
             ]);
             Auth::login($newUser);
+            $req->session()->put('user', $data['user']);
             return redirect()->intended('/pages/home-page');
         }
     }
