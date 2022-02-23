@@ -24,8 +24,6 @@ class HouseController extends Controller
         $finduserU = User::where('email', $userInfo['email'])->first();
         if($finduserU){
             Auth::login($finduserU);
-            $req->session()->put('email', $userInfo['email']);
-            return redirect()->intended('/pages/home-page');
         }else{
             $newUser = User::create([
                 'name' => $userInfo['email'],
@@ -33,12 +31,22 @@ class HouseController extends Controller
                 'password' => encrypt($userInfo['password'])
             ]);
             Auth::login($newUser);
-            $req->session()->put('user', $data['user']);
-            return redirect()->intended('/pages/home-page');
         }
+        $req->session()->put('email', $userInfo['email']);
+        $req->session()->put('id', Auth::user()->id);
+        return redirect()->intended('/pages/room-num');
     }
     public function signup(){
         return view('pages.sign-up');
+    }
+    public function roomnum(){
+        return view('pages.room-num');
+    }
+    public function assignRoom(Request $req){
+        $id = Auth::user()->id;
+        $affected = DB::update('UPDATE users SET house_num=? WHERE id=?', [request('roomnum'), $id]);
+
+        return redirect()->intended('/pages/home-page');
     }
     public function index(){
         return view('pages.index');
@@ -52,7 +60,8 @@ class HouseController extends Controller
     public function contact(){
         $contacts = Contact::all();
         $landlords = Landlord::all();
-        return view('pages.contact', ['contacts' => $contacts], ['landlords' => $landlords]);
+        $users = DB::table('users')->where('house_num', Auth::user()->house_num)->get();
+        return view('pages.contact', ['contacts' => $contacts], ['landlords' => $landlords], ['users' => $users]);
     }
     public function shopping(){
         return view('pages.shopping');
