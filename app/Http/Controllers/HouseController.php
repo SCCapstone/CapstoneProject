@@ -148,7 +148,7 @@ class HouseController extends Controller
     }
     public function logout(){
         Auth::logout(Auth::user());
-        return redirect()->intended('pages.sign-in');
+        return redirect()->intended('/');
     }
     public function emergencySettings(){
         return view('pages.settingsPages.emergencySettings');
