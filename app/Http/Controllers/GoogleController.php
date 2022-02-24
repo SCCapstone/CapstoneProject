@@ -50,7 +50,7 @@ class GoogleController extends Controller
 
                 Auth::login($newUser);
       
-                return redirect()->intended('/pages/home-page');
+                return redirect()->intended('/pages/room-num');
             }
       
         } catch (Exception $e) {
