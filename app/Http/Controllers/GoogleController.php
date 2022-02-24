@@ -32,7 +32,7 @@ class GoogleController extends Controller
             $user = Socialite::driver('google')->user();
             
        
-            $finduser = User::where('google_id', $user->user_id)->first();
+            $finduser = User::where('google_id', $user->id)->first();
        
             if($finduser){
        
@@ -44,7 +44,7 @@ class GoogleController extends Controller
                 $newUser = User::create([
                     'name' => $user->name,
                     'email' => $user->email,
-                    'google_id'=> $user->user_id,
+                    'google_id'=> $user->id,
                     'password' => encrypt('123456dummy')
                 ]);
 
