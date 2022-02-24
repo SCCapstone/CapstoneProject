@@ -11,28 +11,25 @@ use Illuminate\Support\Facades\DB;
 
 class HouseController extends Controller
 {
-    public function signin(){
-        return view('pages.sign-in');
+    public function login(){
+        return view('auth.login');
     }
-    public function signup(){
-        return view('pages.sign-up');
-    }
-    public function index(){
-        return view('pages.index');
+    public function register(){
+        return view('auth.register');
     }
     public function calendar(){
-        return view('pages.calendar');
+        return view('calendar');
     }
-    public function chat(){
-        return view('pages.chat');
+    public function chores(){
+        return view('chores');
     }
     public function contact(){
         $contacts = Contact::all();
         $landlords = Landlord::all();
-        return view('pages.contact', ['contacts' => $contacts], ['landlords' => $landlords]);
+        return view('contact', ['contacts' => $contacts], ['landlords' => $landlords]);
     }
     public function shopping(){
-        return view('pages.shopping');
+        return view('shopping');
     }
     public function storeShoppingTable(){
         $updateDetails1 = [
@@ -111,23 +108,23 @@ class HouseController extends Controller
         error_log(request('assignee1'));
         return redirect( route('shopping') );
     }
-    public function homepage(){
-        return view('pages.home-page');
+    public function home(){
+        return view('home');
     }
-    public function emergencySettings(){
-        return view('pages.settingsPages.emergencySettings');
+    public function settingsEmergency(){
+        return view('settings.emergency');
     }
-    public function informationSettings(){
-        return view('pages.settingsPages.informationSettings');
+    public function settingsHousing(){
+        return view('settings.housing');
     }
-    public function personalSettings(){
-        return view('pages.settingsPages.personalSettings');
+    public function settingsPersonal(){
+        return view('settings.personal');
     }
-    public function roommatesSettings(){
-        return view('pages.settingsPages.roommatesSettings');
+    public function settingsInvite(){
+        return view('settings.invite');
     }
-    public function socialsSettings(){
-        return view('pages.settingsPages.socialsSettings');
+    public function settingsSocial(){
+        return view('settings.social');
     }
 
     public function storeEmergencySettings() {
@@ -145,7 +142,7 @@ class HouseController extends Controller
         return redirect( route('settings.emergency') );
     }
 
-    public function storeInformationSettings() {
+    public function storeHousingSettings() {
         $updateDetails = [
             'housingType' => request('housing'),
             'rentalCompany' => request('rent'),
@@ -187,7 +184,7 @@ class HouseController extends Controller
         return redirect( route('settings.personal') );
     }
 
-    public function storeRoommatesSettings() {
+    public function storeInviteSettings() {
         $updateDetails = [
             'roommate1' => request('r1'),
             'roommate2' => request('r2'),
@@ -206,7 +203,7 @@ class HouseController extends Controller
         return redirect( route('settings.roommates') );
     }
 
-    public function storeSocialsSettings() {
+    public function storeSocialSettings() {
         $updateDetails = [
             'instagram' => request('insta'),
             'snapchat' => request('snap'),
@@ -220,6 +217,6 @@ class HouseController extends Controller
         error_log(request('snap'));
         error_log(request('venmo'));
         error_log(request('tt'));
-        return redirect( route('settings.socials') );
+        return redirect( route('settings.social') );
     }
 }
