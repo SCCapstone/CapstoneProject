@@ -5,6 +5,11 @@
 
 <body>
 
+	<form action='logout' method="POST">
+		@csrf
+        <button>Logout</button>
+	</form>
+
 	<div id="box1"></div>
     	<div id="alert-rectangle"></div>
     	<div id="alert2-rectangle"></div>
