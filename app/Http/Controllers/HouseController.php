@@ -33,7 +33,7 @@ class HouseController extends Controller
             Auth::login($newUser);
         }
         $req->session()->put('email', $userInfo['email']);
-        $req->session()->put('id', Auth::user()->id);
+        $req->session()->put('id', Auth::user()->user_id);
         return redirect()->intended('/pages/room-num');
     }
     public function signup(){
@@ -43,7 +43,7 @@ class HouseController extends Controller
         return view('pages.room-num');
     }
     public function assignRoom(Request $req){
-        $id = Auth::user()->id;
+        $id = Auth::user()->user_id;
         $affected = DB::update('UPDATE users SET house_num=? WHERE id=?', [request('roomnum'), $id]);
 
         return redirect()->intended('/pages/home-page');
