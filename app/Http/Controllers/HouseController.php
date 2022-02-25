@@ -209,7 +209,7 @@ class HouseController extends Controller
 
     public function storePersonalSettings() {
         $updateDetails = [
-            'Name' => request('name'),
+            'name' => request('name'),
             'phone' => request('phone'),
             'email' => request('email'),
             'address' => request('address')
