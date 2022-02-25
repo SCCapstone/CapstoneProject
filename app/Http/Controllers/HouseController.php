@@ -43,9 +43,8 @@ class HouseController extends Controller
         return view('pages.room-num');
     }
     public function assignRoom(Request $req){
-        $id = Auth::user()->user_id;
-        $affected = DB::update('UPDATE users SET house_num=? WHERE user_id=?', [request('roomnum'), $id]);
-
+        $id = Auth::user()->id;
+        $affected = DB::update('UPDATE users SET house_num=? WHERE id=?', [request('roomnum'), $id]);
         return redirect()->intended('/pages/home-page');
     }
     public function index(){
