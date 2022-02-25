@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
 
-<h1>Sign-in</h1>
+<h1>Contact</h1>
 
 @endsection
