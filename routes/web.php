@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\HouseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,21 +18,24 @@ use Laravel\Socialite\Facades\Socialite;
 Route::get('/', function () {
     return view('welcome');
 });
-
-//routes
-use App\Http\Controllers\HouseController;
+Route::post('user', [HouseController::class, 'trySignIn']);
 
 Route::get('/pages/contact', [HouseController::class, 'contact']);
 
 Route::get('/pages/settings', [HouseController::class, 'settings']);
 
 Route::get('/pages/sign-in', [HouseController::class, 'signin']);
+//Route::post('/pages/sign-in', [HouseController::class, 'trySignIn']);
 Route::get('/pages/sign-up', [HouseController::class, 'signup']);
 Route::get('/pages/home-page', [HouseController::class, 'homepage']);
+Route::post('/pages/logout', [HouseController::class, 'logout']);
 Route::get('/pages/shopping', [HouseController::class, 'shopping'])->name('shopping');
 Route::post('/pages/shopping', [HouseController::class, 'storeShoppingTable']);
 Route::get('/pages/calendar', [HouseController::class, 'calendar']);
 Route::get('/pages/chat', [HouseController::class, 'chat']);
+
+Route::get('/pages/room-num', [HouseController::class, 'roomnum']);
+Route::post('/pages/roomNum', [HouseController::class, 'assignRoom']);
 
 Route::get('/pages/index', [HouseController::class, 'index']);
 
@@ -47,7 +51,9 @@ Route::post('/pages/settingsPages/personalSettings', [HouseController::class, 's
 Route::post('/pages/settingsPages/roommatesSettings', [HouseController::class, 'storeRoommatesSettings']);
 Route::post('/pages/settingsPages/socialsSettings', [HouseController::class, 'storeSocialsSettings']);
 
-Route::prefix('google')->name('google.')->group( function(){
-    Route::get('login', [GoogleController::class, 'loginWithGoogle'])->name('login');
-    Route::any('callback', [GoogleController::class, 'callbackFromGoogle'])->name('callback');
-});
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
+Route::get('oauth2callback', [GoogleController::class, 'handleGoogleCallback']);

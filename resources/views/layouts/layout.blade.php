@@ -8,6 +8,7 @@
         <link href="/css/home.css" type="text/css" rel="stylesheet">
         <link href="/css/shopping.css" type="text/css" rel="stylesheet">
         <link href="/css/calendar.css" type="text/css" rel="stylesheet">
+        <link href="/css/roomnum.css" type="text/css" rel="stylesheet">
 
         <script src="{{ asset('resources/js/reminders.js')}}"></script>
         
@@ -15,6 +16,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
+    <form action='logout' method="POST">
+		@csrf
+        <button>Logout</button>
+	</form>
     <body>
         <h1><a href="/pages/home-page">Housemates</a></h1> 
         <!-- this needs to be fixed -->

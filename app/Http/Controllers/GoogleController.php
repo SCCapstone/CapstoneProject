@@ -1,49 +1,60 @@
 <?php
-
+  
 namespace App\Http\Controllers;
-
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Laravel\Socialite\Facades\Socialite;
+use Exception;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
+  
 class GoogleController extends Controller
 {
-    public function loginWithGoogle()
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function redirectToGoogle()
     {
         return Socialite::driver('google')->redirect();
     }
-
-    public function callbackFromGoogle()
+        
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function handleGoogleCallback()
     {
         try {
+      
             $user = Socialite::driver('google')->user();
-
-            // Check Users Email If Already There
-            $is_user = User::where('email', $user->getEmail())->first();
-            if(!$is_user){
-
-                $saveUser = User::updateOrCreate([
-                    'google_id' => $user->getId(),
-                ],[
-                    'name' => $user->getName(),
-                    'email' => $user->getEmail(),
-                    'password' => Hash::make($user->getName().'@'.$user->getId())
-                ]);
+            
+       
+            $finduser = User::where('google_id', $user->id)->first();
+       
+            if($finduser){
+       
+                Auth::login($finduser);
+      
+                return redirect()->intended('/pages/home-page');
+       
             }else{
-                $saveUser = User::where('email',  $user->getEmail())->update([
-                    'google_id' => $user->getId(),
+                $newUser = User::create([
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'google_id'=> $user->id,
+                    'password' => encrypt('123456dummy')
                 ]);
-                $saveUser = User::where('email', $user->getEmail())->first();
+
+                Auth::login($newUser);
+      
+                return redirect()->intended('/pages/room-num');
             }
-
-
-            Auth::loginUsingId($saveUser->id);
-
-            return redirect()->route('homepage');
-        } catch (\Throwable $th) {
-            throw $th;
+      
+        } catch (Exception $e) {
+            dd($e->getMessage());
         }
     }
 }
