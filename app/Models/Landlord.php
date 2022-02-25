@@ -10,4 +10,5 @@ class Landlord extends Model
     use HasFactory;
 
     protected $table = 'landlord';
+    protected $fillable = ['landlordnum'];
 }

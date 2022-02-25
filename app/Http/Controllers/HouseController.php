@@ -24,6 +24,7 @@ class HouseController extends Controller
         $finduserU = User::where('email', $userInfo['email'])->first();
         if($finduserU){
             Auth::login($finduserU);
+            return redirect()->intended('/pages/home-page');
         }else{
             $newUser = User::create([
                 'name' => $userInfo['email'],
@@ -31,10 +32,10 @@ class HouseController extends Controller
                 'password' => encrypt($userInfo['password'])
             ]);
             Auth::login($newUser);
+            return redirect()->intended('/pages/room-num');
         }
         $req->session()->put('email', $userInfo['email']);
         $req->session()->put('id', Auth::user()->id);
-        return redirect()->intended('/pages/room-num');
     }
     public function signup(){
         return view('pages.sign-up');
@@ -45,6 +46,11 @@ class HouseController extends Controller
     public function assignRoom(Request $req){
         $id = Auth::user()->id;
         $affected = DB::update('UPDATE users SET house_num=? WHERE id=?', [request('roomnum'), $id]);
+
+        $findLandlord = Landlord::where('landlordnum', request('roomnum'))->first();
+        if(!$findLandlord){
+            $newLandlord = Landlord::create(['landlordnum' => request('roomnum')]);
+        }
         return redirect()->intended('/pages/home-page');
     }
     public function index(){
@@ -57,10 +63,10 @@ class HouseController extends Controller
         return view('pages.chat');
     }
     public function contact(){
-        $contacts = Contact::all();
-        $landlords = Landlord::all();
-        $users = DB::table('users')->where('house_num', Auth::user()->house_num)->get();
-        return view('pages.contact', ['contacts' => $contacts], ['landlords' => $landlords], ['users' => $users]);
+        $landlords = DB::table('landlord')->where('landlordnum', Auth::user()->house_num)->first();
+        $users = DB::table('users')->where('house_num', Auth::user()->house_num)
+            ->whereNotIn('id', DB::table('users')->select('id')->where('id', Auth::user()->id))->get();
+        return view('pages.contact', ['landlords' => $landlords], ['users' => $users]);
     }
     public function shopping(){
         return view('pages.shopping');
@@ -153,13 +159,11 @@ class HouseController extends Controller
         return view('pages.settingsPages.emergencySettings');
     }
     public function informationSettings(){
-        return view('pages.settingsPages.informationSettings');
+        $landlords = Landlord::all();
+        return view('pages.settingsPages.informationSettings', ['landlords' => $landlords]);
     }
     public function personalSettings(){
         return view('pages.settingsPages.personalSettings');
-    }
-    public function roommatesSettings(){
-        return view('pages.settingsPages.roommatesSettings');
     }
     public function socialsSettings(){
         return view('pages.settingsPages.socialsSettings');
@@ -171,9 +175,9 @@ class HouseController extends Controller
             'emergencyPhone' => request('emnum'),
             'emergencyRelation' => request('emrel')
         ];
-        DB::table('contactinfo')
-            ->where('id', 1)
-            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
+        DB::table('users')
+            ->where('id', Auth::user()->id)
+            ->update($updateDetails); 
         error_log(request('emname'));
         error_log(request('emnum'));
         error_log(request('emrel'));
@@ -191,8 +195,9 @@ class HouseController extends Controller
             'rentDueBy' => request('due')
         ];
         DB::table('landlord')
-            ->where('id', 1)
-            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
+            ->where('landlordnum', Auth::user()->house_num)
+            ->where('id', Auth::user()->id)
+            ->update($updateDetails); 
         error_log(request('housing'));
         error_log(request('rent'));
         error_log(request('hours'));
@@ -205,40 +210,19 @@ class HouseController extends Controller
 
     public function storePersonalSettings() {
         $updateDetails = [
-            'firstName' => request('fname'),
-            'lastName' => request('lname'),
+            'name' => request('name'),
             'phone' => request('phone'),
             'email' => request('email'),
             'address' => request('address')
         ];
-        DB::table('contactinfo')
-            ->where('id', 1)
-            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
-        error_log(request('fname'));
-        error_log(request('lname'));
+        DB::table('users')
+            ->where('id', Auth::user()->id)
+            ->update($updateDetails); 
+        error_log(request('name'));
         error_log(request('phone'));
         error_log(request('email'));
         error_log(request('address'));
         return redirect( route('settings.personal') );
-    }
-
-    public function storeRoommatesSettings() {
-        $updateDetails = [
-            'roommate1' => request('r1'),
-            'roommate2' => request('r2'),
-            'roommate3' => request('r3'),
-            'roommate4' => request('r4'),
-            'inviteRoommate' => request('invite'),
-        ];
-        DB::table('contactinfo')
-            ->where('id', 1)
-            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
-        error_log(request('r1'));
-        error_log(request('r2'));
-        error_log(request('r3'));
-        error_log(request('r4'));
-        error_log(request('invite'));
-        return redirect( route('settings.roommates') );
     }
 
     public function storeSocialsSettings() {
@@ -248,9 +232,9 @@ class HouseController extends Controller
             'venmo' => request('venmo'),
             'tiktok' => request('tt')
         ];
-        DB::table('contactinfo')
-            ->where('id', 1)
-            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
+        DB::table('users')
+            ->where('id', Auth::user()->id)
+            ->update($updateDetails); 
         error_log(request('insta'));
         error_log(request('snap'));
         error_log(request('venmo'));
