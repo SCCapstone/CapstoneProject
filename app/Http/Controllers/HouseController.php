@@ -153,13 +153,11 @@ class HouseController extends Controller
         return view('pages.settingsPages.emergencySettings');
     }
     public function informationSettings(){
-        return view('pages.settingsPages.informationSettings');
+        $landlords = Landlord::all();
+        return view('pages.settingsPages.informationSettings', ['landlords' => $landlords]);
     }
     public function personalSettings(){
         return view('pages.settingsPages.personalSettings');
-    }
-    public function roommatesSettings(){
-        return view('pages.settingsPages.roommatesSettings');
     }
     public function socialsSettings(){
         return view('pages.settingsPages.socialsSettings');
@@ -171,9 +169,9 @@ class HouseController extends Controller
             'emergencyPhone' => request('emnum'),
             'emergencyRelation' => request('emrel')
         ];
-        DB::table('contactinfo')
-            ->where('id', 1)
-            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
+        DB::table('users')
+            ->where('id', Auth::user()->id)
+            ->update($updateDetails); 
         error_log(request('emname'));
         error_log(request('emnum'));
         error_log(request('emrel'));
@@ -191,8 +189,8 @@ class HouseController extends Controller
             'rentDueBy' => request('due')
         ];
         DB::table('landlord')
-            ->where('id', 1)
-            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
+            ->where('id', Auth::user()->id)
+            ->update($updateDetails); 
         error_log(request('housing'));
         error_log(request('rent'));
         error_log(request('hours'));
@@ -205,40 +203,19 @@ class HouseController extends Controller
 
     public function storePersonalSettings() {
         $updateDetails = [
-            'firstName' => request('fname'),
-            'lastName' => request('lname'),
+            'Name' => request('name'),
             'phone' => request('phone'),
             'email' => request('email'),
             'address' => request('address')
         ];
-        DB::table('contactinfo')
-            ->where('id', 1)
-            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
-        error_log(request('fname'));
-        error_log(request('lname'));
+        DB::table('users')
+            ->where('id', Auth::user()->id)
+            ->update($updateDetails); 
+        error_log(request('name'));
         error_log(request('phone'));
         error_log(request('email'));
         error_log(request('address'));
         return redirect( route('settings.personal') );
-    }
-
-    public function storeRoommatesSettings() {
-        $updateDetails = [
-            'roommate1' => request('r1'),
-            'roommate2' => request('r2'),
-            'roommate3' => request('r3'),
-            'roommate4' => request('r4'),
-            'inviteRoommate' => request('invite'),
-        ];
-        DB::table('contactinfo')
-            ->where('id', 1)
-            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
-        error_log(request('r1'));
-        error_log(request('r2'));
-        error_log(request('r3'));
-        error_log(request('r4'));
-        error_log(request('invite'));
-        return redirect( route('settings.roommates') );
     }
 
     public function storeSocialsSettings() {
@@ -248,9 +225,9 @@ class HouseController extends Controller
             'venmo' => request('venmo'),
             'tiktok' => request('tt')
         ];
-        DB::table('contactinfo')
-            ->where('id', 1)
-            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
+        DB::table('users')
+            ->where('id', Auth::user()->id)
+            ->update($updateDetails); 
         error_log(request('insta'));
         error_log(request('snap'));
         error_log(request('venmo'));

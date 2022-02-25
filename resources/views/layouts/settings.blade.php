@@ -12,7 +12,6 @@
     <h4><a href="{{ route('settings.emergency') }}">Emergency</a></h4>
     <h3>House</h3>
     <h4><a href="{{ route('settings.information') }}">Information</a></h4>
-    <h4><a href="{{ route('settings.roommates') }}">Roommates</a></h4>
 </div>
 
 @yield('subSettingsPages')
