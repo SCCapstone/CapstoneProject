@@ -3,7 +3,7 @@
 
 <div class="emergency">
 	<h1>Emergency Contact</h1>
-	<form action='/settings/emergency' method="POST">
+	<form action='/pages/settingsPages/emergencySettings' method="POST">
 		@csrf
 		<label for="emname">Emergency Contact Name</label><br>
 		<input size="50" type="text" id="emname" name="emname" value="{{ DB::table('contactinfo')->where('id',1)->value('emergencyName') }}"><br>

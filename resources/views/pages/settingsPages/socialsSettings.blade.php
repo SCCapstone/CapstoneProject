@@ -3,7 +3,7 @@
 	
 <div class="social">
 	<h1>Social Media</h1>
-	<form action='/settings/social' method="POST">
+	<form action='/pages/settingsPages/socialsSettings' method="POST">
 		@csrf
 		<label for="insta">Instagram</label><br>
 		<input size="50" type="text" id="insta" name="insta" value="{{ DB::table('contactinfo')->where('id',1)->value('instagram') }}"><br>

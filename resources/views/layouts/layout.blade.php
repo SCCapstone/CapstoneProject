@@ -23,26 +23,26 @@
         <button>Logout</button>
 	</form>
     <body>
-        <h1 class="logo"><a href="/home">Housemates</a></h1>
+        <h1 class="logo"><a href="/pages/home-page">Housemates</a></h1>
         <nav class="primary-nav">
             <ul>
                 <li>
-                    <a href="/home">Home</a>
+                    <a href="/pages/home-page">Home</a>
                 </li>
                 <li>
-                    <a href="/calendar">Calendar</a>
+                    <a href="/pages/calendar">Calendar</a>
                 </li>
                 <li>
-                    <a href="/shopping">Shopping</a>
+                    <a href="/pages/shopping">Shopping</a>
                 </li>
                 <li>
-                    <a href="/chores">Chores</a>
+                    <a href="/pages/chores">Chores</a>
                 </li>
                 <li>
-                    <a href="/contact">Contact</a>
+                    <a href="/pages/contact">Contact</a>
                 </li>
                 <li>
-                    <a href="/settings/personal">Settings</a>
+                    <a href="/pages/settingsPages/personalSettings">Settings</a>
                 </li>
             </ul>
         </nav>

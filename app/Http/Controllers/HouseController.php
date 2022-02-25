@@ -15,12 +15,18 @@ class HouseController extends Controller {
     
     /* AUTHENTICATION AND ACCOUNT HANDLING */
 
+    /* public function signin(){
+        return view('pages.sign-in');
+    }
+    public function signup(){
+        return view('pages.sign-up');
+    }
     public function login(){
         return view('auth.login');
     }
     public function register(){
         return view('auth.register');
-    }
+    } */
     public function logout(){
         Auth::logout(Auth::user());
         return redirect()->intended('/');
@@ -46,9 +52,7 @@ class HouseController extends Controller {
         $req->session()->put('email', $userInfo['email']);
         $req->session()->put('id', Auth::user()->id);
     }
-    public function signup(){
-        return view('pages.sign-up');
-    }
+    
     public function roomnum(){
         return view('pages.room-num');
     }
@@ -65,9 +69,6 @@ class HouseController extends Controller {
 
     /* MAIN PAGES */
 
-    public function home(){
-        return view('home');
-    }
     public function homepage(){
         return view('pages.home-page');
     }
@@ -75,10 +76,10 @@ class HouseController extends Controller {
         return view('pages.index');
     }
     public function calendar(){
-        return view('calendar');
+        return view('pages.calendar');
     }
     public function chores(){
-        return view('chores');
+        return view('pages.chores');
     }
     public function contact(){
         $landlords = DB::table('landlord')->where('landlordnum', Auth::user()->house_num)->first();
@@ -87,7 +88,7 @@ class HouseController extends Controller {
         return view('pages.contact', ['landlords' => $landlords], ['users' => $users]);
     }
     public function shopping(){
-        return view('shopping');
+        return view('pages.shopping');
     }
     public function storeShoppingTable(){
         $updateDetails1 = [
@@ -169,8 +170,8 @@ class HouseController extends Controller {
     
     /* SETTINGS */
 
-    public function settingsEmergency(){
-        return view('settings.emergency');
+    public function emergencySettings(){
+        return view('pages.settingsPages.emergencySettings');
     }
     public function storeEmergencySettings() {
         $updateDetails = [
@@ -184,17 +185,14 @@ class HouseController extends Controller {
         error_log(request('emname'));
         error_log(request('emnum'));
         error_log(request('emrel'));
-        return redirect( route('settings.emergency') );
+        return redirect( route('pages.settingsPages.emergencySettings') );
     }
 
-    public function settingsHousing(){
-        return view('settings.housing');
-    }
     public function informationSettings(){
         $landlords = Landlord::all();
-        return view('settings.housing', ['landlords' => $landlords]);
+        return view('pages.settingsPages.informationSettings', ['landlords' => $landlords]);
     }
-    public function storeHousingSettings() {
+    public function storeInformationSettings() {
         $updateDetails = [
             'housingType' => request('housing'),
             'rentalCompany' => request('rent'),
@@ -215,11 +213,11 @@ class HouseController extends Controller {
         error_log(request('email'));
         error_log(request('address'));
         error_log(request('due'));
-        return redirect( route('settings.information') );
+        return redirect( route('pages.settingsPages.informationSettings') );
     }
 
-    public function settingsPersonal(){
-        return view('settings.personal');
+    public function personalSettings(){
+        return view('pages.settingsPages.personalSettings');
     }
     public function storePersonalSettings() {
         $updateDetails = [
@@ -235,35 +233,13 @@ class HouseController extends Controller {
         error_log(request('phone'));
         error_log(request('email'));
         error_log(request('address'));
-        return redirect( route('settings.personal') );
+        return redirect( route('pages.settingsPages.personalSettings') );
     }
 
-    public function settingsInvite(){
-        return view('settings.invite');
+    public function socialsSettings(){
+        return view('pages.settingsPages.socialsSettings');
     }
-    public function storeInviteSettings() {
-        $updateDetails = [
-            'roommate1' => request('r1'),
-            'roommate2' => request('r2'),
-            'roommate3' => request('r3'),
-            'roommate4' => request('r4'),
-            'inviteRoommate' => request('invite'),
-        ];
-        DB::table('contactinfo')
-            ->where('id', 1)
-            ->update($updateDetails); //Currently pointing to user 1 for testing, will implement user_id later
-        error_log(request('r1'));
-        error_log(request('r2'));
-        error_log(request('r3'));
-        error_log(request('r4'));
-        error_log(request('invite'));
-        return redirect( route('settings.roommates') );
-    }
-
-    public function settingsSocial(){
-        return view('settings.social');
-    }
-    public function storeSocialSettings() {
+    public function storeSocialsSettings() {
         $updateDetails = [
             'instagram' => request('insta'),
             'snapchat' => request('snap'),
@@ -277,6 +253,6 @@ class HouseController extends Controller {
         error_log(request('snap'));
         error_log(request('venmo'));
         error_log(request('tt'));
-        return redirect( route('settings.social') );
+        return redirect( route('pages.settingsPages.socialsSettings') );
     }
 }

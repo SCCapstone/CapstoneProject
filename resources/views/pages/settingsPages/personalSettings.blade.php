@@ -3,7 +3,7 @@
 	
 <div class="personal">
 	<h1>Personal Profile</h1>
-	<form action='/settings/personal' method="POST">
+	<form action='/pages/settingsPages/personalSettings' method="POST">
 		@csrf
 		<label for="fname">First Name</label><br>
 		<input size="50" type="text" id="fname" name="fname" value="{{ DB::table('contactinfo')->where('id',1)->value('firstName') }}"><br>

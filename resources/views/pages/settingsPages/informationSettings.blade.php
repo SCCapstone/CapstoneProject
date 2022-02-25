@@ -3,7 +3,7 @@
 	
 <div class="housing">
 	<h1>Housing Information</h1>
-	<form action='/settings/housing' method="POST">
+	<form action='/pages/settingsPages/informationSettings' method="POST">
 		@csrf
 		<label for="housing">Type of Housing</label><br>
 		<input size="50" type="text" id="housing" name="housing" value="{{ DB::table('landlord')->where('landlordnum', Auth::user()->house_num)->value('housingType') }}"><br>
