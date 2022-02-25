@@ -1,0 +1,15 @@
+#roomNum{
+    position: relative;
+    left: 25%;
+    background: white;
+    width: 50%;
+    height: 200px;
+    border-radius: 15px;
+    margin-top: 4%;
+}
+p{
+    color: black;
+}
+h2{
+    color: black;
+}

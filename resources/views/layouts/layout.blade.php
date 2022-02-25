@@ -18,6 +18,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
+    <form action='logout' method="POST">
+		@csrf
+        <button>Logout</button>
+	</form>
     <body>
         <h1 class="logo"><a href="/home">Housemates</a></h1>
         <nav class="primary-nav">
