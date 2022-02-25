@@ -24,6 +24,7 @@ class HouseController extends Controller
         $finduserU = User::where('email', $userInfo['email'])->first();
         if($finduserU){
             Auth::login($finduserU);
+            return redirect()->intended('/pages/home-page');
         }else{
             $newUser = User::create([
                 'name' => $userInfo['email'],
@@ -31,10 +32,10 @@ class HouseController extends Controller
                 'password' => encrypt($userInfo['password'])
             ]);
             Auth::login($newUser);
+            return redirect()->intended('/pages/room-num');
         }
         $req->session()->put('email', $userInfo['email']);
         $req->session()->put('id', Auth::user()->id);
-        return redirect()->intended('/pages/room-num');
     }
     public function signup(){
         return view('pages.sign-up');
@@ -62,10 +63,10 @@ class HouseController extends Controller
         return view('pages.chat');
     }
     public function contact(){
-        $contacts = Contact::all();
-        $landlords = Landlord::all();
-        $users = DB::table('users')->where('house_num', Auth::user()->house_num)->get();
-        return view('pages.contact', ['contacts' => $contacts], ['landlords' => $landlords], ['users' => $users]);
+        $landlords = DB::table('landlord')->where('landlordnum', Auth::user()->house_num)->first();
+        $users = DB::table('users')->where('house_num', Auth::user()->house_num)
+            ->whereNotIn('id', DB::table('users')->select('id')->where('id', Auth::user()->id))->get();
+        return view('pages.contact', ['landlords' => $landlords], ['users' => $users]);
     }
     public function shopping(){
         return view('pages.shopping');
