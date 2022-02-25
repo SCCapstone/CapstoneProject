@@ -14,8 +14,12 @@
     	</div>
 
 	<div style = "position:absolute; left:40px; top:525px; color:black; font-size:48px; font-weight: bold; font-family: Roboto">
-      	Alerts:
-    	</div>
+		Alerts: <!-- TODO: PULL FROM DB -->
+		<!-- @foreach($chores as $chore)
+			<p>Alerts: {{ $chorse->phone }}</p>
+			<p>Address: {{ $landlord->officeAddress }}</p>
+		@endforeach -->
+	</div>
     	<!-- display alerts based on user input -->
 
 	<div style = "position:absolute; left:40px; top:725px; color:black; font-size:24px; font-weight: bold; font-family: Roboto">

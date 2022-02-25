@@ -112,8 +112,11 @@ class HouseController extends Controller
         return redirect( route('shopping') );
     }
     public function homepage(){
+        //$alerts = Chores::all();
+        //return view('pages.home-page', ['home-page' => $alerts]);
         return view('pages.home-page');
     }
+
     public function emergencySettings(){
         return view('pages.settingsPages.emergencySettings');
     }
