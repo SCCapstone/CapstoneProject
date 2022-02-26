@@ -14,7 +14,7 @@
       	<!-- Change name based on user input -->
     	</div>
 
-	<div style = "position:absolute; left:40px; top:525px; color:black; font-size:48px; font-weight: bold; font-family: Roboto">
+	<div style = "position:absolute; left:40px; top:525px; color:black; font-size:48px; font-weight: bold; font-family: Roboto" value="{{ DB::table('users')->where('id', Auth::user()->id)->value('email') }}">
       	Alerts:
     	</div>
     	<!-- display alerts based on user input -->
