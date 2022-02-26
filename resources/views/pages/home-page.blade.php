@@ -17,7 +17,7 @@
 	<div style = "position:absolute; left:40px; top:525px; color:black; font-size:48px; font-weight: bold; font-family: Roboto">
 		Alerts: <!-- TODO: PULL FROM DB -->
 		<!-- @foreach($chores as $chore)
-			<p>Alerts: {{ $chorse->phone }}</p>
+			<p>Alerts: {{ $chores->phone }}</p>
 			<p>Address: {{ $landlord->officeAddress }}</p>
 		@endforeach -->
 	</div>
