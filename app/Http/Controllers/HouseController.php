@@ -213,7 +213,8 @@ class HouseController extends Controller
             'name' => request('name'),
             'phone' => request('phone'),
             'email' => request('email'),
-            'address' => request('address')
+            'address' => request('address'),
+            'calendar' => request('calendar')
         ];
         DB::table('users')
             ->where('id', Auth::user()->id)
@@ -222,6 +223,7 @@ class HouseController extends Controller
         error_log(request('phone'));
         error_log(request('email'));
         error_log(request('address'));
+        error_log(request('calendar'));
         return redirect( route('settings.personal') );
     }
 
