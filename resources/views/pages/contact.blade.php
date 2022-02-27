@@ -28,11 +28,11 @@
         <p><b>Email:</b></p><p>{{ $person->email }}</p><br>
         <p><b>Emergency Contact:</b></p><p>{{ $person->emergencyName }}</p><br>
         <p><b>Relation:</b></p><p>{{ $person->emergencyRelation }}</p><br>
-        <p><b>Emergencry Phone:</b></p><p>{{ $person->emergencyPhone }}</p><br>
-        <p><b>Instagram</b></p><p>{{ $person->instagram }}</p><br>
-        <p><b>Snapchat</b></p><p>{{ $person->snapchat }}</p><br>
-        <p><b>Venmo</b></p><p>{{ $person->venmo }}</p><br>
-        <p><b>TikTok</b></p><p>{{ $person->tiktok }}</p><br>
+        <p><b>Emergency Phone:</b></p><p>{{ $person->emergencyPhone }}</p><br>
+        <p><b>Instagram:</b></p><p>{{ $person->instagram }}</p><br>
+        <p><b>Snapchat:</b></p><p>{{ $person->snapchat }}</p><br>
+        <p><b>Venmo:</b></p><p>{{ $person->venmo }}</p><br>
+        <p><b>TikTok:</b></p><p>{{ $person->tiktok }}</p><br>
     </div>
     @endforeach
 </div>

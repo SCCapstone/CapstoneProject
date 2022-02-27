@@ -37,6 +37,9 @@ Route::get('/pages/chores', [HouseController::class, 'chores']);
 Route::get('/pages/room-num', [HouseController::class, 'roomnum']);
 Route::post('/pages/roomNum', [HouseController::class, 'assignRoom']);
 
+Route::get('/pages/room-num', [HouseController::class, 'roomnum']);
+Route::post('/pages/roomNum', [HouseController::class, 'assignRoom']);
+
 Route::get('/pages/index', [HouseController::class, 'index']);
 
 Route::get('/pages/settingsPages/emergencySettings', [HouseController::class, 'emergencySettings'])->name('settings.emergency');
@@ -48,6 +51,7 @@ Route::post('/pages/settingsPages/emergencySettings', [HouseController::class, '
 Route::post('/pages/settingsPages/informationSettings', [HouseController::class, 'storeInformationSettings']);
 Route::post('/pages/settingsPages/personalSettings', [HouseController::class, 'storePersonalSettings']);
 Route::post('/pages/settingsPages/socialsSettings', [HouseController::class, 'storeSocialsSettings']);
+Route::post('/pages/settingsPages/logout', [HouseController::class, 'logout']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

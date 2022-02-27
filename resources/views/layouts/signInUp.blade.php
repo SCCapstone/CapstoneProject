@@ -16,13 +16,6 @@
 		<div id="welcomebox"></div>
 		<div id="divider"></div>
 
-		@yield('content')
-
-		<!--<div id="userandpass" style = "top: 330px; left: 525px; position: absolute;">Username:</div> -->
-		<!-- <div id="entry" style = "top: 425px; left: 525px;"></div> -->
-		<!-- <div id="userandpass" style = "top: 450px; left: 525px; position: absolute;">Password:</div> -->
-		<!-- <div id="entry" style = "top: 550px; left: 525px;"></div> -->
-
     @yield('content')
 
 	<!--<div id="userandpass" style = "top: 330px; left: 525px; position: absolute;">Username:</div> -->
