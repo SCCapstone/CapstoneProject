@@ -15,14 +15,14 @@
 		  <!-- TODO -->  
     	</div>
 
+
+
 	<div style = "position:absolute; left:40px; top:525px; color:black; font-size:48px; font-weight: bold; font-family: Roboto">
-		<form action='/pages/home-page' method="POST">
-			@csrf
-			<label for="alert">Alert</label><br>
-			<input size="50" type="text" id="alert" name="alert" value="{{ DB::table('users')->where('id', Auth::user()->id)->value('name') }}"><br>
-			<!-- Alerts: -->
-		</form>
+		Alerts:
     </div>
+	<div style = "position: absolute; left: 50px; 525pxl color: black; font-size: 38px; font-family: Roboto" value ="{{ DB::table('chores-table')->where('id', Auth::user()->id)->value('name') }}">
+
+	</div>
 		<!-- TODO -->
     	<!-- display alerts based on user input -->
 
