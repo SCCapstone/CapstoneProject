@@ -23,8 +23,8 @@ class HouseController extends Controller
     public function calendar(){
         return view('pages.calendar');
     }
-    public function chat(){
-        return view('pages.chat');
+    public function chores(){
+        return view('pages.chores');
     }
     public function contact(){
         $contacts = Contact::all();
