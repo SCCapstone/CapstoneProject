@@ -18,7 +18,6 @@ use App\Http\Controllers\HouseController;
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::post('user', [HouseController::class, 'trySignIn']);
 
 Route::get('/pages/contact', [HouseController::class, 'contact']);

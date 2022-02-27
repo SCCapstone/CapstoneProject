@@ -4,7 +4,7 @@
 
 <div id="shopping-background-rectangle">
 
-<form action="/shopping" method="POST">
+<form action="/pages/shopping" method="POST">
 <table id="shopping-table">
     <thead>
         <tr>
