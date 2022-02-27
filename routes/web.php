@@ -48,6 +48,7 @@ Route::post('/pages/settingsPages/emergencySettings', [HouseController::class, '
 Route::post('/pages/settingsPages/informationSettings', [HouseController::class, 'storeInformationSettings']);
 Route::post('/pages/settingsPages/personalSettings', [HouseController::class, 'storePersonalSettings']);
 Route::post('/pages/settingsPages/socialsSettings', [HouseController::class, 'storeSocialsSettings']);
+Route::post('/pages/settingsPages/logout', [HouseController::class, 'logout']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
