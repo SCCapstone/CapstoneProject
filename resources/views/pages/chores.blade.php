@@ -14,6 +14,18 @@
             <th>Assigned</th>
         </tr>
     </thead>
+    @php 
+        $choreBoxOne = 1;
+        $choreBoxTwo = 2;
+        $choreBoxThree = 3;
+        $choreBoxFour = 4;
+        $choreBoxFive = 5;
+        $choreBoxSix = 6;
+        $choreBoxSeven = 7;
+        $choreBoxEight = 8;
+        $choreBoxNine = 9;
+        $choreBoxTen = 10;
+    @endphp
     <tbody>
         <tr>
             <td class="checkbox-column">
