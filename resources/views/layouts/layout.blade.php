@@ -29,7 +29,7 @@
                     <a href="/pages/shopping">Shopping</a>
                 </li>
                 <li>
-                    <a href="/pages/chat">Chat</a>
+                    <a href="/pages/chores">Chores</a>
                 </li>
                 <li>
                     <a href="/pages/contact">Contact</a>
