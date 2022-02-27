@@ -14,23 +14,35 @@
             <th>Assigned</th>
         </tr>
     </thead>
+    @php
+        $firBox = 1;
+        $secBox = 2;
+        $thiBox = 3;
+        $fouBox = 4;
+        $fivBox = 5;
+        $sixBox = 6;
+        $sevBox = 7;
+        $eigBox = 8;
+        $ninBox = 9;
+        $tenBox = 10;
+    @endphp
     <tbody>
         <tr>
             <td class="checkbox-column">
                     @csrf
-                    <input type="checkbox" name="checkbox1" class="checkbox-form" value="{{ DB::table('shopping')->where('id',1)->value('done') }}">
+                    <input type="checkbox" name="checkbox1" class="checkbox-form" value="{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('done') }}">
             </td>
             <td class="item-column">
                     @csrf
-                    <input type="text" name="item1" class="item-form" value="{{ DB::table('shopping')->where('id',1)->value('item') }}">
+                    <input type="text" name="item1" class="item-form" value="{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('item') }}">
             </td>
             <td class="urgency-column">
                     @csrf
-                    <input type="text" name="urgency1" class="urgency-form" value="{{ DB::table('shopping')->where('id',1)->value('urgency') }}">
+                    <input type="text" name="urgency1" class="urgency-form" value="{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('urgency') }}">
             </td>
             <td class="assignee-column">
                     @csrf
-                    <input type="text" name="assignee1" class="assignee-form" value="{{ DB::table('shopping')->where('id',1)->value('assignee') }}">
+                    <input type="text" name="assignee1" class="assignee-form" value="{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('assignee') }}">
             </td>
         </tr>
         <tr>

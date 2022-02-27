@@ -7,6 +7,7 @@ use App\Models\House;
 use App\Models\Contact;
 use App\Models\Landlord;
 use App\Models\User;
+use App\Models\Shopping;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,7 +25,7 @@ class HouseController extends Controller
         $finduserU = User::where('email', $userInfo['email'])->first();
         if($finduserU){
             Auth::login($finduserU);
-            return redirect()->intended('/pages/home-page');
+            return redirect()->intended('/pages/room-num');
         }else{
             $newUser = User::create([
                 'name' => $userInfo['email'],
@@ -44,12 +45,17 @@ class HouseController extends Controller
         return view('pages.room-num');
     }
     public function assignRoom(Request $req){
+        $roomNum = request('roomnum');
         $id = Auth::user()->id;
-        $affected = DB::update('UPDATE users SET house_num=? WHERE id=?', [request('roomnum'), $id]);
+        $affected = DB::update('UPDATE users SET house_num=? WHERE id=?', [$roomNum, $id]);
 
-        $findLandlord = Landlord::where('landlordnum', request('roomnum'))->first();
+        $findLandlord = Landlord::where('landlordnum', $roomNum)->first();
         if(!$findLandlord){
-            $newLandlord = Landlord::create(['landlordnum' => request('roomnum')]);
+            $newLandlord = Landlord::create(['landlordnum' => $roomNum]);
+
+            for($i=1; $i<11; $i++){
+                $newShoppingList = Shopping::create(['local_id' => $i, 'house_num' => $roomNum]);
+            }
         }
         return redirect()->intended('/pages/home-page');
     }
@@ -78,7 +84,7 @@ class HouseController extends Controller
             'urgency' => request('urgency1'),
             'assignee' => request('assignee1')
         ];
-        DB::table('shopping')->where('id', 1)->update($updateDetails1);
+        DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->update($updateDetails1);
         $updateDetails2 = [
             'done' => request('checkbox2'),
             'item' => request('item2'),
