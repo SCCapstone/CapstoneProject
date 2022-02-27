@@ -195,6 +195,7 @@ class HouseController extends Controller
             'rentDueBy' => request('due')
         ];
         DB::table('landlord')
+            ->where('landlordnum', Auth::user()->house_num)
             ->where('id', Auth::user()->id)
             ->update($updateDetails); 
         error_log(request('housing'));
