@@ -1,28 +1,14 @@
 @extends('layouts.layout')
 @section('content')
 
-<h1>Home Page</h1>
-
-<body>
-
-	<div id="box1"></div>
-    	<div id="alert-rectangle"></div>
-    	<div id="alert2-rectangle"></div>
-    	<div style = "position:absolute; left:540px; top:255px; color:black; font-size:72px; text-decoration: underline; font-weight: bold; font-family: Roboto">
-	House Name
-	<!-- Example session call <h2>{{session('email')}}</h2> -->
-      	<!-- Change name based on user input -->
-    	</div>
-
-	<div style = "position:absolute; left:40px; top:525px; color:black; font-size:48px; font-weight: bold; font-family: Roboto">
-      	Alerts:
-    	</div>
-    	<!-- display alerts based on user input -->
-
-	<div style = "position:absolute; left:40px; top:725px; color:black; font-size:24px; font-weight: bold; font-family: Roboto">
-      	House Reminders:
-    	</div>
-    	<!-- add vertical line -->
-</body>
+<div class="home">
+	<h1 class="home-housename">House Name</h1> <!-- Change name based on user input in settings -->
+	<div class="home-alerts">
+		<h1>Alerts:</h1>
+		<p>
+			<!-- Chores/rent payments/etc. with nearing due dates should show up here -->
+		</p>
+	</div>
+</div>
 
 @endsection
