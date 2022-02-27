@@ -7,6 +7,11 @@ body {
     font-family: Roboto;
     margin: 0;
 }
+#gsign{
+	/* object-position: 10px 10px; */
+	position: absolute;
+	top: 10px;
+}
 /* ul {
     margin: 0;
     padding: 0;

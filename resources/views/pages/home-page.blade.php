@@ -23,9 +23,9 @@
 	</div>
     	<!-- display alerts based on user input -->
 
-	<div style = "position:absolute; left:40px; top:725px; color:black; font-size:24px; font-weight: bold; font-family: Roboto">
+	<!-- <div style = "position:absolute; left:40px; top:725px; color:black; font-size:24px; font-weight: bold; font-family: Roboto">
       	House Reminders:
-    	</div>
+    	</div> -->
     	<!-- add vertical line -->
 </body>
 
