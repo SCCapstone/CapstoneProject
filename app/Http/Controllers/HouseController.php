@@ -91,63 +91,63 @@ class HouseController extends Controller
             'urgency' => request('urgency2'),
             'assignee' => request('assignee2')
         ];
-        DB::table('shopping')->where('id', 2)->update($updateDetails2);
+        DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 2)->update($updateDetails2);
         $updateDetails3 = [
             'done' => request('checkbox3'),
             'item' => request('item3'),
             'urgency' => request('urgency3'),
             'assignee' => request('assignee3')
         ];
-        DB::table('shopping')->where('id', 3)->update($updateDetails3);
+        DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 3)->update($updateDetails3);
         $updateDetails4 = [
             'done' => request('checkbox4'),
             'item' => request('item4'),
             'urgency' => request('urgency4'),
             'assignee' => request('assignee4')
         ];
-        DB::table('shopping')->where('id', 4)->update($updateDetails4);
+        DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 4)->update($updateDetails4);
         $updateDetails5 = [
             'done' => request('checkbox5'),
             'item' => request('item5'),
             'urgency' => request('urgency5'),
             'assignee' => request('assignee5')
         ];
-        DB::table('shopping')->where('id', 5)->update($updateDetails5);
+        DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 5)->update($updateDetails5);
         $updateDetails6 = [
             'done' => request('checkbox6'),
             'item' => request('item6'),
             'urgency' => request('urgency6'),
             'assignee' => request('assignee6')
         ];
-        DB::table('shopping')->where('id', 6)->update($updateDetails6);
+        DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 6)->update($updateDetails6);
         $updateDetails7 = [
             'done' => request('checkbox7'),
             'item' => request('item7'),
             'urgency' => request('urgency7'),
             'assignee' => request('assignee7')
         ];
-        DB::table('shopping')->where('id', 7)->update($updateDetails7);
+        DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 7)->update($updateDetails7);
         $updateDetails8 = [
             'done' => request('checkbox8'),
             'item' => request('item8'),
             'urgency' => request('urgency8'),
             'assignee' => request('assignee8')
         ];
-        DB::table('shopping')->where('id', 8)->update($updateDetails8);
+        DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 8)->update($updateDetails8);
         $updateDetails9 = [
             'done' => request('checkbox9'),
             'item' => request('item9'),
             'urgency' => request('urgency9'),
             'assignee' => request('assignee9')
         ];
-        DB::table('shopping')->where('id', 9)->update($updateDetails9);
+        DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 9)->update($updateDetails9);
         $updateDetails10 = [
             'done' => request('checkbox10'),
             'item' => request('item10'),
             'urgency' => request('urgency10'),
             'assignee' => request('assignee10')
         ];
-        DB::table('shopping')->where('id', 10)->update($updateDetails10);
+        DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 10)->update($updateDetails10);
         error_log(request('checkbox1'));
         error_log(request('item1'));
         error_log(request('urgency1'));
