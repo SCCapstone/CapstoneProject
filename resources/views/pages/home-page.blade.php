@@ -15,9 +15,14 @@
       	<!-- Change name based on user input -->
     	</div>
 
-	<div style = "position:absolute; left:40px; top:525px; color:black; font-size:48px; font-weight: bold; font-family: Roboto" value="{{ DB::table('users')->where('id', Auth::user()->id)->value('email') }}">
-      	Alerts:
-    	</div>
+	<div style = "position:absolute; left:40px; top:525px; color:black; font-size:48px; font-weight: bold; font-family: Roboto">
+		<form action='/pages/settingsPages/personalSettings' method="POST">
+			@csrf
+			<label for="alert">Alert</label><br>
+			<input size="50" type="text" id="alert" name="alert" value="{{ DB::table('users')->where('id', Auth::user()->id)->value('name') }}"><br>
+			<!-- Alerts: -->
+		</form>
+    </div>
     	<!-- display alerts based on user input -->
 
 		<!-- getting rid of house reminders -->

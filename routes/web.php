@@ -29,6 +29,7 @@ Route::get('/pages/sign-in', [HouseController::class, 'signin']);
 Route::get('/pages/sign-up', [HouseController::class, 'signup']);
 Route::get('/pages/home-page', [HouseController::class, 'homepage']);
 Route::post('/pages/logout', [HouseController::class, 'logout']);
+Route::post('/pages/settingsPages/logout', [HouseController::class, 'logout']);
 Route::get('/pages/shopping', [HouseController::class, 'shopping'])->name('shopping');
 Route::post('/pages/shopping', [HouseController::class, 'storeShoppingTable']);
 Route::get('/pages/calendar', [HouseController::class, 'calendar']);
