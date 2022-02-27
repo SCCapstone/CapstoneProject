@@ -13,7 +13,7 @@
 			<label for="address">Address</label><br>
 			<input size="50" type="text" id="address" name="address" value="{{ DB::table('users')->where('id', Auth::user()->id)->value('address') }}"><br>
 			<label for="calendar">Calendar</label><br>
-			<input size="50" type="text" id="calendar" name="calendar" value="{{ DB::table('users')->where('id', Auth::user()->id)->value('calendar') }}"><br>
+			<input style="position:absolute; left:0px; top:255px; width:350px; height:15px;" size="50" type="text" id="calendar" name="calendar" value="{{ DB::table('users')->where('id', Auth::user()->id)->value('calendar') }}"><br>
 			<input type="submit" value="Publish">
 		</form>
 	</div>
