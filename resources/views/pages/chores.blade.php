@@ -1,6 +1,9 @@
 @extends('layouts.layout')
 @section('content')
 
+<head> 
+        <link rel="stylesheet" href="chores.css" />
+</head>
 <h1>Chores</h1>
 <div id="chores-background-rectangle"></div>
 
