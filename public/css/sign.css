@@ -1,3 +1,8 @@
+#gsign{
+	position:fixed; 
+	top:0; 
+	left:0; 
+}
 body {
     /* text-align: left; */
     background-color: #E6ECEF;
@@ -6,11 +11,6 @@ body {
     color: white;
     font-family: Roboto;
     margin: 0;
-}
-#gsign{
-	/* object-position: 10px 10px; */
-	position: absolute;
-	top: 10px;
 }
 /* ul {
     margin: 0;

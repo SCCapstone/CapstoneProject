@@ -27,20 +27,6 @@
 	<!-- <div id="userandpass" style = "top: 450px; left: 525px; position: absolute;">Password:</div> -->
 	<!-- <div id="entry" style = "top: 550px; left: 525px;"></div> -->
 
-	<!-- button goes here -->
-	<!-- <input type="button" value="Go!" class="signbutton" id="btnHome" onClick="document.location.href='pages/home-page'" style = "top: 600px;" /> -->
-
-	<!-- <button name="button" onClick="document.location.href='pages/home-page'">Go!</button> -->
-	
-	<!-- <form action='user' method="POST">
-		@csrf
-		<label for="email">Email</label><br>
-		<input type="text" id="email" name="email" placeholder="Email"><br>
-		<label for="password">Password</label><br>
-		<input type="password" id="password" name="password" placeholder="Password"><br>
-		<input type="submit" value="Go">
-	</form> -->
-
 	<div id ="bottom">The home all-in-one-app! Share calendars, organize chores, decide on grocery lists, assign tasks, or discuss topics! We strive to help your household become a more transparent one.</bottom>
 
 	</body>
