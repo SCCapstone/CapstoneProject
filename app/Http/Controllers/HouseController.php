@@ -271,7 +271,7 @@ class HouseController extends Controller {
         error_log(request('emname'));
         error_log(request('emnum'));
         error_log(request('emrel'));
-        return redirect( route('pages.settingsPages.emergencySettings') );
+        return redirect()->intended('pages/settingsPages/emergencySettings');
     }
 
     public function informationSettings(){
@@ -290,7 +290,6 @@ class HouseController extends Controller {
         ];
         DB::table('landlord')
             ->where('landlordnum', Auth::user()->house_num)
-            ->where('id', Auth::user()->id)
             ->update($updateDetails); 
         error_log(request('housing'));
         error_log(request('rent'));
@@ -299,7 +298,7 @@ class HouseController extends Controller {
         error_log(request('email'));
         error_log(request('address'));
         error_log(request('due'));
-        return redirect( route('pages.settingsPages.informationSettings') );
+        return redirect()->intended('pages/settingsPages/informationSettings');
     }
 
     public function personalSettings(){
@@ -321,7 +320,7 @@ class HouseController extends Controller {
         error_log(request('email'));
         error_log(request('address'));
         error_log(request('calendar'));
-        return redirect( route('pages.settingsPages.personalSettings') );
+        return redirect()->intended('pages/settingsPages/personalSettings');
     }
 
     public function socialsSettings(){
@@ -341,6 +340,6 @@ class HouseController extends Controller {
         error_log(request('snap'));
         error_log(request('venmo'));
         error_log(request('tt'));
-        return redirect( route('pages.settingsPages.socialsSettings') );
+        return redirect()->intended('pages/settingsPages/socialsSettings');
     }
 }
