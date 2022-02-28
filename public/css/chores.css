@@ -1,0 +1,72 @@
+#chores-table {
+    width: 92vw;
+    color: black;
+    position: relative;
+    top: 100px;
+    margin: 55px 55px 55px 65px;
+    font-family: Roboto;
+}
+#chores-table, #chores-table th, #chores-table td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#chores-table th {
+    font-weight: bolder;
+}
+#chores-table th, #chores-table td {
+    padding: 6px;
+    text-align: left;
+}
+.checkbox-column {
+    width: 20px;
+}
+.chores-column {
+    width: 20px;
+}
+.chores-form {
+    font-weight: bold;
+    text-transform: capitalize;
+    width: 800px;
+}
+.urgency-column {
+    width: 20px;
+}
+.urgency-form {
+    width: 300px;
+    font-style: italic;
+    text-transform: capitalize;
+}
+.assignee-column {
+    width: 20px;
+}
+.assignee-form {
+    width: 300px;
+    text-transform: uppercase;
+}
+.chores-form, .urgency-form, .assignee-form {
+    border: none;
+    font-size: 100%;
+    font-family: inherit;
+}
+#submit {
+    margin-top: 60px;
+    margin-left: 65px;
+    font-family: Roboto;
+    font-size: 100%;
+}
+
+#chores-background-rectangle {
+    width: 95vw;
+    height: 50vw;
+    position: absolute;
+    background-color: #fff;
+    top: 150px;
+    z-index: -100;
+    margin: 40px 40px 40px 40px;
+    border-radius: 1%;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
