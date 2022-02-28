@@ -24,7 +24,7 @@ class HouseController extends Controller {
         return view('pages.sign-up');
     }
     public function login(){
-        return view('auth.login');
+        return redirect()->intended('/pages/room-num');
     }
     public function register(){
         return view('auth.register');
