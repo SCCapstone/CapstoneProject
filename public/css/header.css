@@ -16,6 +16,13 @@ a:any-link {
     text-decoration: none;
     color: black;
 }
+p {
+    text-decoration: none;
+    color: black;
+    font-family: Roboto;
+    text-align: right;
+    padding: 2px 15px 0;
+}
 a:hover {
     color: #698384;
 }
@@ -40,4 +47,5 @@ a:hover {
 h1 {
     color: #698384;
     text-align: center;
+    margin: 0 auto;
 }
