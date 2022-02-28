@@ -27,7 +27,7 @@
 	<!-- <div id="userandpass" style = "top: 450px; left: 525px; position: absolute;">Password:</div> -->
 	<!-- <div id="entry" style = "top: 550px; left: 525px;"></div> -->
 
-	<div id ="bottom">The home all-in-one-app! Share calendars, organize chores, decide on grocery lists, assign tasks, or discuss topics! We strive to help your household become a more transparent one.</bottom>
+	<div id ="bottom">The home all-in-one-app! Share calendars, organize chores, decide on grocery lists, assign tasks, or discuss topics! We strive to help your household become a more transparent one.</div>
 
 	</body>
 
