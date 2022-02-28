@@ -32,7 +32,13 @@ Route::post('/pages/logout', [HouseController::class, 'logout']);
 Route::get('/pages/shopping', [HouseController::class, 'shopping'])->name('shopping');
 Route::post('/pages/shopping', [HouseController::class, 'storeShoppingTable']);
 Route::get('/pages/calendar', [HouseController::class, 'calendar']);
-Route::get('/pages/chat', [HouseController::class, 'chat']);
+Route::get('/pages/chores', [HouseController::class, 'chores']);
+
+Route::get('/pages/room-num', [HouseController::class, 'roomnum']);
+Route::post('/pages/roomNum', [HouseController::class, 'assignRoom']);
+
+Route::get('/pages/room-num', [HouseController::class, 'roomnum']);
+Route::post('/pages/roomNum', [HouseController::class, 'assignRoom']);
 
 Route::get('/pages/room-num', [HouseController::class, 'roomnum']);
 Route::post('/pages/roomNum', [HouseController::class, 'assignRoom']);
@@ -42,14 +48,13 @@ Route::get('/pages/index', [HouseController::class, 'index']);
 Route::get('/pages/settingsPages/emergencySettings', [HouseController::class, 'emergencySettings'])->name('settings.emergency');
 Route::get('/pages/settingsPages/informationSettings', [HouseController::class, 'informationSettings'])->name('settings.information');
 Route::get('/pages/settingsPages/personalSettings', [HouseController::class, 'personalSettings'])->name('settings.personal');
-Route::get('/pages/settingsPages/roommatesSettings', [HouseController::class, 'roommatesSettings'])->name('settings.roommates');
 Route::get('/pages/settingsPages/socialsSettings', [HouseController::class, 'socialsSettings'])->name('settings.socials');
 
 Route::post('/pages/settingsPages/emergencySettings', [HouseController::class, 'storeEmergencySettings']);
 Route::post('/pages/settingsPages/informationSettings', [HouseController::class, 'storeInformationSettings']);
 Route::post('/pages/settingsPages/personalSettings', [HouseController::class, 'storePersonalSettings']);
-Route::post('/pages/settingsPages/roommatesSettings', [HouseController::class, 'storeRoommatesSettings']);
 Route::post('/pages/settingsPages/socialsSettings', [HouseController::class, 'storeSocialsSettings']);
+Route::post('/pages/settingsPages/logout', [HouseController::class, 'logout']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

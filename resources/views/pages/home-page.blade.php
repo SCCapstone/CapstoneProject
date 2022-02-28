@@ -1,34 +1,33 @@
 @extends('layouts.layout')
 @section('content')
 
-<h1>Home Page</h1>
+<div class="home">
+	<h1 class="home-housename">House Name: {{ Auth::user()->house_num }}</h1> <!-- This is now displaying the house -->
+	<div class="home-alerts">
+		<h1>Alerts:</h1>
+		@foreach($chores as $chore) 
+		<p>
+			Chore: {{ $chore->chore }}<br>
+			Urgency: {{ $chore->urgency }}<br>
+			Assignee: {{ $chore->assignee }}
 
-<body>
-
-	<div id="box1"></div>
-    	<div id="alert-rectangle"></div>
-    	<!-- <div id="alert2-rectangle"></div> -->
-    	<div style = "position:absolute; left:540px; top:255px; color:black; font-size:72px; text-decoration: underline; font-weight: bold; font-family: Roboto" value ="{{ DB::table('users')->where('id', Auth::user()->id)->value('house_num') }}">
-		<h1 class="home-housename"> House Name: {{ Auth::user()->house_num }}</h1>
-		<!-- House Name -->
-		<!-- Example session call <h2>{{session('email')}}</h2> -->
-      	<!-- Change name based on user input -->
-		  <!-- TODO -->  
-    	</div>
-
-
-
-	<div style = "position:absolute; left:40px; top:525px; color:black; font-size:48px; font-weight: bold; font-family: Roboto">
-		Alerts:
-    </div>
-	<div style = "position: absolute; left: 55px; top: 525px; color: black; font-size: 38px; font-family: Roboto" value ="{{ DB::table('chores-table')->where('house_num', Auth::user()->house_num)->value('chores') }}"></div>
-		<!-- TODO -->
-    	<!-- display alerts based on user input -->
-
-	<!-- <div style = "position:absolute; left:40px; top:725px; color:black; font-size:24px; font-weight: bold; font-family: Roboto">
-      	House Reminders:
-    	</div> -->
-    	<!-- add vertical line -->
-</body>
+		<!-- Go to the HouseController.php file and look at the homepage() method near the top
+			I have written a line there that creates a $chores object that holds the value of all chores at once
+			The command is written as follows: $chores = DB::table('chores')->where('house_num', Auth::user()->house_num)->get();
+			In order, this looks in the chores table. Then narrows it down to where the chores house_num is equal to the user house_num.
+			It then uses get() to retrieve all values that fit this criteria.
+			Also please note I included this object in the return statement. This way you can access the $chores object from in the actual view (as I did above this comment).
+			Now look at the code above. I use a foreach loop to loop through every value in the $chores object I made in the controller.
+			I assign each value to a temporary object $chore using the loop.
+			You can then use the curly brace schema to pull directly from the DB using the format: Object->Desired Value in Object
+			This code should work with any number of database entries
+			Also to display the current house number, use the Auth statement I wrote in the h1 at the top
+			Don't forgot to close the foreach loop.
+		
+		-->
+		</p>
+		@endforeach
+	</div>
+</div>
 
 @endsection
