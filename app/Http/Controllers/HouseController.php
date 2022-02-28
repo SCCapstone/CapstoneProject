@@ -76,7 +76,8 @@ class HouseController extends Controller {
     /* MAIN PAGES */
 
     public function homepage(){
-        return view('pages.home-page');
+        $chores = DB::table('chores')->where('house_num', Auth::user()->house_num)->get();
+        return view('pages.home-page', ['chores' => $chores]);
     }
     public function index(){
         return view('pages.index');
