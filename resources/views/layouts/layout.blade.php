@@ -9,6 +9,7 @@
         <link href="/css/shopping.css" type="text/css" rel="stylesheet">
         <link href="/css/calendar.css" type="text/css" rel="stylesheet">
         <link href="/css/roomnum.css" type="text/css" rel="stylesheet">
+        <link href="/css/chores.css" type="text/css" rel="stylesheet">
 
         <script src="{{ asset('resources/js/reminders.js')}}"></script>
         
@@ -34,7 +35,7 @@
                     <a href="/pages/shopping">Shopping</a>
                 </li>
                 <li>
-                    <a href="/pages/chat">Chat</a>
+                    <a href="/pages/chores">Chores</a>
                 </li>
                 <li>
                     <a href="/pages/contact">Contact</a>
