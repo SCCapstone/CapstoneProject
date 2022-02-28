@@ -1,0 +1,40 @@
+.settings {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.settings-nav {
+	justify-self: flex-start;
+	width: 150px;
+	background-color: #fff;
+    margin: 4% 3%;
+    padding: 1% 2%;
+    border-radius: 1.5%;
+}
+
+.settings-nav h1 {
+	font-size: 2em;
+	text-align: center;
+	color: #698384;
+}
+
+.settings-nav h3 {
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.settings-nav a:hover {
+	color: #698384;
+}
+
+.personal, .social, .emergency, .housing, .invite {
+	margin: 4% 2%;
+	line-height: 1.5em;
+}
+
+.personal h1, .social h1, .emergency h1, .housing h1, .invite h1 {
+	text-align: center;
+	color: #698384;
+	font-weight: bolder;
+}

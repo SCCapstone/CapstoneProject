@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 
+<<<<<<< HEAD
 <h1>Chores</h1>
 <div id="chores-background-rectangle"></div>
 
@@ -225,5 +226,8 @@
 </table>
 <input type="submit" value="Submit" id="submit">
 </form>
+=======
+<!-- Content -->
+>>>>>>> 19689f2f895aad863c748b23addb59377d7c983c
 
 @endsection
