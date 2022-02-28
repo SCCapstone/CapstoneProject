@@ -1,6 +1,9 @@
 @extends('layouts.layout')
 @section('content')
 
+<head> 
+        <link rel="stylesheet" href="chores.css" />
+</head>
 <h1>Chores</h1>
 <div id="chores-background-rectangle"></div>
 
@@ -32,184 +35,194 @@
     @endphp
     <tbody>
         <tr>
-                <td class="checkbox-column">
-                        @csrf
-                        <input type="checkbox" name="checkbox1" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxOne)->value('done') }}">
-                </td>
-                <td class="item-column">
-                        @csrf
-                        <input type="text" name="item1" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxOne)->value('item') }}">
-                </td>
-                <td class="urgency-column">
-                        @csrf
-                        <input type="text" name="urgency1" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxOne)->value('urgency') }}">
-                </td>
-                <td class="assignee-column">
-                        @csrf
-                        <input type="text" name="assignee1" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxOne)->value('assignee') }}">
-                </td>
+            <td class="checkbox-column">
+                    @csrf
+                    <input type="checkbox" name="checkbox1" class="checkbox-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxOne->value('done') }}">
+            </td>
+            <td class="chore-column">
+                    @csrf 
+                    <input type="text" name="chores1" class="chores-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBox1->value('chores') }}">
+                    <!-- code to switch from text to drop down menu
+                    <label for="cars">Choose a car:</label>
+
+                    <select name="cars" id="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                    </select>
+                    
+                -->
+            </td>
+            <td class="urgency-column">
+                    @csrf
+                    <input type="text" name="urgency1" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choresBox1)->value('urgency') }}">
+            </td>
+            <td class="assignee-column">
+                    @csrf       
+                    <input type="text" name="assignee1" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choresBox1)->value('assignee') }}">
+            </td>
         </tr>
         <tr>
-                <td class="checkbox-column">
-                        @csrf
-                        <input type="checkbox" name="checkbox2" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxTwo)->value('done') }}">
-                </td>
-                <td class="item-column">
-                        @csrf
-                        <input type="text" name="item2" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxTwo)->value('item') }}">
-                </td>
-                <td class="urgency-column">
-                        @csrf
-                        <input type="text" name="urgency2" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxTwo)->value('urgency') }}">
-                </td>
-                <td class="assignee-column">
-                        @csrf
-                        <input type="text" name="assignee2" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxTwo)->value('assignee') }}">
-                </td>
+            <td claazss="checkbox-column">
+                    @csrf
+                    <input type="checkbox" name="checkbox2" class="checkbox-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxTwo->value('done') }}">
+            </td>
+            <td class="chores-column">
+                    @csrf
+                    <input type="text" name="chores2" class="chores-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBox2->value('chores') }}">
+            </td>
+            <td class="urgency-column">
+                    @csrf
+                    <input type="text" name="urgency2" class="urgency-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBox2->value('urgency') }}">
+            </td>
+            <td class="assignee-column">
+                    @csrf
+                    <input type="text" name="assignee2" class="assignee-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBox2->value('assignee') }}">
+            </td>
         </tr>
         <tr>
-                <td class="checkbox-column">
-                        @csrf
-                        <input type="checkbox" name="checkbox3" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxThree)->value('done') }}">
-                </td>
-                <td class="item-column">
-                        @csrf
-                        <input type="text" name="item3" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxThree)->value('item') }}">
-                </td>
-                <td class="urgency-column">
-                        @csrf
-                        <input type="text" name="urgency3" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxThree)->value('urgency') }}">
-                </td>
-                <td class="assignee-column">
-                        @csrf
-                        <input type="text" name="assignee3" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxThree)->value('assignee') }}">
-                </td>
+            <td class="checkbox-column">
+                    @csrf
+                    <input type="checkbox" name="checkbox3" class="checkbox-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxThree->value('done') }}">
+            </td>            
+            <td class="chores-column">
+                    @csrf
+                    <input type="text" name="chores3" class="chores-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxThree->value('chores') }}">
+            </td>
+            <td class="urgency-column">
+                    @csrf
+                    <input type="text" name="urgency3" class="urgency-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxThree->value('urgency') }}">
+            </td>
+            <td class="assignee-column">
+                    @csrf
+                    <input type="text" name="assignee3" class="assignee-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxThree->value('assignee') }}">
+            </td>
         </tr>
         <tr>
-                <td class="checkbox-column">
-                        @csrf
-                        <input type="checkbox" name="checkbox4" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxFour)->value('done') }}">
-                </td>
-                <td class="item-column">
-                        @csrf
-                        <input type="text" name="item4" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxFour)->value('item') }}">
-                </td>
-                <td class="urgency-column">
-                        @csrf
-                        <input type="text" name="urgency4" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxFour)->value('urgency') }}">
-                </td>
-                <td class="assignee-column">
-                        @csrf
-                        <input type="text" name="assignee4" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxFour)->value('assignee') }}">
-                </td>
+            <td class="checkbox-column">
+                    @csrf
+                    <input type="checkbox" name="checkbox4" class="checkbox-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxFour->value('done') }}">
+            <td class="chores-column">
+                    @csrf
+                    <input type="text" name="chores4" class="chores-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxFour->value('chores') }}">
+            </td>
+            <td class="urgency-column">
+                    @csrf
+                    <input type="text" name="urgency4" class="urgency-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxFour->value('urgency') }}">
+            </td>
+            <td class="assignee-column">
+                    @csrf
+                    <input type="text" name="assignee4" class="assignee-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxFour->value('assignee') }}">
+            </td>
         </tr>
         <tr>
-                <td class="checkbox-column">
-                        @csrf
-                        <input type="checkbox" name="checkbox5" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxFive)->value('done') }}">
-                </td>
-                <td class="item-column">
-                        @csrf
-                        <input type="text" name="item5" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxFive)->value('item') }}">
-                </td>
-                <td class="urgency-column">
-                        @csrf
-                        <input type="text" name="urgency5" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxFive)->value('urgency') }}">
-                </td>
-                <td class="assignee-column">
-                        @csrf
-                        <input type="text" name="assignee5" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxFive)->value('assignee') }}">
-                </td>
+            <td class="checkbox-column">
+                    @csrf
+                    <input type="checkbox" name="checkbox5" class="checkbox-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxFive->value('done') }}">
+            </td>
+            <td class="chores-column">
+                    @csrf
+                    <input type="text" name="chores5" class="chores-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxFive->value('chores') }}">
+            </td>
+            <td class="urgency-column">
+                    @csrf
+                    <input type="text" name="urgency5" class="urgency-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxFive->value('urgency') }}">
+            </td>
+            <td class="assignee-column">
+                    @csrf
+                    <input type="text" name="assignee5" class="assignee-form" value="{{  DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxFive->value('assignee') }}">
+            </td>
         </tr>
         <tr>
-                <td class="checkbox-column">
-                        @csrf
-                        <input type="checkbox" name="checkbox6" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxSix)->value('done') }}">
-                </td>
-                <td class="item-column">
-                        @csrf
-                        <input type="text" name="item6" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxSix)->value('item') }}">
-                </td>
-                <td class="urgency-column">
-                        @csrf
-                        <input type="text" name="urgency6" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxSix)->value('urgency') }}">
-                </td>
-                <td class="assignee-column">
-                        @csrf
-                        <input type="text" name="assignee6" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxSix)->value('assignee') }}">
-                </td>
+            <td class="checkbox-column">
+                    @csrf
+                    <input type="checkbox" name="checkbox6" class="checkbox-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxSix->value('done') }}">
+            </td>
+            <td class="chores-column">
+                    @csrf
+                    <input type="text" name="chores6" class="chores-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxSix->value('chores') }}">
+            </td>
+            <td class="urgency-column">
+                    @csrf
+                    <input type="text" name="urgency6" class="urgency-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxSix->value('urgency') }}">
+            </td>
+            <td class="assignee-column">
+                    @csrf
+                    <input type="text" name="assignee6" class="assignee-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxSix->value('assignee') }}">
+            </td>
         </tr>
         <tr>
-                <td class="checkbox-column">
-                        @csrf
-                        <input type="checkbox" name="checkbox7" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxSeven)->value('done') }}">
-                </td>
-                <td class="item-column">
-                        @csrf
-                        <input type="text" name="item7" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxSeven)->value('item') }}">
-                </td>
-                <td class="urgency-column">
-                        @csrf
-                        <input type="text" name="urgency7" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxSeven)->value('urgency') }}">
-                </td>
-                <td class="assignee-column">
-                        @csrf
-                        <input type="text" name="assignee7" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxSeven)->value('assignee') }}">
-                </td>
+            <td class="checkbox-column">
+                    @csrf
+                    <input type="checkbox" name="checkbox7" class="checkbox-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxSeven->value('done') }}">
+            </td>
+            <td class="chores-column">
+                    @csrf
+                    <input type="text" name="chores7" class="chores-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxSeven->value('chores') }}">
+            </td>
+            <td class="urgency-column">
+                    @csrf
+                    <input type="text" name="urgency7" class="urgency-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxSeven->value('urgency') }}">
+            </td>
+            <td class="assignee-column">
+                    @csrf
+                    <input type="text" name="assignee7" class="assignee-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxSeven->value('assignee') }}">
+            </td>
         </tr>
         <tr>
-                <td class="checkbox-column">
-                        @csrf
-                        <input type="checkbox" name="checkbox8" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxEight)->value('done') }}">
-                </td>
-                <td class="item-column">
-                        @csrf
-                        <input type="text" name="item8" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxEight)->value('item') }}">
-                </td>
-                <td class="urgency-column">
-                        @csrf
-                        <input type="text" name="urgency8" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxEight)->value('urgency') }}">
-                </td>
-                <td class="assignee-column">
-                        @csrf
-                        <input type="text" name="assignee8" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxEight)->value('assignee') }}">
-                </td>
+            <td class="checkbox-column">
+                    @csrf
+                    <input type="checkbox" name="checkbox8" class="checkbox-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxEight->value('done') }}">
+            </td>
+            <td class="chores-column">
+                    @csrf
+                    <input type="text" name="chores8" class="chores-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxEight->value('chores') }}">
+            </td>
+            <td class="urgency-column">
+                    @csrf
+                    <input type="text" name="urgency8" class="urgency-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxEight->value('urgency') }}">
+            </td>
+            <td class="assignee-column">
+                    @csrf
+                    <input type="text" name="assignee8" class="assignee-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxEight->value('assignee') }}">
+            </td>
         </tr>
         <tr>
-                <td class="checkbox-column">
-                        @csrf
-                        <input type="checkbox" name="checkbox9" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxNine)->value('done') }}">
-                </td>
-                <td class="item-column">
-                        @csrf
-                        <input type="text" name="item9" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxNine)->value('item') }}">
-                </td>
-                <td class="urgency-column">
-                        @csrf
-                        <input type="text" name="urgency9" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxNine)->value('urgency') }}">
-                </td>
-                <td class="assignee-column">
-                        @csrf
-                        <input type="text" name="assignee9" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxNine)->value('assignee') }}">
-                </td>
+            <td class="checkbox-column">
+                    @csrf
+                    <input type="checkbox" name="checkbox9" class="checkbox-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxNine->value('done') }}">
+            </td>
+            <td class="chores-column">
+                    @csrf
+                    <input type="text" name="chores9" class="chores-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxNine->value('chores') }}">
+            </td>
+            <td class="urgency-column">
+                    @csrf
+                    <input type="text" name="urgency9" class="urgency-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxNine->value('urgency') }}">
+            </td>
+            <td class="assignee-column">
+                    @csrf
+                    <input type="text" name="assignee9" class="assignee-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxNine->value('assignee') }}">
+            </td>
         </tr>
         <tr>
-                <td class="checkbox-column">
-                        @csrf
-                        <input type="checkbox" name="checkbox10" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxTen)->value('done') }}">
-                </td>
-                <td class="item-column">
-                        @csrf
-                        <input type="text" name="item10" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxTen)->value('item') }}">
-                </td>
-                <td class="urgency-column">
-                        @csrf
-                        <input type="text" name="urgency10" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxTen)->value('urgency') }}">
-                </td>
-                <td class="assignee-column">
-                        @csrf
-                        <input type="text" name="assignee10" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $choreBoxTen)->value('assignee') }}">
-                </td>
+            <td class="checkbox-column">
+                    @csrf
+                    <input type="checkbox" name="checkbox10" class="checkbox-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxTen->value('done') }}">
+            </td>
+            <td class="chores-column">
+                    @csrf
+                    <input type="text" name="chores10" class="chores-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxTen->value('chores') }}">
+            </td>
+            <td class="urgency-column">
+                    @csrf
+                    <input type="text" name="urgency10" class="urgency-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxTen->value('urgency') }}">
+            </td>
+            <td class="assignee-column">
+                    @csrf
+                    <input type="text" name="assignee10" class="assignee-form" value="{{ DB::table('chores')->where('house_num',Auth::user()->house_num)->where('local_id',choreBoxTen->value('assignee') }}">
+            </td>
         </tr>
     </tbody>
 </table>
