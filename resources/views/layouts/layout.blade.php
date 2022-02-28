@@ -11,6 +11,7 @@
         <link href="/css/home.css" type="text/css" rel="stylesheet">
         <link href="/css/settings.css" type="text/css" rel="stylesheet">
         <link href="/css/shopping.css" type="text/css" rel="stylesheet">
+        <link href="/css/chores.css" type="text/css" rel="stylesheet">
         
         <script src="{{ asset('resources/js/reminders.js')}}"></script>
         
