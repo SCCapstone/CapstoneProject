@@ -1,7 +1,8 @@
 @extends('layouts.settings')
-@section('subSettingsPages')
+@section('settingsContent')
 	
-<div style="position:absolute; top:250px; left:350px;">
+<div class="housing">
+	<h1>Housing Information</h1>
 	<form action='/pages/settingsPages/informationSettings' method="POST">
 		@csrf
 		<label for="housing">Type of Housing</label><br>

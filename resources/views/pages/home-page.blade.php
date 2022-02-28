@@ -1,7 +1,15 @@
 @extends('layouts.layout')
 @section('content')
 
-<h1>Home Page</h1>
+<div class="home">
+	<h1 class="home-housename">House Name: {{ Auth::user()->house_num }}</h1> <!-- This is now displaying the house -->
+	<div class="home-alerts">
+		<h1>Alerts:</h1>
+		@foreach($chores as $chore) 
+		<p>
+			Chore: {{ $chore->chore }}<br>
+			Urgency: {{ $chore->urgency }}<br>
+			Assignee: {{ $chore->assignee }}
 
 <body>
 

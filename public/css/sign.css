@@ -1,3 +1,8 @@
+#gsign{
+	position: relative; 
+	bottom:180px; 
+	left:30px; 
+}
 body {
     /* text-align: left; */
     background-color: #E6ECEF;

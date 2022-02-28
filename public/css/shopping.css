@@ -1,9 +1,6 @@
 #shopping-table {
-    width: 92vw;
+    width: 100%;
     color: black;
-    position: relative;
-    top: 100px;
-    margin: 55px 55px 55px 65px;
     font-family: Roboto;
 }
 #shopping-table, #shopping-table th, #shopping-table td {
@@ -18,7 +15,7 @@
     text-align: left;
 }
 .checkbox-column {
-    width: 20px;
+    width: 1%;
 }
 .item-column {
     width: 20px;
@@ -26,13 +23,13 @@
 .item-form {
     font-weight: bold;
     text-transform: capitalize;
-    width: 800px;
+    width: fit-content;
 }
 .urgency-column {
     width: 20px;
 }
 .urgency-form {
-    width: 300px;
+    width: fit-content;
     font-style: italic;
     text-transform: capitalize;
 }
@@ -40,30 +37,25 @@
     width: 20px;
 }
 .assignee-form {
-    width: 300px;
+    width: fit-content;
     text-transform: uppercase;
 }
 .item-form, .urgency-form, .assignee-form {
     border: none;
-    font-size: 100%;
+    font-size: 1em;
     font-family: inherit;
 }
 #submit {
-    margin-top: 60px;
-    margin-left: 65px;
     font-family: Roboto;
-    font-size: 100%;
+    margin-top: 1%;
+    font-size: 1em;
 }
 
 #shopping-background-rectangle {
-    width: 95vw;
-    height: 50vw;
-    position: absolute;
     background-color: #fff;
-    top: 150px;
-    z-index: -100;
-    margin: 40px 40px 40px 40px;
-    border-radius: 1%;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 1.5%;
 }
 
 @font-face {
