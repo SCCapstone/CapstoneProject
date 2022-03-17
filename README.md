@@ -1,22 +1,25 @@
-# Housemates
+### Housemates
 
-This project will use php and Laravel framework to create a web app. The app is designed to allow users to share contact information, grocery lists, calendars, and chat.
+Housemates is a web app made with the PHP Laravel framework that allows you and your roommates to share and coordinate shopping lists, chores, itineraries, contact information, and more. Visit http://housemates.fun to get started!
+
 More detailed design information is available at: https://github.com/SCCapstone/CapstoneProject/wiki/Design
 
-## Style
+## Technology
 
-This project will use the [PSR-12](https://www.php-fig.org/psr/psr-12/) style guide from the PHP Framework Interoperability Group.
+* Language: primarily [PHP](https://www.php.net)
+* Framework: [Laravel](https://github.com/laravel/framework)
+* IDE: [Visual Studio Code](https://code.visualstudio.com)
+* Hosting: [DigitalOcean](https://www.digitalocean.com)
 
-## External Requirements
+## External Dependencies
 
-In order to build this project you first have to install:
+# Optional
 
-* composer
-* Laravel
-* php
-* vscode or desired IDE
-* xammp
-* MySQL
+* [Composer](https://github.com/composer/composer)
+* [Laravel](https://github.com/laravel/framework)
+* [Visual Studio Code](https://code.visualstudio.com) or desired IDE
+* [XAMPP](https://www.apachefriends.org)
+* [MySQL](https://www.mysql.com/)
 
 ## Setup
 
@@ -52,7 +55,11 @@ We do not plan on installing software to automate testing. We will create test u
 
 We will run our tests through testCase.php. Compiling and running testCase.php will automatically run our application by using the file CreateApplication.php.
 
-# Authors
+## Style
+
+This project will use the [PSR-12](https://www.php-fig.org/psr/psr-12/) style guide from the PHP Framework Interoperability Group.
+
+## Maintainers
 
 Camryn Reid: ctreid@email.sc.edu<br>
 Colin Bowes: cbowes@email.sc.edu<br>
