@@ -1,4 +1,4 @@
-### Housemates
+# Housemates
 
 Housemates is a web app made with the PHP Laravel framework that allows you and your roommates to share and coordinate shopping lists, chores, itineraries, contact information, and more. Visit http://housemates.fun to get started!
 
@@ -13,7 +13,7 @@ More detailed design information is available at: https://github.com/SCCapstone/
 
 ## External Dependencies
 
-# Optional
+### Optional
 
 * [Composer](https://github.com/composer/composer)
 * [Laravel](https://github.com/laravel/framework)
