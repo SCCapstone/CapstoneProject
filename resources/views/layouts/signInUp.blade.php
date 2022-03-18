@@ -28,7 +28,6 @@
 
 	<!-- <button name="button" onClick="document.location.href='pages/home-page'">Go!</button> -->
 	
-	<!--
 	<form action='user' method="POST">
 		@csrf
 		<label for="email">Email</label><br>
@@ -37,7 +36,6 @@
 		<input type="password" id="password" name="password" placeholder="Password"><br>
 		<input type="submit" value="Go">
 	</form>
--->
 
 	<div class="flex items-center justify-end mt-4">
         	<a href="{{ url('auth/google') }}">
