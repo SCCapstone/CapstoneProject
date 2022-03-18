@@ -310,7 +310,8 @@ class HouseController extends Controller {
             'phone' => request('phone'),
             'email' => request('email'),
             'address' => request('address'),
-            'calendar' => request('calendar')
+            'calendar' => request('calendar'),
+            'house_num' => request('house_num')
         ];
         DB::table('users')
             ->where('id', Auth::user()->id)
@@ -320,6 +321,7 @@ class HouseController extends Controller {
         error_log(request('email'));
         error_log(request('address'));
         error_log(request('calendar'));
+        error_log(request('house_num'));
         return redirect()->intended('pages/settingsPages/personalSettings');
     }
 
