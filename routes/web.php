@@ -40,9 +40,6 @@ Route::post('/pages/roomNum', [HouseController::class, 'assignRoom']);
 Route::get('/pages/room-num', [HouseController::class, 'roomnum']);
 Route::post('/pages/roomNum', [HouseController::class, 'assignRoom']);
 
-Route::get('/pages/room-num', [HouseController::class, 'roomnum']);
-Route::post('/pages/roomNum', [HouseController::class, 'assignRoom']);
-
 Route::get('/pages/index', [HouseController::class, 'index']);
 
 Route::get('/pages/settingsPages/emergencySettings', [HouseController::class, 'emergencySettings'])->name('settings.emergency');

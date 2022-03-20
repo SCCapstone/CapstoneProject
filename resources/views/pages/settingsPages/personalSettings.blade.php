@@ -17,7 +17,7 @@
 		<input size="50" type="text" id="calendar" name="calendar" value="{{ DB::table('users')->where('id', Auth::user()->id)->value('calendar') }}"><br>
 		<label for="house_num">Room Number</label><br>
 		<input size="50" type="text" id="house_num" name="house_num" value="{{ DB::table('users')->where('id', Auth::user()->id)->value('house_num') }}"><br>
-		<p style="color:#878787">To invite someone else to the room, have them log into <a href="http://housemates.fun/">Housemates</a> and sign in with the above room number</p>
+		<p>To invite someone else to the room, have them log into <a href="http://housemates.fun/">Housemates</a> and sign in with the above room number</p>
 		<input type="submit" value="Publish">
 		</form>
 </div>

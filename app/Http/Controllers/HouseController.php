@@ -16,17 +16,43 @@ class HouseController extends Controller {
     
     /* AUTHENTICATION AND ACCOUNT HANDLING */
 
-    public function signin(){
+    /* public function signin(){
         return view('pages.sign-in');
+    }
+    public function trySignIn(Request $req){
+        $userInfo = [
+            'email' => request('email'),
+            'password' => request('password')
+        ];
+        $finduserU = User::where('email', $userInfo['email'])->first();
+        if($finduserU){
+            Auth::login($finduserU);
+            return redirect()->intended('/pages/room-num');
+        }else{
+            $newUser = User::create([
+                'name' => $userInfo['email'],
+                'email' => $userInfo['email'],
+                'password' => encrypt($userInfo['password'])
+            ]);
+            Auth::login($newUser);
+            return redirect()->intended('/pages/room-num');
+        }
+        $req->session()->put('email', $userInfo['email']);
+        $req->session()->put('id', Auth::user()->id);
     }
     public function signup(){
         return view('pages.sign-up');
     }
-    public function login(){
-        return redirect()->intended('/pages/room-num');
+    public function register(){
+        return view('auth.register');
+    }
+        return view('auth.login');
     }
     public function register(){
         return view('auth.register');
+    } */
+    public function login(){
+        return redirect()->intended('/pages/room-num');
     }
     public function logout(){
         Auth::logout(Auth::user());

@@ -2,14 +2,9 @@
 @section('content')
 
 <title>Sign In</title>
-<div id="sign">Sign In</div>
-
-<body>
-<form action='logout' method="POST">
-		@csrf
-        <button>Logout</button>
-	</form>
-    
-</body>
+<form action='logout' method="POST" id='logout'>
+    @csrf
+    <button id='logout-button'>Log Out</button>
+</form>
 
 @endsection
