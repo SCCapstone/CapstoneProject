@@ -12,14 +12,14 @@
 	<body>
 		<h1 id='welcome'>Welcome Housemates!</h1>
 		
-		<!-- <form action='user' method="POST">
+		<form action='user' method="POST">
 			@csrf
 			<label for="email">Email</label><br>
 			<input type="text" id="email" name="email" placeholder="Email"><br>
 			<label for="password">Password</label><br>
 			<input type="password" id="password" name="password" placeholder="Password"><br>
 			<input type="submit" value="Go">
-		</form> -->
+		</form>
 
 		<div class="flex items-center justify-end mt-4 google-signin">
 			<a href="{{ url('auth/google') }}">
