@@ -21,11 +21,15 @@
 			<input type="submit" value="Go">
 		</form>
 
+		<div id="welcomebox"></div>
+
 		<div class="flex items-center justify-end mt-4 google-signin">
 			<a href="{{ url('auth/google') }}">
 				<img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
 			</a>
 		</div>
+
+		<div id="divider"></div>
 
 		@yield('content')
 	</body>
