@@ -25,3 +25,28 @@ body {
 	padding: 4px;
 	border-radius: 4%;
 }
+#welcomebox {
+	width: 450px;
+    height: 450px;
+    background: #FFFFFF;
+    position:absolute;
+    top: 175px;
+    left: 500px;
+    border-radius: 25px;
+}
+#bottom {
+	position: absolute;
+	left: 52px;
+	top: 700px;
+	color: #698384;
+	font-size: 24px;
+	font-family: Roboto;
+	text-align: center;
+}
+#divider {
+	top: 300px;
+	background-color: #E6ECEF;
+	height: 10px;
+	border: none;
+	position: relative;
+}
