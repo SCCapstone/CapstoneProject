@@ -8,24 +8,7 @@ body {
     margin-top: 10%;
 	font-size: 5em;
 }
-.google-signin {
-	text-align: center;
-}
-#logout {
-	margin-top: 5%;
-	text-align: center;
-}
-#logout-button {
-	font-size: 1em;
-	background-color: #698384;
-	color: #e6ecef;
-	font-family: Roboto, sans-serif;
-	font-weight: bold;
-	border: 1px solid #698384;
-	padding: 4px;
-	border-radius: 4%;
-}
-#welcomebox {
+/* #welcomebox {
 	width: 450px;
     height: 450px;
     background: #FFFFFF;
@@ -49,4 +32,21 @@ body {
 	height: 10px;
 	border: none;
 	position: relative;
+}*/
+.google-signin {
+	text-align: center;
+}
+#logout {
+	margin-top: 5%;
+	text-align: center;
+}
+#logout-button {
+	font-size: 1em;
+	background-color: #698384;
+	color: #e6ecef;
+	font-family: Roboto, sans-serif;
+	font-weight: bold;
+	border: 1px solid #698384;
+	padding: 4px;
+	border-radius: 4%;
 }
