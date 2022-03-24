@@ -34,9 +34,6 @@ Route::post('/pages/shopping', [HouseController::class, 'storeShoppingTable']);
 Route::get('/pages/calendar', [HouseController::class, 'calendar']);
 Route::get('/pages/chore', [HouseController::class, 'chores']);
 
-Route::get('/pages/room-num', [HouseController::class, 'roomnum']);
-Route::post('/pages/roomNum', [HouseController::class, 'assignRoom']);
-
 Route::get('/pages/index', [HouseController::class, 'index']);
 
 Route::get('/pages/settingsPages/emergencySettings', [HouseController::class, 'emergencySettings'])->name('settings.emergency');

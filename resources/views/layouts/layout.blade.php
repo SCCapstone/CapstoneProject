@@ -12,8 +12,6 @@
         <link href="/css/settings.css" type="text/css" rel="stylesheet">
         <link href="/css/shopping.css" type="text/css" rel="stylesheet">
         <link href="/css/chores.css" type="text/css" rel="stylesheet">
-        <link href="/css/roomnum.css" type="text/css" rel="stylesheet">
-       
         <script src="{{ asset('resources/js/reminders.js')}}"></script>
         
         <link rel="preconnect" href="https://fonts.googleapis.com">

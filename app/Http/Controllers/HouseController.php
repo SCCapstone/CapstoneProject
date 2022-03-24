@@ -8,6 +8,7 @@ use App\Models\Contact;
 use App\Models\Landlord;
 use App\Models\User;
 use App\Models\Shopping;
+use App\Models\Chores;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,17 +17,43 @@ class HouseController extends Controller {
     
     /* AUTHENTICATION AND ACCOUNT HANDLING */
 
-    public function signin(){
+    /* public function signin(){
         return view('pages.sign-in');
+    }
+    public function trySignIn(Request $req){
+        $userInfo = [
+            'email' => request('email'),
+            'password' => request('password')
+        ];
+        $finduserU = User::where('email', $userInfo['email'])->first();
+        if($finduserU){
+            Auth::login($finduserU);
+            return redirect()->intended('/pages/room-num');
+        }else{
+            $newUser = User::create([
+                'name' => $userInfo['email'],
+                'email' => $userInfo['email'],
+                'password' => encrypt($userInfo['password'])
+            ]);
+            Auth::login($newUser);
+            return redirect()->intended('/pages/room-num');
+        }
+        $req->session()->put('email', $userInfo['email']);
+        $req->session()->put('id', Auth::user()->id);
     }
     public function signup(){
         return view('pages.sign-up');
     }
-    public function login(){
+    public function register(){
+        return view('auth.register');
+    }
         return view('auth.login');
     }
     public function register(){
         return view('auth.register');
+    } */
+    public function login(){
+        return redirect()->intended('/pages/room-num');
     }
     public function logout(){
         Auth::logout(Auth::user());
@@ -68,6 +95,7 @@ class HouseController extends Controller {
 
             for($i=1; $i<11; $i++){
                 $newShoppingList = Shopping::create(['local_id' => $i, 'house_num' => $roomNum]);
+                $newChoreList = Chores::create(['local_id' => $i, 'house_num' => $roomNum]);
             }
         }
         return redirect()->intended('/pages/home-page');
@@ -86,6 +114,83 @@ class HouseController extends Controller {
     }
     public function chores(){
         return view('pages.chores');
+    }
+    public function storeChores(){
+        $updateDetails1 = [
+            'done' => request('checkbox1'),
+            'item' => request('item1'),
+            'urgency' => request('urgency1'),
+            'assignee' => request('assignee1')
+        ];
+        DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->update($updateDetails1);
+        $updateDetails2 = [
+            'done' => request('checkbox2'),
+            'item' => request('item2'),
+            'urgency' => request('urgency2'),
+            'assignee' => request('assignee2')
+        ];
+        DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 2)->update($updateDetails2);
+        $updateDetails3 = [
+            'done' => request('checkbox3'),
+            'item' => request('item3'),
+            'urgency' => request('urgency3'),
+            'assignee' => request('assignee3')
+        ];
+        DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 3)->update($updateDetails3);
+        $updateDetails4 = [
+            'done' => request('checkbox4'),
+            'item' => request('item4'),
+            'urgency' => request('urgency4'),
+            'assignee' => request('assignee4')
+        ];
+        DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 4)->update($updateDetails4);
+        $updateDetails5 = [
+            'done' => request('checkbox5'),
+            'item' => request('item5'),
+            'urgency' => request('urgency5'),
+            'assignee' => request('assignee5')
+        ];
+        DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 5)->update($updateDetails5);
+        $updateDetails6 = [
+            'done' => request('checkbox6'),
+            'item' => request('item6'),
+            'urgency' => request('urgency6'),
+            'assignee' => request('assignee6')
+        ];
+        DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 6)->update($updateDetails6);
+        $updateDetails7 = [
+            'done' => request('checkbox7'),
+            'item' => request('item7'),
+            'urgency' => request('urgency7'),
+            'assignee' => request('assignee7')
+        ];
+        DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 7)->update($updateDetails7);
+        $updateDetails8 = [
+            'done' => request('checkbox8'),
+            'item' => request('item8'),
+            'urgency' => request('urgency8'),
+            'assignee' => request('assignee8')
+        ];
+        DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 8)->update($updateDetails8);
+        $updateDetails9 = [
+            'done' => request('checkbox9'),
+            'item' => request('item9'),
+            'urgency' => request('urgency9'),
+            'assignee' => request('assignee9')
+        ];
+        DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 9)->update($updateDetails9);
+        $updateDetails10 = [
+            'done' => request('checkbox10'),
+            'item' => request('item10'),
+            'urgency' => request('urgency10'),
+            'assignee' => request('assignee10')
+        ];
+        DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 10)->update($updateDetails10);
+        error_log(request('checkbox1'));
+        error_log(request('item1'));
+        error_log(request('urgency1'));
+        error_log(request('assignee1'));
+        return redirect()->intended('/pages/chores');
     }
     public function contact(){
         $landlords = DB::table('landlord')->where('landlordnum', Auth::user()->house_num)->first();
@@ -231,7 +336,8 @@ class HouseController extends Controller {
             'phone' => request('phone'),
             'email' => request('email'),
             'address' => request('address'),
-            'calendar' => request('calendar')
+            'calendar' => request('calendar'),
+            'house_num' => request('house_num')
         ];
         DB::table('users')
             ->where('id', Auth::user()->id)
@@ -241,7 +347,8 @@ class HouseController extends Controller {
         error_log(request('email'));
         error_log(request('address'));
         error_log(request('calendar'));
-        return redirect( route('pages.settingsPages.personalSettings') );
+        error_log(request('house_num'));
+        return redirect()->intended('pages/settingsPages/personalSettings');
     }
 
     public function socialsSettings(){

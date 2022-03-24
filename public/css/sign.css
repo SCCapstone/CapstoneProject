@@ -1,57 +1,14 @@
 body {
-    /* text-align: left; */
     background-color: #E6ECEF;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    font-family: Roboto;
-    margin: 0;
+    font-family: Roboto, sans-serif;
 }
-/* ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}*/
-/* li {
-    list-style-type: none;
-    margin: 0 6vw;
-    font-size: 3vh;
-} */
-/* .g-signin2 {
-	top: 400px; 
-	left: 550px; 
-	position: absolute; 
-	height: 75px; 
-	width: 350px; 
-	box-shadow: 6px 2px 8px #698384;
-} */
-h1 {
+#welcome {
     color: #698384;
-    position: absolute;
-    left: 400px;
-	font-size: 72px;
-	text-shadow: 2px 1px 4px #000000;
-
-}
-#sign {
-	position: absolute;
-	left: 625px;
-	top: 200px;
-	color: #698384;
-	font-size: 64px;
-	font-weight: bold;
-	font-family: Roboto;
+	text-align: center;
+    margin-top: 10%;
+	font-size: 5em;
 }
 /* #welcomebox {
-    width: 450px;
-    height: 650px;
-    background: #FFFFFF;
-    position:absolute;
-    top: 175px;
-    left: 500px;
-    border-radius: 25px;
-} */
-#welcomebox {
 	width: 450px;
     height: 450px;
     background: #FFFFFF;
@@ -75,54 +32,21 @@ h1 {
 	height: 10px;
 	border: none;
 	position: relative;
+}*/
+.google-signin {
+	text-align: center;
 }
-#userandpass {
-	color: #698384;
-	font-size: 24px;
-	font-family: Roboto;
-    position: absolute;
+#logout {
+	margin-top: 5%;
+	text-align: center;
 }
-/* #entry {
-	width: 400px;
-    	height: 60px;
-    	background-color: rgba(196, 196, 196, 0.5);
-    	position:absolute;
-} */
-a {
-	top: 600px;
-	left: 600px;
-	position: absolute;
-	color: #698384
-}
-form {
-	top: 350px;
-	left: 525px;
-    color: #698384;
-    position: absolute;
-	margin:10px 0;
-	font-size: 24px;
-	font-family: Roboto;
-}
-input {
-	margin: 10px;
-	width: 350px;
-	height: 50px;
-	background-color: rgba(196, 196, 196, 0.5);
-	left: 525px;
-	border-radius: 10px;
-	font-family: Roboto;
-	font-size: 24px;
-	padding: 5px;
-}
-placeholder {
-	font-family: Roboto;
-	font-size: 24px;
-}
-
-button {
-	top: 555px;
-	position: absolute;
-	left: 675px;
-	width: 100px;
-	height: 40px;
+#logout-button {
+	font-size: 1em;
+	background-color: #698384;
+	color: #e6ecef;
+	font-family: Roboto, sans-serif;
+	font-weight: bold;
+	border: 1px solid #698384;
+	padding: 4px;
+	border-radius: 4%;
 }
