@@ -366,7 +366,7 @@ class HouseController extends Controller {
             ->update($updateDetails); 
         error_log(request('insta'));
         error_log(request('snap'));
-        error_log(request('venmo'));3
+        error_log(request('venmo'));
         error_log(request('tt'));
         return redirect( route('pages.settingsPages.socialsSettings') );
     }
