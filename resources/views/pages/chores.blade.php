@@ -19,7 +19,7 @@
         </tr>
     </thead>
     @php 
-        $choreBoxOne = 1;
+        $choreBoxOne = "choreBoxOne";
         $choreBoxTwo = 2;
         $choreBoxThree = 3;
         $choreBoxFour = 4;

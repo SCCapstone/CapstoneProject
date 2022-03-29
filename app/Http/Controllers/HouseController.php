@@ -52,9 +52,11 @@ class HouseController extends Controller {
     public function register(){
         return view('auth.register');
     } */
+    /*
     public function login(){
         return redirect()->intended('/pages/room-num');
     }
+    */
     public function logout(){
         Auth::logout(Auth::user());
         return redirect()->intended('/');
