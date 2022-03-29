@@ -32,7 +32,8 @@ Route::post('/pages/logout', [HouseController::class, 'logout']);
 Route::get('/pages/shopping', [HouseController::class, 'shopping'])->name('shopping');
 Route::post('/pages/shopping', [HouseController::class, 'storeShoppingTable']);
 Route::get('/pages/calendar', [HouseController::class, 'calendar']);
-Route::get('/pages/chore', [HouseController::class, 'chores']);
+Route::get('/pages/chores', [HouseController::class, 'chores']);
+Route::post('/pages/chores', [HouseController::class, 'storeChores']);
 
 Route::get('/pages/room-num', [HouseController::class, 'roomnum']);
 Route::post('/pages/roomNum', [HouseController::class, 'assignRoom']);

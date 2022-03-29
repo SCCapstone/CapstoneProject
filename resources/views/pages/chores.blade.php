@@ -19,7 +19,7 @@
         </tr>
     </thead>
     @php 
-        $choreBoxOne = "choreBoxOne";
+        $choreBoxOne = 1;
         $choreBoxTwo = 2;
         $choreBoxThree = 3;
         $choreBoxFour = 4;
@@ -29,7 +29,35 @@
         $choreBoxEight = 8;
         $choreBoxNine = 9;
         $choreBoxTen = 10;
+
+        $choreBox = 1;
+        $checkBox = "check";
     @endphp
+
+    <tbody>
+        @for ($i = 0; $i < 10; $i++)
+        <tr>
+                @csrf
+                <td class="checkbox-column">
+                        <input type="checkbox" name="checkbox1" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('done') }}">
+                </td>
+                <td class="item-column">
+                        <input type="text" name="item1" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('item') }}">
+                </td>
+                <td class="urgency-column">
+                        <input type="text" name="urgency1" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('urgency') }}">
+                </td>
+                <td class="assignee-column">
+                        <input type="text" name="assignee1" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('assignee') }}">
+                </td>
+                @php
+                        $choreBox += 1;
+                @endphp
+        </tr>
+        @endfor
+    </tbody>
+
+    <!--
     <tbody>
         <tr>
                 <td class="checkbox-column">
@@ -212,6 +240,7 @@
                 </td>
         </tr>
     </tbody>
+-->
 </table>
 <input type="submit" value="Submit" id="submit">
 </form>
