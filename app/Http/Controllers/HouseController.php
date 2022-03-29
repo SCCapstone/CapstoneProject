@@ -17,7 +17,10 @@ class HouseController extends Controller {
     
     /* AUTHENTICATION AND ACCOUNT HANDLING */
 
-    /* public function signin(){
+    /*
+    Repeat code here
+    
+    public function signin(){
         return view('pages.sign-in');
     }
     public function trySignIn(Request $req){
@@ -52,9 +55,11 @@ class HouseController extends Controller {
     public function register(){
         return view('auth.register');
     } */
+    /*
     public function login(){
         return redirect()->intended('/pages/room-num');
     }
+    */
     public function logout(){
         Auth::logout(Auth::user());
         return redirect()->intended('/');
