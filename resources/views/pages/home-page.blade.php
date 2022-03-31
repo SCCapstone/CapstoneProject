@@ -22,9 +22,9 @@
 			You can then use the curly brace schema to pull directly from the DB using the format: Object->Desired Value in Object
 			This code should work with any number of database entries
 			Also to display the current house number, use the Auth statement I wrote in the h1 at the top
-			Don't forgot to close the foreach loop.
+			Don't forgot to close the foreach loop. -->
 		
-		-->
+		
 		</p>
 		@endforeach
 	</div>
