@@ -5,11 +5,11 @@
 	<h1 class="home-housename">House Name: {{ Auth::user()->house_num }}</h1> <!-- This is now displaying the house -->
 	<div class="home-alerts">
 		<h1>Alerts:</h1>
-		@foreach($chores as $chore) 
+		@for($i=1; $i<4; $i++) 
 		<p>
-			Chore: {{ $chore->chore }}<br>
-			Urgency: {{ $chore->urgency }}<br>
-			Assignee: {{ $chore->assignee }}
+			Chore: {{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('item') }}<br>
+			Urgency: {{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('urgency') }}<br>
+			Assignee: {{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('assignee') }}
 
 		<!-- Go to the HouseController.php file and look at the homepage() method near the top
 			I have written a line there that creates a $chores object that holds the value of all chores at once
@@ -26,7 +26,7 @@
 		
 		
 		</p>
-		@endforeach
+		@endfor
 	</div>
 </div>
 

@@ -77,7 +77,8 @@ class HouseController extends Controller {
         return view('pages.calendar');
     }
     public function chores(){
-        return view('pages.chores');
+        $users = DB::table('users')->where('house_num', Auth::user()->house_num)->get();
+        return view('pages.chores', ['users' => $users]);
     }
     public function storeChores(){
 
@@ -107,7 +108,8 @@ class HouseController extends Controller {
         return view('pages.contact', ['landlords' => $landlords], ['users' => $users]);
     }
     public function shopping(){
-        return view('pages.shopping');
+        $users = DB::table('users')->where('house_num', Auth::user()->house_num)->get();
+        return view('pages.shopping', ['users' => $users]);
     }
     public function storeShoppingTable(){
 

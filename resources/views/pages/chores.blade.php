@@ -36,7 +36,12 @@
                                                 <input type="text" name="{{$urgency.strval($i)}}" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('urgency') }}">
                                         </td>
                                         <td class="assignee-column">
-                                                <input type="text" name="{{$assignee.strval($i)}}" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('assignee') }}">
+                                                <select name="{{$assignee.strval($i)}}" id="assignOptions">
+                                                        <option value="">Select</option>
+                                                        @foreach($users as $person)
+                                                                <option value="{{$person->name}}"> {{ $person->name }}</option>
+                                                        @endforeach
+                                                </select>
                                         </td>
                                         @php
                                                 $choreBox += 1;

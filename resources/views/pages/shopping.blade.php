@@ -35,13 +35,12 @@
                                                         <input type="text" name="{{$urgency.strval($i)}}" class="urgency-form" value="{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('urgency') }}">
                                                 </td>
                                                 <td class="assignee-column">
-                                                        <select name="assignOptions" id="assignOptions">
+                                                        <select name="{{$assignee.strval($i)}}" id="assignOptions">
                                                                 <option value="">Select</option>
                                                                 @foreach($users as $person)
-                                                                        <option value="name" {{ $person->name }}</option>
+                                                                        <option value="{{$person->name}}"> {{ $person->name }}</option>
                                                                 @endforeach
                                                         </select>
-                                                        <!-- <input type="text" name="{{$assignee.strval($i)}}" class="assignee-form" value="{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('assignee') }}"> -->
                                                 </td>
                                                 @php
                                                         $choreBox += 1;
