@@ -16,10 +16,10 @@
         <p><b>Emergency Contact:</b></p><p>{{ Auth::user()->emergencyName }}</p><br>
         <p><b>Relation:</b></p><p>{{ Auth::user()->emergencyRelation }}</p><br>
         <p><b>Emergency Phone:</b></p><p>{{ Auth::user()->emergencyPhone }}</p><br>
-        <p><b>Instagram</b></p><p>{{ Auth::user()->instagram }}</p><br>
-        <p><b>Snapchat</b></p><p>{{ Auth::user()->snapchat }}</p><br>
-        <p><b>Venmo</b></p><p>{{ Auth::user()->venmo }}</p><br>
-        <p><b>TikTok</b></p><p>{{ Auth::user()->tiktok }}</p><br>
+        <p><b>Instagram:</b></p><p>{{ Auth::user()->instagram }}</p><br>
+        <p><b>Snapchat:</b></p><p>{{ Auth::user()->snapchat }}</p><br>
+        <p><b>Venmo:</b></p><p>{{ Auth::user()->venmo }}</p><br>
+        <p><b>TikTok:</b></p><p>{{ Auth::user()->tiktok }}</p><br>
     </div>
     @foreach($users as $person)
     <div class="rm">
