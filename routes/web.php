@@ -16,7 +16,7 @@ use App\Http\Controllers\HouseController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.welcome');
 });
 Route::get('/pages/room-num', [HouseController::class, 'roomnum']);
 Route::post('/pages/roomNum', [HouseController::class, 'assignRoom']);
