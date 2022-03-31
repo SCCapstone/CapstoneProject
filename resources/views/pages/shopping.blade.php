@@ -24,7 +24,13 @@
                                         </td>
                                         <td class="urgency-column">
                                                 @csrf
-                                                <input type="text" name="urgency1" class="urgency-form" value="{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('urgency') }}">
+                                                <select name="urgOptions" id="urgOptions">
+                                                        <option value="">Select</option>
+                                                        @foreach($users as $person)
+                                                                <option value="name" {{ $person->name }}</option>
+                                                        @endforeach
+                                                </select>
+                                                <!-- <input type="text" name="urgency1" class="urgency-form" value="{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('urgency') }}"> -->
                                         </td>
                                         <td class="assignee-column">
                                                 @csrf
