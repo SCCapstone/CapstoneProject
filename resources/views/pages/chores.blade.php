@@ -31,24 +31,27 @@
         $choreBoxTen = 10;
 
         $choreBox = 1;
-        $checkBox = "check";
+        $checkBox = "checkbox";
+        $item = "item";
+        $urgency = "urgency";
+        $assignee = "assignee";
     @endphp
 
     <tbody>
-        @for ($i = 0; $i < 10; $i++)
+        @for ($i = 1; $i < 11; $i++)
         <tr>
                 @csrf
                 <td class="checkbox-column">
-                        <input type="checkbox" name="checkbox1" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('done') }}">
+                        <input type="checkbox" name="{{$checkbox+$i}}" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('done') }}">
                 </td>
                 <td class="item-column">
-                        <input type="text" name="item1" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('item') }}">
+                        <input type="text" name="{{$item+$i}}" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('item') }}">
                 </td>
                 <td class="urgency-column">
-                        <input type="text" name="urgency1" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('urgency') }}">
+                        <input type="text" name="{{$urgency+$i}}" class="urgency-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('urgency') }}">
                 </td>
                 <td class="assignee-column">
-                        <input type="text" name="assignee1" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', 1)->value('assignee') }}">
+                        <input type="text" name="{{$assignee+$i}}" class="assignee-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('assignee') }}">
                 </td>
                 @php
                         $choreBox += 1;
