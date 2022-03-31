@@ -8,4 +8,17 @@
   <script src="{{asset('resources/js/reminders.js')}}"></script> -->
 </div>
 
+<html>
+  <body>
+    <h1>If your calendar is displaying a 404 error, follow these steps:</h1>
+    <ol>
+      <li>Go to https://calendar.google.com/calendar/u/0/r/settings/calendar/Y3RyOTIyQGdtYWlsLmNvbQ?tab=rc</li>
+      <li>Scroll down to “Integrate Calendar” section</li>
+      <li>Copy the Embed code link</li>
+      <li>Go to the settings page (on Housemates.fun)</li>
+      <li>Paste the link in the Personal Profile page under Calendar</li>
+    </ol>
+  </body>
+</html>
+
 @endsection
