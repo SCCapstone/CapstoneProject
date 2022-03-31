@@ -16,64 +16,24 @@ use Illuminate\Support\Facades\Auth;
 class HouseController extends Controller {
     
     /* AUTHENTICATION AND ACCOUNT HANDLING */
-
-    /*
-    Repeat code here
     
-    public function signin(){
-        return view('pages.sign-in');
-    }
-    public function trySignIn(Request $req){
-        $userInfo = [
-            'email' => request('email'),
-            'password' => request('password')
-        ];
-        $finduserU = User::where('email', $userInfo['email'])->first();
-        if($finduserU){
-            Auth::login($finduserU);
-            return redirect()->intended('/pages/room-num');
-        }else{
-            $newUser = User::create([
-                'name' => $userInfo['email'],
-                'email' => $userInfo['email'],
-                'password' => encrypt($userInfo['password'])
-            ]);
-            Auth::login($newUser);
-            return redirect()->intended('/pages/room-num');
-        }
-        $req->session()->put('email', $userInfo['email']);
-        $req->session()->put('id', Auth::user()->id);
-    }
-    public function signup(){
-        return view('pages.sign-up');
-    }
-    public function register(){
-        return view('auth.register');
-    }
-        return view('auth.login');
-    }
-    public function register(){
-        return view('auth.register');
-    } */
-    /*
     public function login(){
         return redirect()->intended('/pages/room-num');
     }
-    */
     public function logout(){
         Auth::logout(Auth::user());
         return redirect()->intended('/');
     }
-    public function trySignIn(Request $req){
+    public function trySignIn(Request $req) {
         $userInfo = [
             'email' => request('email'),
             'password' => request('password')
         ];
         $finduserU = User::where('email', $userInfo['email'])->first();
-        if($finduserU){
+        if ($finduserU) {
             Auth::login($finduserU);
             return redirect()->intended('/pages/room-num');
-        }else{
+        } else {
             $newUser = User::create([
                 'name' => $userInfo['email'],
                 'email' => $userInfo['email'],
@@ -85,11 +45,10 @@ class HouseController extends Controller {
         $req->session()->put('email', $userInfo['email']);
         $req->session()->put('id', Auth::user()->id);
     }
-    
-    public function roomnum(){
+    public function roomnum() {
         return view('pages.room-num');
     }
-    public function assignRoom(Request $req){
+    public function assignRoom(Request $req) {
         $roomNum = request('roomnum');
         $id = Auth::user()->id;
         $affected = DB::update('UPDATE users SET house_num=? WHERE id=?', [$roomNum, $id]);
