@@ -31,7 +31,7 @@
     27 => 'Laravel\\Sail\\SailServiceProvider',
     28 => 'Laravel\\Sanctum\\SanctumServiceProvider',
     29 => 'Laravel\\Socialite\\SocialiteServiceProvider',
-    30 => 'Laravel\\Socialite\\SocialiteServiceProvider',
+    30 => 'Laravel\\Tinker\\TinkerServiceProvider',
     31 => 'Livewire\\LivewireServiceProvider',
     32 => 'Carbon\\Laravel\\ServiceProvider',
     33 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
@@ -196,6 +196,7 @@
     'Laravel\\Sail\\Console\\InstallCommand' => 'Laravel\\Sail\\SailServiceProvider',
     'Laravel\\Sail\\Console\\PublishCommand' => 'Laravel\\Sail\\SailServiceProvider',
     'Laravel\\Socialite\\Contracts\\Factory' => 'Laravel\\Socialite\\SocialiteServiceProvider',
+    'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
   ),
   'when' => 
   array (
@@ -239,6 +240,9 @@
     array (
     ),
     'Laravel\\Socialite\\SocialiteServiceProvider' => 
+    array (
+    ),
+    'Laravel\\Tinker\\TinkerServiceProvider' => 
     array (
     ),
   ),

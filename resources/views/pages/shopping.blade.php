@@ -201,7 +201,7 @@
                                 </tr>
                         </tbody>
                 </table>
-                <input type="submit" value="Submit" id="submit">
+                <input type="submit" value="Submit" id="shopping-submit">
         </form>
 </div>
 

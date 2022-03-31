@@ -41,6 +41,7 @@ a:hover {
 }
 .primary-nav li {
     list-style-type: none;
+<<<<<<< HEAD
     margin: 0 5vw;
     font-size: 3vh;
 }
@@ -48,4 +49,6 @@ h1 {
     color: #698384;
     text-align: center;
     margin: 0 auto;
+=======
+>>>>>>> main
 }
