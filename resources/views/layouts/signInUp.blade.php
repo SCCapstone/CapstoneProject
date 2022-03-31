@@ -14,7 +14,7 @@
 	<body>
 
 		<div id='background'>
-			<h1 id='welcome'>Welcome, Housemates!</h1>
+			<h1 id='welcome'>Welcome Housemates!</h1>
 			
 			<form action='user' method="POST">
 				@csrf
