@@ -90,12 +90,20 @@ class HouseController extends Controller {
         $assignee = "assignee";
 
         for($i=1; $i<$boxLimit; $i++){
-            $updateDetails = [
-                'done' => request($checkbox.strval($i)),
-                'item' => request($item.strval($i)),
-                'urgency' => request($urgency.strval($i)),
-                'assignee' => request($assignee.strval($i))
-            ];
+            if(request($checkbox.strval($i))==true){
+                $updateDetails = [
+                    'item' => null,
+                    'urgency' => null,
+                    'assignee' => null,
+                ];
+            } else{
+                $updateDetails = [
+                    'item' => request($item.strval($i)),
+                    'urgency' => request($urgency.strval($i)),
+                    'assignee' => request($assignee.strval($i)),
+                    'list_size' => request('extendChores')
+                ];
+            }
             DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->update($updateDetails);
         }
         

@@ -20,14 +20,17 @@
                                 $item = "item";
                                 $urgency = "urgency";
                                 $assignee = "assignee";
-                        @endphp
+02                        @endphp
 
                         <tbody>
                                 @for ($i = 1; $i < $boxLimit; $i++)
                                 <tr>
                                         @csrf
                                         <td class="checkbox-column">
-                                                <input type="checkbox" name="{{$checkbox.strval($i)}}" class="checkbox-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('done') }}">
+                                                <select name="{{$checkbox.strval($i)}}" class="checbox-form">
+                                                        <option value="0">To Be Done</option>
+                                                        <option value="1">Done</option>
+                                                </select>
                                         </td>
                                         <td class="item-column">
                                                 <input type="text" name="{{$item.strval($i)}}" class="item-form" value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('item') }}">
@@ -37,7 +40,7 @@
                                         </td>
                                         <td class="assignee-column">
                                                 <select name="{{$assignee.strval($i)}}" id="assignOptions">
-                                                        <option value="">Select</option>
+                                                        <option value="">{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('assignee') }}</option>
                                                         @foreach($users as $person)
                                                                 <option value="{{$person->name}}"> {{ $person->name }}</option>
                                                         @endforeach
@@ -50,9 +53,13 @@
                                 @endfor
                         </tbody>
                 </table>
+                <h3>Select to add rows</h3>
+        <select name="extendChores">
+                <option value="0"></option>
+                <option value="1">Add Rows</option>
+                <option value="2">Delete Rows</option>
+        </select>
         <input type="submit" value="Submit" id="submit">
-        <input type="submit" value="Add Rows" id="addRows">
-        <input type="submit" value="Remove Rows" id="removeRows">
         </form>
 </div>
 
