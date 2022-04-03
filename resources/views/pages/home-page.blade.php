@@ -5,13 +5,12 @@
 	<h1 class="home-housename">House Name: {{ Auth::user()->house_num }}</h1> <!-- This is now displaying the house -->
 	<div class="home-alerts">
 		<h1>Alerts:</h1>
-		@for($i=1; $i<4; $i++) 
-		<p>
+		@for($i=1; $i<4; $i++) <p>
 			Chore: {{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('item') }}<br>
 			Urgency: {{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('urgency') }}<br>
 			Assignee: {{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('assignee') }}
 
-		<!-- Go to the HouseController.php file and look at the homepage() method near the top
+			<!-- Go to the HouseController.php file and look at the homepage() method near the top
 			I have written a line there that creates a $chores object that holds the value of all chores at once
 			The command is written as follows: $chores = DB::table('chores')->where('house_num', Auth::user()->house_num)->get();
 			In order, this looks in the chores table. Then narrows it down to where the chores house_num is equal to the user house_num.
@@ -23,10 +22,10 @@
 			This code should work with any number of database entries
 			Also to display the current house number, use the Auth statement I wrote in the h1 at the top
 			Don't forgot to close the foreach loop. -->
-		
-		
-		</p>
-		@endfor
+
+
+			</p>
+			@endfor
 	</div>
 </div>
 

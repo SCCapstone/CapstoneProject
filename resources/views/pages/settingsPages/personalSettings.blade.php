@@ -1,6 +1,6 @@
 @extends('layouts.settings')
 @section('settingsContent')
-	
+
 <div class="personal">
 	<h1>Personal Profile</h1>
 	<form action='/pages/settingsPages/personalSettings' method="POST">
@@ -19,7 +19,7 @@
 		<input size="50" type="text" id="house_num" name="house_num" value="{{ DB::table('users')->where('id', Auth::user()->id)->value('house_num') }}"><br>
 		<p>To invite someone else to the room, have them log into <a href="http://housemates.fun/">Housemates</a> and sign in with the above room number</p>
 		<input type="submit" value="Publish">
-		</form>
+	</form>
 </div>
 
 @endsection

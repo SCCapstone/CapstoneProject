@@ -1,4 +1,4 @@
-#roomNum{
+#roomNum {
     position: relative;
     left: 25%;
     background: white;
@@ -7,9 +7,11 @@
     border-radius: 15px;
     margin-top: 4%;
 }
-p{
+
+p {
     color: black;
 }
-h2{
+
+h2 {
     color: black;
 }
