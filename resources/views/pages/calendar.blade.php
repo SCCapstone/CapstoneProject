@@ -11,7 +11,7 @@
 <div class="instructions">
   <h3>If your calendar is displaying a 404 error, follow these steps:</h3>
   <ol>
-    <li>Go to <a href="https://www.w3schools.com/html/default.asp" target="_blank">this page:</a></li>
+    <li>Go to <a href="https://calendar.google.com/calendar/u/0/r/settings/calendar/Y3RyOTIyQGdtYWlsLmNvbQ?tab=rc" target="_blank">this page:</a></li>
     <li>Scroll down to the “Integrate Calendar” section</li>
     <li>Copy the Embed code link</li>
     <li>Go to the Settings Page (on Housemates.fun)</li>
