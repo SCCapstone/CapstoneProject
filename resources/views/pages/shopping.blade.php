@@ -14,7 +14,6 @@
                         </thead>
                         @php
                                 $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size');;
-                                $choreBox = 1;
                                 $checkbox = "checkbox";
                                 $item = "item";
                                 $urgency = "urgency";
@@ -45,14 +44,11 @@
                                                                 @endforeach
                                                         </select>
                                                 </td>
-                                                @php
-                                                        $choreBox += 1;
-                                                @endphp
                                         </tr>
                                 @endfor
                         </tbody>
                 </table>
-                <select name="extendChores">
+                <select name="extendShopping">
                         <option value="0"></option>
                         <option value="1">Add Rows</option>
                         <option value="2">Delete Rows</option>
