@@ -10,5 +10,5 @@ class Shopping extends Model
     use HasFactory;
 
     protected $table = 'shopping';
-    protected $fillable = ['house_num', 'local_id'];
+    protected $fillable = ['house_num', 'local_id', 'list_size'];
 }

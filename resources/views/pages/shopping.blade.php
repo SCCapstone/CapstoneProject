@@ -13,7 +13,7 @@
                                 </tr>
                         </thead>
                         @php
-                                $boxLimit = 11;
+                                $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size');;
                                 $choreBox = 1;
                                 $checkbox = "checkbox";
                                 $item = "item";
@@ -26,7 +26,10 @@
                                         <tr>
                                                 @csrf
                                                 <td class="checkbox-column">
-                                                        <input type="checkbox" name="{{$checkbox.strval($i)}}" class="checkbox-form" value="{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('done') }}">
+                                                        <select name="{{$checkbox.strval($i)}}" class="checbox-form">
+                                                                <option value="0">To Be Done</option>
+                                                                <option value="1">Done</option>
+                                                        </select>
                                                 </td>
                                                 <td class="item-column">
                                                         <input type="text" name="{{$item.strval($i)}}" class="item-form" value="{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('item') }}">
@@ -49,6 +52,11 @@
                                 @endfor
                         </tbody>
                 </table>
+                <select name="extendChores">
+                        <option value="0"></option>
+                        <option value="1">Add Rows</option>
+                        <option value="2">Delete Rows</option>
+                </select>
                 <input type="submit" value="Submit" id="shopping-submit">
         </form>
 </div>

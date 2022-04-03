@@ -14,7 +14,7 @@
                                 </tr>
                         </thead>
                         @php 
-                                $boxLimit = 11;
+                                $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size');
                                 $choreBox = 1;
                                 $checkbox = "checkbox";
                                 $item = "item";

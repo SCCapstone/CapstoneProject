@@ -10,5 +10,5 @@ class Chores extends Model
     use HasFactory;
 
     protected $table = 'chores';
-    protected $fillable = ['house_num', 'local_id'];
+    protected $fillable = ['house_num', 'local_id', 'list_size'];
 }
