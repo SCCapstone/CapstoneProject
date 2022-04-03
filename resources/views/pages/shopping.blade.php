@@ -13,7 +13,7 @@
                                 </tr>
                         </thead>
                         @php
-                                $boxLimit = 11;
+                                $boxLimit = 25;
                                 $choreBox = 1;
                                 $checkbox = "checkbox";
                                 $item = "item";

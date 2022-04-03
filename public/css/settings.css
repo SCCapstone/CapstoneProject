@@ -8,9 +8,9 @@
 	justify-self: flex-start;
 	width: 150px;
 	background-color: #fff;
-    margin: 4% 3%;
-    padding: 1% 2%;
-    border-radius: 1.5%;
+	margin: 4% 3%;
+	padding: 1% 2%;
+	border-radius: 1.5%;
 }
 
 .settings-nav h1 {
@@ -28,12 +28,20 @@
 	color: #698384;
 }
 
-.personal, .social, .emergency, .housing, .invite {
+.personal,
+.social,
+.emergency,
+.housing,
+.invite {
 	margin: 4% 2%;
 	line-height: 1.5em;
 }
 
-.personal h1, .social h1, .emergency h1, .housing h1, .invite h1 {
+.personal h1,
+.social h1,
+.emergency h1,
+.housing h1,
+.invite h1 {
 	text-align: center;
 	color: #698384;
 	font-weight: bolder;

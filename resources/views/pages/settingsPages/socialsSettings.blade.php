@@ -1,6 +1,6 @@
 @extends('layouts.settings')
 @section('settingsContent')
-	
+
 <div class="social">
 	<h1>Social Media</h1>
 	<form action='/pages/settingsPages/socialsSettings' method="POST">

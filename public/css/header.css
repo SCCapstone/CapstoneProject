@@ -16,6 +16,7 @@ a:any-link {
     text-decoration: none;
     color: black;
 }
+
 p {
     text-decoration: none;
     color: black;
@@ -23,6 +24,7 @@ p {
     text-align: right;
     padding: 2px 15px 0;
 }
+
 a:hover {
     color: #698384;
 }
@@ -32,6 +34,7 @@ a:hover {
     font-size: 1.75em;
     width: 100%;
 }
+
 .primary-nav ul {
     display: flex;
     justify-content: space-around;
@@ -39,6 +42,7 @@ a:hover {
     padding: 0.75em 0;
     margin: 0;
 }
+
 .primary-nav li {
     list-style-type: none;
 }

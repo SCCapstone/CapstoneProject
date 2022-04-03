@@ -1,6 +1,6 @@
 @extends('layouts.settings')
 @section('settingsContent')
-	
+
 <div class="housing">
 	<h1>Housing Information</h1>
 	<form action='/pages/settingsPages/informationSettings' method="POST">
