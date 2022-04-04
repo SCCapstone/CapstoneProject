@@ -24,7 +24,7 @@
 			<input type="password" id="password" name="password" placeholder="Password"><br>
 			<input type="submit" value="Go">
 		</form>
-	-->
+-->
 
 		<div class="flex items-center justify-end mt-4 google-signin">
 			<a href="{{ url('auth/google') }}">
