@@ -38,7 +38,7 @@
                                                 </td>
                                                 <td class="assignee-column">
                                                         <select name="{{$assignee.strval($i)}}" id="assignOptions">
-                                                                <option value="">Select</option>
+                                                                <option value="">{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('assignee') }}</option>
                                                                 @foreach($users as $person)
                                                                         <option value="{{$person->name}}"> {{ $person->name }}</option>
                                                                 @endforeach
@@ -48,6 +48,7 @@
                                 @endfor
                         </tbody>
                 </table>
+                <h3>Select to add/delete rows or submit the content</h3>
                 <select name="extendShopping">
                         <option value="0"></option>
                         <option value="1">Add Rows</option>

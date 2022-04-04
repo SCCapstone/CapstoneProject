@@ -53,7 +53,7 @@
                                 @endfor
                         </tbody>
                 </table>
-                <h3>Select to add rows</h3>
+                <h3>Select to add/delete rows or submit the content</h3>
         <select name="extendChores">
                 <option value="0"></option>
                 <option value="1">Add Rows</option>

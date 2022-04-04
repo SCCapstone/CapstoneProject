@@ -8,8 +8,9 @@
     margin-top: 4%;
 }
 
-p {
+.numberInstructions {
     color: black;
+    left: 5%;
 }
 
 h2 {

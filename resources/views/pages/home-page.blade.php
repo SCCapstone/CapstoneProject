@@ -2,13 +2,14 @@
 @section('content')
 
 <div class="home">
-	<h1 class="home-housename">House Name: {{ Auth::user()->house_num }}</h1> <!-- This is now displaying the house -->
+	<h1 class="home-housename">House Number: {{ Auth::user()->house_num }}</h1> <!-- This is now displaying the house -->
 	<div class="home-alerts">
 		<h1>Alerts:</h1>
-		@for($i=1; $i<4; $i++) <p>
-			Chore: {{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('item') }}<br>
-			Urgency: {{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('urgency') }}<br>
-			Assignee: {{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('assignee') }}
+		<ul style="margin-left:28%;">
+		@for($i=1; $i<4; $i++) 
+			<li><b>Chore:</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('item') }} <br>
+			<b>Urgency:</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('urgency') }}<br> 
+			<b>Assignee:</b> &nbsp; &nbsp; &nbsp; &nbsp; {{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('assignee') }}</li> <br>
 
 			<!-- Go to the HouseController.php file and look at the homepage() method near the top
 			I have written a line there that creates a $chores object that holds the value of all chores at once
@@ -24,8 +25,9 @@
 			Don't forgot to close the foreach loop. -->
 
 
-			</p>
+		
 			@endfor
+			</ul>
 	</div>
 </div>
 
