@@ -309,6 +309,6 @@ class HouseController extends Controller
         error_log(request('snap'));
         error_log(request('venmo'));
         error_log(request('tt'));
-        return redirect(route('pages.settingsPages.socialsSettings'));
+        return redirect()->intended('pages/settingsPages/socialsSettings');
     }
 }
