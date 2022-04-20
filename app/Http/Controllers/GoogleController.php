@@ -38,6 +38,9 @@ class GoogleController extends Controller
        
                 Auth::login($finduser);
       
+                if(Auth::user()->house_num == null || Auth::user()->house_num == 0){
+                    return redirect()->intended('/pages/room-num');
+                }
                 return redirect()->intended('/pages/home-page');
        
             }else{
