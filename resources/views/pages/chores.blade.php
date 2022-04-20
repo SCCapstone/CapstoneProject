@@ -59,6 +59,7 @@
                 <option value="1">Add Rows</option>
                 <option value="2">Delete Rows</option>
         </select>
+        @csrf
         <input type="submit" value="Submit" id="submit">
         </form>
 </div>
