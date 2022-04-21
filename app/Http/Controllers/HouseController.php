@@ -18,15 +18,19 @@ class HouseController extends Controller
 
     /* AUTHENTICATION AND ACCOUNT HANDLING */
 
+    //built to potentially override the Auth::Login method
     public function login()
     {
         return redirect()->intended('/pages/room-num');
     }
+    //Auth::logout for the currently logged in user
     public function logout()
     {
         Auth::logout(Auth::user());
         return redirect()->intended('/');
     }
+    //creates an account using local method if one is not built or logs in existing user
+    //no verification as this is for testing purposes only
     public function trySignIn(Request $req)
     {
         $userInfo = [
@@ -49,10 +53,12 @@ class HouseController extends Controller
         $req->session()->put('email', $userInfo['email']);
         $req->session()->put('id', Auth::user()->id);
     }
+    //returns room-num page
     public function roomnum()
     {
         return view('pages.room-num');
     }
+    //post method from room-num assigns room num to user and builds landlord, shopping, and chores table
     public function assignRoom(Request $req)
     {
         $roomNum = request('roomnum');
@@ -74,23 +80,29 @@ class HouseController extends Controller
 
     /* MAIN PAGES */
 
+    //home page return
     public function homepage()
     {
         return view('pages.home-page');
     }
+    //index page return
     public function index()
     {
         return view('pages.index');
     }
+    //calendar page return
     public function calendar()
     {
         return view('pages.calendar');
     }
+    //chores page return (returns table of users with the logged in user's house_num)
     public function chores()
     {
         $users = DB::table('users')->where('house_num', Auth::user()->house_num)->get();
         return view('pages.chores', ['users' => $users]);
     }
+    //stores chores including status, item, urgency, & assignee 
+    //determines whether to add/remove/keep current amount of rows by list_size variable and add/remove drop down menu
     public function storeChores()
     {
 
@@ -110,7 +122,7 @@ class HouseController extends Controller
         }else{
             $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size') - 10;
             for($i=$boxLimit+11; $i>$boxLimit; $i--){
-                $newChoreList = Chores::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
+                //$newChoreList = Chores::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
                 DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->delete();
             }
         }
@@ -136,6 +148,7 @@ class HouseController extends Controller
 
         return redirect()->intended('/pages/chores');
     }
+    //returns contact page with landlord and users table pre-sorted to users with matching house_num of logged in user
     public function contact()
     {
         $landlords = DB::table('landlord')->where('landlordnum', Auth::user()->house_num)->first();
@@ -143,11 +156,14 @@ class HouseController extends Controller
             ->whereNotIn('id', DB::table('users')->select('id')->where('id', Auth::user()->id))->get();
         return view('pages.contact', ['landlords' => $landlords], ['users' => $users]);
     }
+    //shopping page return (returns table of users with the logged in user's house_num)
     public function shopping()
     {
         $users = DB::table('users')->where('house_num', Auth::user()->house_num)->get();
         return view('pages.shopping', ['users' => $users]);
     }
+    //stores shopping including status, item, urgency, & assignee 
+    //determines whether to add/remove/keep current amount of rows by list_size variable and add/remove drop down menu
     public function storeShoppingTable(){
  
         /*
@@ -214,11 +230,13 @@ class HouseController extends Controller
 
     /* SETTINGS */
 
+    //returns emergencySettings page
     public function emergencySettings()
     {
         //return redirect()->intended('/pages/settingsPages/emergencySettings');
         return view('pages.settingsPages.emergencySettings');
     }
+    //stores emergencySettings into users table (emergencyName, emergencyPhone, emergencyRelation)
     public function storeEmergencySettings()
     {
         $updateDetails = [
@@ -237,12 +255,14 @@ class HouseController extends Controller
         //return redirect(route('pages.settingsPages.emergencySettings'));
     }
 
+    //returns informationSettings page along with "$landlords" variable filled with landlord table
     public function informationSettings()
     {
         $landlords = Landlord::all();
 
         return view('pages.settingsPages.informationSettings', ['landlords' => $landlords]);
     }
+    //stores landlord information from informationSettings page data
     public function storeInformationSettings()
     {
         $updateDetails = [
@@ -268,11 +288,12 @@ class HouseController extends Controller
         return redirect()->intended('/pages/settingsPages/informationSettings');
         //return redirect(route('pages.settingsPages.informationSettings'));
     }
-
+    //returns personalSettings page
     public function personalSettings()
     {
         return view('pages.settingsPages.personalSettings');
     }
+    //stores settings values into users table from personalSettings page
     public function storePersonalSettings()
     {
         $updateDetails = [
@@ -294,11 +315,12 @@ class HouseController extends Controller
         error_log(request('house_num'));
         return redirect()->intended('/pages/settingsPages/personalSettings');
     }
-
+    //returns socialSettings page
     public function socialsSettings()
     {
-        return view('/pages.settingsPages.socialsSettings');
+        return view('/pages/settingsPages/socialsSettings');
     }
+    //stores social information in users table from socialSettings page
     public function storeSocialsSettings()
     {
         $updateDetails = [
