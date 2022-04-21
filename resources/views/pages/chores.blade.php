@@ -7,7 +7,7 @@
                 <table id="shopping-table">
                         <thead>
                                 <tr>
-                                <th>Done?</th>
+                                <th>Status</th>
                                 <th>Chore</th>
                                 <th>Urgency</th>
                                 <th>Assigned</th>
