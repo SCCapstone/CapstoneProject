@@ -32,8 +32,6 @@
 			</a>
 		</div>
 
-		@yield('content')
-
 	</div>
 
 	<p id='desc'>The all-in-one-app for your home! Share calendars, organize chores, decide on shopping lists, assign tasks, and keep tabs on rent and bills! Get started now to help your household become a more coordinated one.</p>
