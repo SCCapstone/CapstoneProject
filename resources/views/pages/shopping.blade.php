@@ -34,7 +34,13 @@
                                                         <input type="text" name="{{$item.strval($i)}}" class="item-form" value="{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('item') }}">
                                                 </td>
                                                 <td class="urgency-column">
-                                                        <input type="text" name="{{$urgency.strval($i)}}" class="urgency-form" value="{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('urgency') }}">
+                                                        <select name="{{$urgency.strval($i)}}" class="urgency-form">
+                                                                <option value="">{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('urgency') }}</option>
+                                                                <option value="HIGH">HIGH</option>
+                                                                <option value="MEDIUM">MEDIUM</option>
+                                                                <option value="LOW">LOW</option>
+                                                        </select>
+                                                        <!--<input type="text" name="{{$urgency.strval($i)}}" class="urgency-form" value="{{ DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('urgency') }}">-->
                                                 </td>
                                                 <td class="assignee-column">
                                                         <select name="{{$assignee.strval($i)}}" id="assignOptions">
