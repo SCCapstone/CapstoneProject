@@ -62,7 +62,7 @@ class HouseController extends Controller
     public function assignRoom(Request $req)
     {
         $roomNum = request('roomnum');
-        $list_size = 11;
+        $list_size = 10;
         $id = Auth::user()->id;
         $affected = DB::update('UPDATE users SET house_num=? WHERE id=?', [$roomNum, $id]);
 
@@ -112,22 +112,22 @@ class HouseController extends Controller
         $urgency = "urgency";
         $assignee = "assignee";
         $extendChores = request('extendChores');
-        if($extendChores==0){
-            $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size');
-        }elseif($extendChores==1){
+        $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size');
+            
+        if($extendChores==1){
             $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size') + 10;
-            for($i=$boxLimit-10; $i<$boxLimit; $i++){
+            for($i=$boxLimit-9; $i<$boxLimit+1; $i++){
                 $newChoreList = Chores::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
             }
-        }else{
+        }else if($extendChores==2){
             $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size') - 10;
-            for($i=$boxLimit+11; $i>$boxLimit; $i--){
+            for($i=$boxLimit+10; $i>$boxLimit; $i--){
                 //$newChoreList = Chores::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
                 DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->delete();
             }
         }
 
-        for ($i = 1; $i < $boxLimit; $i++) {
+        for ($i = 1; $i < $boxLimit+1; $i++) {
             if (request($checkbox . strval($i)) == true) {
                 $updateDetails = [
                     'item' => null,
@@ -191,22 +191,22 @@ class HouseController extends Controller
         $urgency = "urgency";
         $assignee = "assignee";
         $extendShopping = request('extendShopping');
-        if($extendShopping==0){
-            $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size');
-        }elseif($extendShopping==1){
+        $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size');
+        
+        if($extendShopping==1){
             $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size') + 10;
-            for($i=$boxLimit-10; $i<$boxLimit; $i++){
+            for($i=$boxLimit-9; $i<$boxLimit+1; $i++){
                 $newChoreList = Shopping::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
             }
-        }else{
+        }else if($extendShopping==2){
             $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size') - 10;
-            for($i=$boxLimit+11; $i>$boxLimit; $i--){
+            for($i=$boxLimit+10; $i>$boxLimit; $i--){
                 $newShoppingList = Shopping::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
                 DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->delete();
             }
         }
 
-        for($i=1; $i<$boxLimit; $i++){
+        for ($i = 1; $i < $boxLimit+1; $i++) {
             if(request($checkbox.strval($i))==true){
                 $updateDetails = [
                     'item' => null,
