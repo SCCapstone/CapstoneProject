@@ -115,13 +115,13 @@ class HouseController extends Controller
         $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size');
             
         if($extendChores==1){
-            $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size') + 10;
-            for($i=$boxLimit-9; $i<$boxLimit+1; $i++){
+            $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size') + 1;
+            for($i=$boxLimit; $i<$boxLimit+1; $i++){
                 $newChoreList = Chores::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
             }
         }else if($extendChores==2){
-            $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size') - 10;
-            for($i=$boxLimit+10; $i>$boxLimit; $i--){
+            $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size') - 1;
+            for($i=$boxLimit+1; $i>$boxLimit; $i--){
                 //$newChoreList = Chores::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
                 DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->delete();
             }
@@ -194,13 +194,13 @@ class HouseController extends Controller
         $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size');
         
         if($extendShopping==1){
-            $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size') + 10;
-            for($i=$boxLimit-9; $i<$boxLimit+1; $i++){
+            $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size') + 1;
+            for($i=$boxLimit; $i<$boxLimit+1; $i++){
                 $newChoreList = Shopping::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
             }
         }else if($extendShopping==2){
-            $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size') - 10;
-            for($i=$boxLimit+10; $i>$boxLimit; $i--){
+            $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size') - 1;
+            for($i=$boxLimit+1; $i>$boxLimit; $i--){
                 $newShoppingList = Shopping::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
                 DB::table('shopping')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->delete();
             }
