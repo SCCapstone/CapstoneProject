@@ -98,6 +98,12 @@ class HouseController extends Controller
     //chores page return (returns table of users with the logged in user's house_num)
     public function chores()
     {
+        if(Auth::user()->house_num == null){
+            echo ("<script LANGUAGE='JavaScript'>
+                window.alert('You must declare a room number before you can view this page.');
+                window.location.href='/pages/room-num';
+                </script>");
+        }
         $users = DB::table('users')->where('house_num', Auth::user()->house_num)->get();
         return view('pages.chores', ['users' => $users]);
     }
@@ -151,6 +157,12 @@ class HouseController extends Controller
     //returns contact page with landlord and users table pre-sorted to users with matching house_num of logged in user
     public function contact()
     {
+        if(Auth::user()->house_num == null){
+            echo ("<script LANGUAGE='JavaScript'>
+                window.alert('You must declare a room number before you can view this page.');
+                window.location.href='/pages/room-num';
+                </script>");
+        }
         $landlords = DB::table('landlord')->where('landlordnum', Auth::user()->house_num)->first();
         $users = DB::table('users')->where('house_num', Auth::user()->house_num)
             ->whereNotIn('id', DB::table('users')->select('id')->where('id', Auth::user()->id))->get();
@@ -159,6 +171,12 @@ class HouseController extends Controller
     //shopping page return (returns table of users with the logged in user's house_num)
     public function shopping()
     {
+        if(Auth::user()->house_num == null){
+            echo ("<script LANGUAGE='JavaScript'>
+                window.alert('You must declare a room number before you can view this page.');
+                window.location.href='/pages/room-num';
+                </script>");
+        }
         $users = DB::table('users')->where('house_num', Auth::user()->house_num)->get();
         return view('pages.shopping', ['users' => $users]);
     }
