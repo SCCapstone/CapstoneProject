@@ -66,6 +66,7 @@ class HouseController extends Controller
         $id = Auth::user()->id;
         $affected = DB::update('UPDATE users SET house_num=? WHERE id=?', [$roomNum, $id]);
 
+        //create landlord, shopping and chores table to match the logged in user and house number
         $findLandlord = Landlord::where('landlordnum', $roomNum)->first();
         if (!$findLandlord) {
             $newLandlord = Landlord::create(['landlordnum' => $roomNum]);
@@ -120,12 +121,14 @@ class HouseController extends Controller
         $extendChores = request('extendChores');
         $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size');
             
+        //if user wants to add a row
         if($extendChores==1){
             $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size') + 1;
             for($i=$boxLimit; $i<$boxLimit+1; $i++){
                 $newChoreList = Chores::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
             }
         }else if($extendChores==2){
+            //if user wants to remove a row
             $boxLimit = DB::table('chores')->where('house_num', Auth::user()->house_num)->value('list_size') - 1;
             for($i=$boxLimit+1; $i>$boxLimit; $i--){
                 //$newChoreList = Chores::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
@@ -133,6 +136,7 @@ class HouseController extends Controller
             }
         }
 
+        //store/update new row values
         for ($i = 1; $i < $boxLimit+1; $i++) {
             if (request($checkbox . strval($i)) == true) {
                 $updateDetails = [
@@ -211,12 +215,14 @@ class HouseController extends Controller
         $extendShopping = request('extendShopping');
         $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size');
         
+        //if user wants to add a row
         if($extendShopping==1){
             $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size') + 1;
             for($i=$boxLimit; $i<$boxLimit+1; $i++){
                 $newChoreList = Shopping::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
             }
         }else if($extendShopping==2){
+            //if user wants to remove a row
             $boxLimit = DB::table('shopping')->where('house_num', Auth::user()->house_num)->value('list_size') - 1;
             for($i=$boxLimit+1; $i>$boxLimit; $i--){
                 $newShoppingList = Shopping::create(['list_size' => $boxLimit, 'local_id' => $i, 'house_num' => Auth::user()->house_num]);
@@ -224,6 +230,7 @@ class HouseController extends Controller
             }
         }
 
+        //store current values
         for ($i = 1; $i < $boxLimit+1; $i++) {
             if(request($checkbox.strval($i))==true){
                 $updateDetails = [
