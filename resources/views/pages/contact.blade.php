@@ -38,7 +38,7 @@
         <p>{{ $person->email }}</p><br>
         <p><b>Emergency Contact:</b></p>
         <p>{{ $person->emergencyName }}</p><br>
-        <p><b>Relation:</b></p>
+        <p><b>Emergency Contact Relation:</b></p>
         <p>{{ $person->emergencyRelation }}</p><br>
         <p><b>Emergency Phone:</b></p>
         <p>{{ $person->emergencyPhone }}</p><br>
