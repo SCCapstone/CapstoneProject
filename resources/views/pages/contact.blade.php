@@ -1,9 +1,8 @@
 @extends('layouts.layout')
 @section('content')
 
-<h1>Contact</h1>
 <div class="office">
-    <h2>Office-Info</h2>
+    <h2>Office Info</h2>
     <p>Phone: {{ $landlords->phone }}</p>
     <p>Address: {{ $landlords->officeAddress }}</p>
 </div>
@@ -17,7 +16,7 @@
         <p>{{ Auth::user()->email }}</p><br>
         <p><b>Emergency Contact:</b></p>
         <p>{{ Auth::user()->emergencyName }}</p><br>
-        <p><b>Relation:</b></p>
+        <p><b>Emergency Contact Relation:</b></p>
         <p>{{ Auth::user()->emergencyRelation }}</p><br>
         <p><b>Emergency Phone:</b></p>
         <p>{{ Auth::user()->emergencyPhone }}</p><br>
