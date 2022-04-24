@@ -37,7 +37,7 @@
                                         </td>
                                         <td class="urgency-column">
                                                 <select name="{{$urgency.strval($i)}}" class="urgency-form">
-                                                        <option value="">{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('urgency') }}</option>
+                                                        <option value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('urgency') }}">{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('urgency') }}</option>
                                                         <option value="HIGH">HIGH</option>
                                                         <option value="MEDIUM">MEDIUM</option>
                                                         <option value="LOW">LOW</option>
@@ -47,7 +47,7 @@
                                         </td>
                                         <td class="assignee-column">
                                                 <select name="{{$assignee.strval($i)}}" id="assignOptions">
-                                                        <option value="">{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('assignee') }}</option>
+                                                        <option value="{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('assignee') }}">{{ DB::table('chores')->where('house_num', Auth::user()->house_num)->where('local_id', $i)->value('assignee') }}</option>
                                                         @foreach($users as $person)
                                                                 <option value="{{$person->name}}"> {{ $person->name }}</option>
                                                         @endforeach
