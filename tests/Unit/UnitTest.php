@@ -44,4 +44,14 @@ class UnitTest extends TestCase
         $this->assertTrue(true);
     }
 
+    public function test_same_roomnum() {
+        $user1 = User::make([
+            'house_num' => 3324
+        ]);
+        $user2 = User::make([
+            'house_num' => 3324
+        ]);
+        $this->assertTrue($user1->house_num == $user2->house_num);
+    }
+
 }
