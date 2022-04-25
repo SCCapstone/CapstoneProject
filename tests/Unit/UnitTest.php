@@ -13,9 +13,9 @@ class UnitTest extends TestCase
      * @return void
      */
 
-    public function test_login_page() 
+    public function test_welcome_page() 
     {
-        $response = $this->get('/pages/sign-up');
+        $response = $this->get('/pages/welcome');
 
         $response->assertStatus(200);
     }
