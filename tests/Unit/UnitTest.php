@@ -12,9 +12,9 @@ class UnitTest extends TestCase
      *
      * @return void
      */
-    public function test_login_page() 
+    public function test_welcome_page() 
     {
-        $response = $this->get('/pages/sign-up');
+        $response = $this->get('/pages/welcome');
 
         $response->assertStatus(200);
     }
@@ -41,5 +41,25 @@ class UnitTest extends TestCase
         }
 
         $this->assertTrue(true);
+    }
+
+    public function test_same_roomnum() {
+        $user1 = User::make([
+            'house_num' => 2334
+        ]);
+        $user2 = User::make([
+            'house_num' => 2334
+        ]);
+        $this->assertTrue($user1->house_num == $user2->house_num);
+    }
+
+    public function user_exists() {
+        $user = User::make();
+        $this->assertTrue(is_null($user));
+    }
+
+    public function roomnum_exists() {
+        $user = User::make();
+        $this->assertTrue(is_null($user->house_num));
     }
 }
