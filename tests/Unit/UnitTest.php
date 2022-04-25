@@ -13,13 +13,6 @@ class UnitTest extends TestCase
      * @return void
      */
 
-    public function test_welcome_page() 
-    {
-        $response = $this->get('/pages/welcome');
-
-        $response->assertStatus(200);
-    }
-
     public function test_duplicate_user() {
         $user1 = User::make([
             'name' => 'Roscoe Burk-Moody',
