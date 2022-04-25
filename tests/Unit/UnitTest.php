@@ -13,6 +13,13 @@ class UnitTest extends TestCase
      * @return void
      */
 
+    public function test_login_page() 
+    {
+        $response = $this->get('/pages/sign-up');
+
+        $response->assertStatus(200);
+    }
+
     public function test_duplicate_user() {
         $user1 = User::make([
             'name' => 'Roscoe Burk-Moody',
@@ -35,16 +42,6 @@ class UnitTest extends TestCase
         }
 
         $this->assertTrue(true);
-    }
-
-    public function test_same_roomnum() {
-        $user1 = User::make([
-            'house_num' => 2334
-        ]);
-        $user2 = User::make([
-            'house_num' => 2334
-        ]);
-        $this->assertTrue($user1->house_num == $user2->house_num);
     }
 
 }
